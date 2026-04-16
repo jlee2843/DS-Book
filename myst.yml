@@ -3,8 +3,10 @@ version: 1
 project:
   id: b10c3911-4207-47e1-975e-a9a6bb13602c
   toc:
-    - file: Basic.ipynb
+    - file: notes/Basic.ipynb
       title: Basic
+    - file: notes/Preprocessing.ipynb
+      title: Preprocessing
   # title:
   # description:
   # keywords: []
@@ -13,6 +15,7 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
 site:
   template: book-theme
+  title: Data Science Study Notes
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
