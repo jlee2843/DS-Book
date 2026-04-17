@@ -7,6 +7,8 @@ project:
       title: Basic
     - file: notes/Preprocessing.ipynb
       title: Preprocessing
+    - file: notes/Logistic-regression.ipynb
+      title: Logistic Regression
   # title:
   # description:
   # keywords: []
