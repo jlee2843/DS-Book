@@ -24,8 +24,6 @@ project:
 site:
   template: book-theme
   title: Data Science Study Notes
-  nav:
-    - title: Data Science Study Notes
   options:
     logo_text: Jenny's Data Science
     logo: data/logo/book2.png
