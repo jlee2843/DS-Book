@@ -3,12 +3,18 @@ version: 1
 project:
   id: b10c3911-4207-47e1-975e-a9a6bb13602c
   toc:
-    - file: notes/Basic.ipynb
-      title: Basic
-    - file: notes/Preprocessing.ipynb
-      title: Preprocessing
-    - file: notes/Logistic-regression.ipynb
-      title: Logistic Regression
+    - file: notes/Introduction.ipynb                    # root page, no children
+    - title: Foundations
+      children:
+        - file: notes/Basic.ipynb
+        - file: notes/Preprocessing.ipynb
+          title: Preprocessing
+    - title: Classification
+      children:
+        - file: notes/Logistic-regression.ipynb
+          title: Logistic Regression
+        - file: notes/k-NN.ipynb
+          title: k-NN
   # title:
   # description:
   # keywords: []
@@ -18,6 +24,9 @@ project:
 site:
   template: book-theme
   title: Data Science Study Notes
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  nav:
+    - title: Data Science Study Notes
+  options:
+    logo_text: Jenny's Data Science
+    logo: data/logo/book2.png
+    favicon: data/logo/book2.png
