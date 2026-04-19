@@ -17,16 +17,12 @@ project:
           title: k-NN
         - file: notes/Naive-bayes.ipynb
           title: Naive Bayes
-  # title:
-  # description:
-  # keywords: []
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+        - file: notes/Trees.ipynb
+          title: Decision Trees
 site:
   template: book-theme
   title: Data Science Study Notes
   options:
-    logo_text: Jenny's Data Science
+    logo_text: Data Science Study Notes
     logo: data/logo/book2.png
     favicon: data/logo/book2.png
