@@ -19,6 +19,10 @@ project:
           title: Naive Bayes
         - file: notes/Trees.ipynb
           title: Decision Trees
+        - file: notes/Random-forest.ipynb
+          title: Random Forest
+        - file: notes/Boosting.ipynb
+          title: Boosting
 site:
   template: book-theme
   title: Data Science Study Notes
