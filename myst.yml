@@ -23,6 +23,8 @@ project:
           title: Random Forest
         - file: notes/Boosting.ipynb
           title: Boosting
+        - file: notes/SVM.ipynb
+          title: SVM
 site:
   template: book-theme
   title: Data Science Study Notes
