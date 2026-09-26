@@ -1,30 +1,67 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
   id: b10c3911-4207-47e1-975e-a9a6bb13602c
   toc:
-    - file: notes/Introduction.ipynb                    # root page, no children
-    - title: Foundations
-      children:
-        - file: notes/Basic.ipynb
-        - file: notes/Preprocessing.ipynb
-          title: Preprocessing
-    - title: Classification
-      children:
-        - file: notes/Logistic-regression.ipynb
-          title: Logistic Regression
-        - file: notes/k-NN.ipynb
-          title: k-NN
-        - file: notes/Naive-bayes.ipynb
-          title: Naive Bayes
-        - file: notes/Trees.ipynb
-          title: Decision Trees
-        - file: notes/Random-forest.ipynb
-          title: Random Forest
-        - file: notes/Boosting.ipynb
-          title: Boosting
-        - file: notes/SVM.ipynb
-          title: SVM
+  - file: notes/Introduction.ipynb
+  - title: Foundations
+    children:
+    - file: notes/Basic.ipynb
+    - file: notes/Preprocessing.ipynb
+      title: Preprocessing
+  - title: Classification
+    children:
+    - file: notes/Logistic-regression.ipynb
+      title: Logistic Regression
+    - file: notes/k-NN.ipynb
+      title: k-NN
+    - file: notes/Naive-bayes.ipynb
+      title: Naive Bayes
+    - file: notes/Trees.ipynb
+      title: Decision Trees
+    - file: notes/Random-forest.ipynb
+      title: Random Forest
+    - file: notes/Boosting.ipynb
+      title: Boosting
+    - file: notes/SVM.ipynb
+      title: SVM
+  - title: Statistical Experiments
+    children:
+    - file: notes/Statistical-Experiments/Experimental-Design.ipynb
+      title: "Experimental Design"
+    - file: notes/Statistical-Experiments/Two-Group-Comparisons.ipynb
+      title: "Two-Group Comparisons"
+    - file: notes/Statistical-Experiments/Paired-and-Randomization-Tests.ipynb
+      title: "Paired & Randomization Tests"
+    - file: notes/Statistical-Experiments/One-Way-ANOVA.ipynb
+      title: "One-Way ANOVA"
+    - file: notes/Statistical-Experiments/Contrasts-and-Multiple-Comparisons.ipynb
+      title: "Contrasts & Multiple Comparisons"
+    - file: notes/Statistical-Experiments/Blocking-Designs.ipynb
+      title: "Blocking Designs"
+    - file: notes/Statistical-Experiments/Factorial-Experiments.ipynb
+      title: "Factorial Experiments & Interaction"
+    - file: notes/Statistical-Experiments/Two-Level-Factorials.ipynb
+      title: "Two-Level Factorial Designs"
+    - file: notes/Statistical-Experiments/Center-Points-and-Curvature.ipynb
+      title: "Center Points & Curvature"
+    - file: notes/Statistical-Experiments/Blocking-Factorials.ipynb
+      title: "Blocking Factorial Experiments"
+    - file: notes/Statistical-Experiments/Fractional-Factorials.ipynb
+      title: "Fractional Factorial Designs"
+    - file: notes/Statistical-Experiments/Saturated-Designs-and-Foldovers.ipynb
+      title: "Saturated Designs & Foldovers"
+    - file: notes/Statistical-Experiments/Response-Surfaces-and-Steepest-Ascent.ipynb
+      title: "Response Surfaces & Steepest Ascent"
+    - file: notes/Statistical-Experiments/Quadratic-Response-Surfaces.ipynb
+      title: "Quadratic Response Surfaces"
+    - file: notes/Statistical-Experiments/Robust-Parameter-Design.ipynb
+      title: "Robust Parameter Design"
+    - file: notes/Statistical-Experiments/Random-Effects-and-Mixed-Models.ipynb
+      title: "Random Effects & Mixed Models"
+    - file: notes/Statistical-Experiments/Nested-Designs.ipynb
+      title: "Nested Designs"
+  substitutions:
+    build_date: '2026-05-04'
 site:
   template: book-theme
   title: Data Science Study Notes
