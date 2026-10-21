@@ -35,10 +35,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18.x
-      - name: Install Jupyter Book (via myst)
-        run: npm install -g jupyter-book
+      - name: Install matching MyST version
+        run: npm install -g mystmd@1.11.0
       - name: Build HTML Assets
-        run: jupyter-book build --html
+        run: myst build --html
+      - name: Version stylesheet for browser caches
+        run: python3 scripts/version_site_styles.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
