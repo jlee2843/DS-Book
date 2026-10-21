@@ -283,3 +283,36 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .article.content .document-actions p { margin: 0; }
 .article.content .intro-courses td { vertical-align: top; }
 .article.content .intro-courses td:first-child { font-weight: 500; }
+
+/* Local preview: distinguish examples, notes, and key ideas by purpose. */
+:root { --ds-key-surface: #f0e8fa; --ds-example-line: #cfc0df; }
+html.dark { --ds-key-surface: #322b3c; --ds-example-line: #62546e; }
+.article.content .myst-admonition-important {
+  padding: 18px 20px; border: 0; border-left: 3px solid var(--ds-accent);
+  border-radius: 0 4px 4px 0; background: var(--ds-key-surface) !important;
+}
+.article.content .myst-admonition-important .myst-admonition-header {
+  font-size: 11px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; margin-bottom: 10px;
+}
+.article.content .myst-admonition-note {
+  padding: 2px 0 2px 18px; border: 0; border-left: 1px solid var(--ds-line);
+  border-radius: 0; background: transparent !important;
+}
+.article.content .myst-admonition-note .myst-admonition-header {
+  color: var(--ds-muted); font-size: 12px; font-weight: 500; margin-bottom: 6px;
+}
+.article.content .myst-admonition-note .myst-admonition-body { color: var(--ds-muted); }
+.article.content .callout-example {
+  padding: 18px 20px; border: 1px solid var(--ds-example-line); border-radius: 4px;
+  background: transparent !important;
+}
+.article.content .callout-example :is(.myst-admonition-header, .myst-dropdown-header) {
+  padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid var(--ds-line);
+  font: 400 17px/1.5 Georgia, 'Times New Roman', serif; color: var(--ds-ink);
+  letter-spacing: 0; text-transform: none;
+}
+.article.content .callout-example:not([open]) > summary { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+.article.content .callout-example :is(.myst-admonition-body, .myst-dropdown-body) { color: var(--ds-ink); }
+@media (max-width: 639px) {
+  .article.content :is(.myst-admonition-important, .callout-example) { padding: 15px 16px; }
+}
