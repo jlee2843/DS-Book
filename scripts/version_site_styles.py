@@ -5,7 +5,8 @@ import hashlib
 root = Path('_build/html')
 replacements = {}
 for original in ('myst-theme.css', 'favicon.ico'):
-    asset = root / original
+    asset = (Path('data/favicon-options/chart-bell-curve.png')
+             if original == 'favicon.ico' else root / original)
     version = hashlib.sha256(asset.read_bytes()).hexdigest()[:16]
     name = f'{asset.stem}.{version}{asset.suffix}'
     (root / name).write_bytes(asset.read_bytes())
