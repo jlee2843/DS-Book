@@ -362,11 +362,11 @@ html.dark { --ds-table-hover: #302b36; }
 }
 
 /* Profile icon beside the resume download. */
-.article.content .intro-author a[href="https://www.linkedin.com/in/jennyjeeun"] {
+.article.content .intro-author a:is([href="https://www.linkedin.com/in/jennyjeeun"], [href="https://www.jennydatascience.com/introduction.html"]) {
   display: inline-flex; align-items: center; justify-content: center;
   width: 40px; height: 40px; padding: 8px; box-sizing: border-box;
 }
-.article.content .intro-author a[href="https://www.linkedin.com/in/jennyjeeun"] img {
+.article.content .intro-author a:is([href="https://www.linkedin.com/in/jennyjeeun"], [href="https://www.jennydatascience.com/introduction.html"]) img {
   width: 22px; height: 22px; margin: 0;
 }
 .article.content .intro-author a:focus-visible { outline: 2px solid var(--ds-accent); outline-offset: 3px; }
@@ -505,3 +505,11 @@ html.dark .myst-top-nav {
 @media (max-width: 639px) {
   .article.content .myst-outline .myst-outline-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px 18px; }
 }
+
+/* Center content figures and notebook image outputs across all sections. */
+.article.content figure { margin-inline: auto; max-width: 100%; }
+.article.content img:not(.intro-author img) {
+  display: block; margin-left: auto !important; margin-right: auto !important;
+  max-width: 100%; height: auto;
+}
+.article.content figure figcaption { text-align: center; }
