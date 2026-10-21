@@ -49,7 +49,7 @@ project:
       - file: notes/Regression/Ridge-Tuning.ipynb
         title: "Ridge Tuning & GCV"
     - file: notes/Regression/NonlinearRegression.ipynb
-      title: "Chapter 3 · Nonlinear Regression"
+      title: "Nonlinear Regression"
       children:
       - file: notes/Regression/FunctionSpaces.ipynb
         title: "Function Spaces and Kernels"
@@ -60,7 +60,7 @@ project:
       - file: notes/Regression/SplineTuning.ipynb
         title: "Spline Tuning and Uncertainty"
     - file: notes/Regression/SparseRegression.ipynb
-      title: "Chapter 4 · Sparse Regression and Trees"
+      title: "Sparse Regression and Trees"
       children:
       - file: notes/Regression/Lasso.ipynb
         title: "LASSO"
