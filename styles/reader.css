@@ -316,3 +316,31 @@ html.dark { --ds-key-surface: #322b3c; --ds-example-line: #62546e; }
 @media (max-width: 639px) {
   .article.content :is(.myst-admonition-important, .callout-example) { padding: 15px 16px; }
 }
+
+/* Align resource actions and adjacent-page navigation to the reading column. */
+.article.content .document-actions {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px; align-items: stretch;
+}
+.article.content .document-actions > p { min-width: 0; display: flex; }
+.article.content .document-actions a.button {
+  width: 100%; min-height: 42px; box-sizing: border-box; justify-content: center;
+}
+.article.content .document-actions > p:only-child {
+  grid-column: 1 / -1; width: min(100%, 340px); justify-self: center;
+}
+.article.content .myst-footer-links {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;
+}
+.article.content .myst-footer-links > * { margin-left: 0 !important; min-width: 0; }
+.article.content .myst-footer-link-prev { grid-column: 1; }
+.article.content .myst-footer-link-next { grid-column: 2; }
+.article.content .myst-footer-link > div { gap: 12px; }
+.article.content .myst-footer-link-prev > div > div { text-align: left; }
+.article.content .myst-footer-link-next > div > div { text-align: right; }
+@media (max-width: 479px) {
+  .article.content .document-actions { gap: 10px; }
+  .article.content .document-actions a.button { padding: 8px; font-size: 14px; }
+  .article.content .myst-footer-links { gap: 16px; }
+  .article.content .myst-footer-link > div { gap: 8px; }
+}
