@@ -37,7 +37,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .myst-primary-sidebar-pointer { background: var(--ds-sidebar); border-right: 1px solid var(--ds-line); }
 .myst-primary-sidebar-nav { padding: 24px 12px; }
 .myst-primary-sidebar-toc { margin: 0; max-width: none; }
-.myst-primary-sidebar-toc::before { content: 'Sections'; display: block; margin: 0 12px 18px; color: var(--ds-muted); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.myst-primary-sidebar-toc::before,
+.myst-primary-sidebar-toc a:is([href$='/research'], [href$='/research/']) {
+  color: var(--ds-muted); font-family: inherit; font-size: 11px;
+  font-weight: 400; line-height: 1.55; letter-spacing: .06em; text-transform: uppercase;
+}
+.myst-primary-sidebar-toc::before { content: 'Learning Topics'; display: block; margin: 0 12px 18px; }
+.myst-primary-sidebar-toc a:is([href$='/research'], [href$='/research/']) {
+  margin: 28px 0 0; padding: 7px 12px;
+}
 .myst-toc { color: var(--ds-ink); }
 .myst-toc .myst-toc-item { color: var(--ds-muted); border-radius: 3px; font-size: 13px; line-height: 1.55; }
 .myst-toc a.myst-toc-item { padding: 7px 10px; margin: 2px 0; font-weight: 400; }
@@ -344,3 +352,87 @@ html.dark { --ds-key-surface: #322b3c; --ds-example-line: #62546e; }
   .article.content .myst-footer-links { gap: 16px; }
   .article.content .myst-footer-link > div { gap: 8px; }
 }
+
+/* Keep table row hover within the pale lavender palette. */
+:root { --ds-table-hover: #f5f0fb; }
+html.dark { --ds-table-hover: #302b36; }
+.article.content table tbody tr:hover,
+.article.content table tbody tr:hover > td {
+  background-color: var(--ds-table-hover) !important;
+}
+
+/* Profile icon beside the resume download. */
+.article.content .intro-author a[href="https://www.linkedin.com/in/jennyjeeun"] {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; padding: 8px; box-sizing: border-box;
+}
+.article.content .intro-author a[href="https://www.linkedin.com/in/jennyjeeun"] img {
+  width: 22px; height: 22px; margin: 0;
+}
+.article.content .intro-author a:focus-visible { outline: 2px solid var(--ds-accent); outline-offset: 3px; }
+
+/* Research is a permanent section label, followed by its page links. */
+.myst-primary-sidebar-toc a.myst-toc-item:is([href$='/proposal'], [href$='/proposal/']) {
+  padding-left: 12px;
+}
+
+/* A noninteractive Research heading before its always-visible page links. */
+.myst-primary-sidebar-toc .myst-toc:has(> a[href$='/proposal']) {
+  display: flex; flex-direction: column;
+}
+.myst-primary-sidebar-toc .myst-toc:has(> a[href$='/proposal'])::after {
+  content: 'Research'; order: 1; margin: 28px 12px 8px;
+  color: var(--ds-muted); font-family: inherit; font-size: 11px;
+  font-weight: 400; line-height: 1.55; letter-spacing: .06em; text-transform: uppercase;
+}
+.myst-primary-sidebar-toc .myst-toc > a[href$='/proposal'] { order: 2; }
+
+/* Proposal: a quiet paper layout with distinct title and metadata. */
+.article.content:has(.proposal-document) { min-width: 0; font-weight: 400; }
+.article.content:has(.proposal-document) .myst-fm-block { margin-bottom: 8px; padding-top: 24px; }
+.article.content:has(.proposal-document) h1.myst-fm-block-title {
+  font: 500 12px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--ds-muted); letter-spacing: .1em; text-transform: uppercase;
+}
+.article.content:has(.proposal-document) .myst-outline { display: none; }
+.article.content:has(.proposal-document) nav[aria-label='Document Outline'] { display: none; }
+.article.content .proposal-document { max-width: 100%; min-width: 0; }
+.article.content .proposal-document p {
+  font-size: 15px; font-weight: 400; line-height: 1.85; white-space: normal;
+  overflow-wrap: break-word; margin: 0 0 18px;
+}
+.article.content .proposal-header { padding-bottom: 28px; margin-bottom: 38px; border-bottom: 1px solid var(--ds-line); }
+.article.content .proposal-header h2 {
+  max-width: 22ch; margin: 0 0 20px; font: 400 clamp(28px, 4vw, 38px)/1.2 Georgia, 'Times New Roman', serif;
+  letter-spacing: -.7px; text-wrap: balance;
+}
+.article.content .proposal-header .headerlink { display: none; }
+.article.content .proposal-subtitle p { max-width: 60ch; font-size: 16px; line-height: 1.65; color: var(--ds-muted); }
+.article.content .proposal-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 24px; }
+.article.content .proposal-meta p { margin: 0; color: var(--ds-muted); font-size: 12px; }
+.article.content .proposal-meta p:first-child { color: var(--ds-ink); }
+.article.content .proposal-header .document-actions { display: flex; margin: 20px 0 0; padding: 0; border: 0; }
+.article.content .proposal-header .document-actions > p:only-child { width: auto; }
+.article.content .proposal-header .document-actions a { width: auto; min-height: 36px; font-size: 14px; }
+.article.content .proposal-document > h2 { margin: 40px 0 16px; font-size: 21px; font-weight: 500; }
+.article.content .proposal-document > h3 { margin: 28px 0 14px; font-size: 17px; font-weight: 500; }
+.article.content .proposal-document .katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 12px 0; }
+.article.content .proposal-document [id^='proposal-ref-'] { font-size: 13px; line-height: 1.75; margin-bottom: 16px; scroll-margin-top: 80px; }
+@media (max-width: 639px) {
+  .article.content .proposal-header { padding-bottom: 24px; margin-bottom: 28px; }
+  .article.content .proposal-meta { display: block; }
+  .article.content .proposal-meta p + p { margin-top: 5px; }
+}
+
+/* Keep the proposal's mathematics and bibliography visually light. */
+.article.content .proposal-document div.group:has(> div > .katex-display) {
+  background: transparent; border-radius: 0; padding: 8px 0; margin: 22px 0;
+}
+.article.content .proposal-document [id^='proposal-ref-'] {
+  padding: 14px 0 14px 2.5em; margin: 0; text-indent: -2.5em;
+  border-bottom: 1px solid var(--ds-line); font-size: 13px; line-height: 1.8;
+}
+.article.content .proposal-document [id^='proposal-ref-'] a { text-indent: 0; }
+.article.content .proposal-document h2#references { margin-bottom: 10px; }
+.article.content .proposal-document [id^='proposal-ref-'] { position: relative; text-indent: 0; padding-left: 2.8em; }
+.article.content .proposal-ref-number { position: absolute; left: 0; top: 14px; color: var(--ds-muted); font-variant-numeric: tabular-nums; }

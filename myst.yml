@@ -123,6 +123,8 @@ project:
         title: "Random Effects & Mixed Models"
       - file: notes/Statistical-Experiments/Nested-Designs.ipynb
         title: "Nested Designs"
+  - file: notes/Proposal.ipynb
+    title: Proposal
   substitutions:
     build_date: '2026-05-04'
 site:
