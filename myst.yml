@@ -24,48 +24,111 @@ project:
       title: Boosting
     - file: notes/SVM.ipynb
       title: SVM
+  - title: Regression
+    children:
+    - file: notes/Regression/Predictive-Modelling.ipynb
+      title: "Predictive Modelling"
+      children:
+      - file: notes/Regression/Prediction-Error.ipynb
+        title: "Prediction Error & Bias-Variance"
+      - file: notes/Regression/Optimism-and-Complexity.ipynb
+        title: "Optimism & Model Complexity"
+      - file: notes/Regression/Cross-Validation.ipynb
+        title: "Cross-Validation"
+      - file: notes/Regression/LOO-and-GCV.ipynb
+        title: "LOO & Generalized Cross-Validation"
+    - file: notes/Regression/Regularization-and-Penalized-Regression.ipynb
+      title: "Regularization & Penalized Regression"
+      children:
+      - file: notes/Regression/Least-Squares.ipynb
+        title: "Least Squares & Projection"
+      - file: notes/Regression/Spectral-Analysis.ipynb
+        title: "Spectral Analysis & Collinearity"
+      - file: notes/Regression/Ridge-Regression.ipynb
+        title: "Ridge Regression"
+      - file: notes/Regression/Ridge-Tuning.ipynb
+        title: "Ridge Tuning & GCV"
+    - file: notes/Regression/NonlinearRegression.ipynb
+      title: "Chapter 3 · Nonlinear Regression"
+      children:
+      - file: notes/Regression/FunctionSpaces.ipynb
+        title: "Function Spaces and Kernels"
+      - file: notes/Regression/SplineBases.ipynb
+        title: "Spline Bases"
+      - file: notes/Regression/PenalizedSplines.ipynb
+        title: "Penalized Splines"
+      - file: notes/Regression/SplineTuning.ipynb
+        title: "Spline Tuning and Uncertainty"
+    - file: notes/Regression/SparseRegression.ipynb
+      title: "Chapter 4 · Sparse Regression and Trees"
+      children:
+      - file: notes/Regression/Lasso.ipynb
+        title: "LASSO"
+      - file: notes/Regression/CoordinateDescent.ipynb
+        title: "Coordinate Descent"
+      - file: notes/Regression/LassoPaths.ipynb
+        title: "Solution Paths and Selection"
+      - file: notes/Regression/RegressionTrees.ipynb
+        title: "Regression Trees"
+      - file: notes/Regression/RegressionDiagnostics.ipynb
+        title: "Reading Model Results"
   - title: Statistical Experiments
     children:
-    - file: notes/Statistical-Experiments/Experimental-Design.ipynb
-      title: "Experimental Design"
-    - file: notes/Statistical-Experiments/Two-Group-Comparisons.ipynb
-      title: "Two-Group Comparisons"
-    - file: notes/Statistical-Experiments/Paired-and-Randomization-Tests.ipynb
-      title: "Paired & Randomization Tests"
-    - file: notes/Statistical-Experiments/One-Way-ANOVA.ipynb
-      title: "One-Way ANOVA"
-    - file: notes/Statistical-Experiments/Contrasts-and-Multiple-Comparisons.ipynb
-      title: "Contrasts & Multiple Comparisons"
-    - file: notes/Statistical-Experiments/Blocking-Designs.ipynb
-      title: "Blocking Designs"
-    - file: notes/Statistical-Experiments/Factorial-Experiments.ipynb
-      title: "Factorial Experiments & Interaction"
-    - file: notes/Statistical-Experiments/Two-Level-Factorials.ipynb
-      title: "Two-Level Factorial Designs"
-    - file: notes/Statistical-Experiments/Center-Points-and-Curvature.ipynb
-      title: "Center Points & Curvature"
-    - file: notes/Statistical-Experiments/Blocking-Factorials.ipynb
-      title: "Blocking Factorial Experiments"
-    - file: notes/Statistical-Experiments/Fractional-Factorials.ipynb
-      title: "Fractional Factorial Designs"
-    - file: notes/Statistical-Experiments/Saturated-Designs-and-Foldovers.ipynb
-      title: "Saturated Designs & Foldovers"
-    - file: notes/Statistical-Experiments/Response-Surfaces-and-Steepest-Ascent.ipynb
-      title: "Response Surfaces & Steepest Ascent"
-    - file: notes/Statistical-Experiments/Quadratic-Response-Surfaces.ipynb
-      title: "Quadratic Response Surfaces"
-    - file: notes/Statistical-Experiments/Robust-Parameter-Design.ipynb
-      title: "Robust Parameter Design"
-    - file: notes/Statistical-Experiments/Random-Effects-and-Mixed-Models.ipynb
-      title: "Random Effects & Mixed Models"
-    - file: notes/Statistical-Experiments/Nested-Designs.ipynb
-      title: "Nested Designs"
+    - file: notes/Statistical-Experiments/Design-and-Comparisons.ipynb
+      title: "Design & Mean Comparisons"
+      children:
+      - file: notes/Statistical-Experiments/Experimental-Design.ipynb
+        title: "Experimental Design"
+      - file: notes/Statistical-Experiments/Two-Group-Comparisons.ipynb
+        title: "Two-Group Comparisons"
+      - file: notes/Statistical-Experiments/Paired-and-Randomization-Tests.ipynb
+        title: "Paired & Randomization Tests"
+      - file: notes/Statistical-Experiments/One-Way-ANOVA.ipynb
+        title: "One-Way ANOVA"
+      - file: notes/Statistical-Experiments/Contrasts-and-Multiple-Comparisons.ipynb
+        title: "Contrasts & Multiple Comparisons"
+    - file: notes/Statistical-Experiments/Blocking-and-Nuisance-Variation.ipynb
+      title: "Blocking & Nuisance Variation"
+      children:
+      - file: notes/Statistical-Experiments/Blocking-Designs.ipynb
+        title: "Blocking Designs"
+      - file: notes/Statistical-Experiments/Blocking-Factorials.ipynb
+        title: "Blocking Factorial Experiments"
+    - file: notes/Statistical-Experiments/Factorials-and-Screening.ipynb
+      title: "Factorials & Screening"
+      children:
+      - file: notes/Statistical-Experiments/Factorial-Experiments.ipynb
+        title: "Factorial Experiments & Interaction"
+      - file: notes/Statistical-Experiments/Two-Level-Factorials.ipynb
+        title: "Two-Level Factorial Designs"
+      - file: notes/Statistical-Experiments/Fractional-Factorials.ipynb
+        title: "Fractional Factorial Designs"
+      - file: notes/Statistical-Experiments/Saturated-Designs-and-Foldovers.ipynb
+        title: "Saturated Designs & Foldovers"
+    - file: notes/Statistical-Experiments/Response-Surfaces-and-Optimization.ipynb
+      title: "Response Surfaces & Optimization"
+      children:
+      - file: notes/Statistical-Experiments/Center-Points-and-Curvature.ipynb
+        title: "Center Points & Curvature"
+      - file: notes/Statistical-Experiments/Response-Surfaces-and-Steepest-Ascent.ipynb
+        title: "Response Surfaces & Steepest Ascent"
+      - file: notes/Statistical-Experiments/Quadratic-Response-Surfaces.ipynb
+        title: "Quadratic Response Surfaces"
+      - file: notes/Statistical-Experiments/Robust-Parameter-Design.ipynb
+        title: "Robust Parameter Design"
+    - file: notes/Statistical-Experiments/Random-Effects-and-Hierarchies.ipynb
+      title: "Random Effects & Hierarchies"
+      children:
+      - file: notes/Statistical-Experiments/Random-Effects-and-Mixed-Models.ipynb
+        title: "Random Effects & Mixed Models"
+      - file: notes/Statistical-Experiments/Nested-Designs.ipynb
+        title: "Nested Designs"
   substitutions:
     build_date: '2026-05-04'
 site:
   template: book-theme
-  title: Data Science Study Notes
+  title: The Statistics Notebook
   options:
-    logo_text: Data Science Study Notes
-    logo: data/logo/book2.png
+    style: styles/reader.css
+    logo_text: The Statistics Notebook
     favicon: data/logo/book2.png
