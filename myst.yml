@@ -133,4 +133,4 @@ site:
   options:
     style: styles/reader.css
     logo_text: The Statistics Notebook
-    favicon: data/logo/book2.png
+    favicon: data/favicon-options/chart-bell-curve.ico

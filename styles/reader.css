@@ -513,3 +513,7 @@ html.dark .myst-top-nav {
   max-width: 100%; height: auto;
 }
 .article.content figure figcaption { text-align: center; }
+
+/* Remove the generator badge and its empty footer space. */
+.myst-primary-sidebar-footer:has(.myst-made-with-myst),
+.myst-made-with-myst { display: none !important; }
