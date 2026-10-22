@@ -633,3 +633,45 @@ html.dark .myst-top-nav {
   .myst-primary-sidebar { top: 60px !important; margin-top: 0 !important; }
   .myst-primary-sidebar-pointer { margin: 0 !important; border-top: 0; }
 }
+
+/* Right-edge Sections drawer; opening it never shifts the reading column. */
+.article.content .ds-sections-source { display: none !important; }
+.article.content > div:has(> .ds-sections + .myst-outline-section) { display: contents; }
+.article.content .ds-sections {
+  position: fixed; top: 120px; right: 0; z-index: 45; margin: 0;
+  width: 40px; padding: 13px 9px; border: 1px solid var(--ds-line);
+  border-right: 0; border-radius: 8px 0 0 8px; background: var(--ds-paper);
+  box-shadow: -8px 10px 24px #0002;
+}
+.article.content .ds-sections:has([aria-expanded=true]) {
+  width: min(270px, calc(100vw - 32px)); padding: 17px;
+}
+.article.content .ds-sections-trigger {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; width: 100%; padding: 0; border: 0; background: transparent;
+  color: var(--ds-muted); font: 400 12px/1.5 'Inter', sans-serif; cursor: pointer;
+}
+.article.content .ds-sections-trigger[aria-expanded=false] { writing-mode: vertical-rl; }
+.article.content .ds-sections-trigger::after {
+  content: ''; width: 6px; height: 6px; border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor; transform: rotate(135deg); flex-shrink: 0;
+}
+.article.content .ds-sections-trigger[aria-expanded=true]::after { transform: rotate(-45deg); }
+.article.content .ds-sections-trigger:hover { color: var(--ds-accent); }
+.article.content .ds-sections-menu {
+  margin: 14px 0 0; padding: 0; border: 0; max-height: calc(100dvh - 200px);
+  overflow-y: auto; overscroll-behavior: contain; font-family: 'Inter', sans-serif;
+}
+.article.content .ds-sections-menu[hidden] { display: none !important; }
+.article.content .ds-sections-menu a {
+  display: block; padding: 10px 9px; border: 0; border-radius: 4px;
+  color: var(--ds-ink); font-size: 13px; font-weight: 400; line-height: 1.6;
+  text-decoration: none; overflow-wrap: anywhere;
+}
+.article.content .ds-sections-menu a:hover,
+.article.content .ds-sections-menu a[aria-current] { color: var(--ds-accent); background: var(--ds-soft); }
+@media (max-width: 640px) {
+  .article.content .ds-sections { top: 85px; }
+  .article.content .ds-sections-menu { max-height: calc(100dvh - 160px); }
+}
+@media print { .article.content .ds-sections { display: none; } }
