@@ -675,3 +675,6 @@ html.dark .myst-top-nav {
   .article.content .ds-sections-menu { max-height: calc(100dvh - 160px); }
 }
 @media print { .article.content .ds-sections { display: none; } }
+
+/* Keep new research notes below the existing Research heading and Proposal. */
+.myst-primary-sidebar-toc .myst-toc > a[href$="/mtrag-inspection"] { order: 3; padding-left: 12px; }

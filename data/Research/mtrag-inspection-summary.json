@@ -1,0 +1,50 @@
+{
+  "commit": "53fef6f5917c7e10c436f697e69a955dbc795d81",
+  "inspected": "2026-10-23",
+  "files": {
+    "mtrag-human__generation_tasks__reference+RAG.jsonl": {
+      "bytes": 5500112,
+      "sha256": "573f32e92fa810e795784809a4685e16000be8fecd3f4b3772193463c3369d3b"
+    },
+    "mtrag-human__evaluations__reference_subset_with_human_evaluations.json": {
+      "bytes": 2190566,
+      "sha256": "ba8518617eca8dd31cadfcbbec1e3b38464e3c6cea33d902865e4acd05e8673e"
+    },
+    "mtrag-human__generation_tasks__reference.jsonl": {
+      "bytes": 7608375,
+      "sha256": "b3dde4076f9f692a99513e424a0a39f57591dbe45600a4c1017aaa7a7edcfaac"
+    },
+    "mtrag-human__conversations__conversations.json": {
+      "bytes": 10032290,
+      "sha256": "1a30baf5e025b4915e87556c64de37d7fe96e98f9f4ea9f3cf9322199e538f89"
+    },
+    "mtrag-human__generation_tasks__RAG.jsonl": {
+      "bytes": 10195362,
+      "sha256": "5d5201da9fabd072fd8f6b8d051bfaafa7ef031e76722a4920c66e94cede1873"
+    }
+  },
+  "tasks": 842,
+  "conversations": 110,
+  "collections": {
+    "mt-rag-clapnq-elser-512-100-20240503": 224,
+    "mt-rag-govt-elser-512-100-20240611": 214,
+    "mt-rag-fiqa-beir-elser-512-100-20240501": 199,
+    "mt-rag-ibmcloud-elser-512-100-20240502": 205
+  },
+  "answerability": {
+    "UNANSWERABLE": 55,
+    "ANSWERABLE": 709,
+    "PARTIAL": 68,
+    "CONVERSATIONAL": 10
+  },
+  "human_tasks": 159,
+  "human_evaluations": 477,
+  "human_conversations": 20,
+  "human_ratings": {
+    "naturalness": 1413,
+    "appropriateness": 1413,
+    "completeness": 1411,
+    "faithfulness": 1419,
+    "win-rate": 1431
+  }
+}

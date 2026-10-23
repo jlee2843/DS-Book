@@ -125,6 +125,8 @@ project:
         title: "Nested Designs"
   - file: notes/Proposal.ipynb
     title: Proposal
+  - file: notes/MTRAG-Inspection.ipynb
+    title: MTRAG Dataset Inspection
   substitutions:
     build_date: '2026-05-04'
 site:
