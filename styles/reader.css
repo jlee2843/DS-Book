@@ -676,5 +676,55 @@ html.dark .myst-top-nav {
 }
 @media print { .article.content .ds-sections { display: none; } }
 
-/* Keep new research notes below the existing Research heading and Proposal. */
-.myst-primary-sidebar-toc .myst-toc > a[href$="/mtrag-inspection"] { order: 3; padding-left: 12px; }
+/* Data follows Proposal within the existing Research section. */
+.myst-primary-sidebar-toc .myst-toc > div:has(> .myst-toc-item > [title="Data"]) { order: 3; }
+
+/* MTRAG data reader uses the site's paper, ink and lavender theme tokens. */
+.mtrag-viewer { margin: 28px 0 40px; min-width: 0; }
+.article.content .mtrag-viewer :is(input,select,button) { font: inherit; font-size: 13px; color: var(--ds-ink); }
+.article.content .mtrag-viewer :is(input[type='search'],select) {
+  display: block; width: 100%; min-width: 0; margin-top: 7px; padding: 10px 12px;
+  background: var(--ds-paper); border: 1px solid var(--ds-line); border-radius: 5px; min-height: 42px;
+}
+.article.content .mtrag-viewer label { display: block; color: var(--ds-muted); font-size: 12px; line-height: 1.5; }
+.mv-filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mv-search { grid-column: 1 / -1; }
+.mv-filter-footer, .mv-navigation, .mv-settings { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin: 18px 0; }
+.article.content .mtrag-viewer .mv-check { display: flex; align-items: center; gap: 8px; }
+.mtrag-viewer input[type='checkbox'] { accent-color: var(--ds-accent); width: 16px; height: 16px; }
+.article.content .mtrag-viewer button { padding: 8px 12px; border: 1px solid var(--ds-line); border-radius: 5px; background: var(--ds-paper); cursor: pointer; line-height: 1.5; }
+.article.content .mtrag-viewer button:hover:not(:disabled) { background: var(--ds-soft); border-color: var(--ds-accent); }
+.article.content .mtrag-viewer :is(button,select):disabled { opacity: .45; cursor: default; }
+.article.content .mtrag-viewer :is(input,select,button,summary):focus-visible { outline: 2px solid var(--ds-accent); outline-offset: 3px; }
+.mv-selection-grid { display: grid; grid-template-columns: minmax(0,2fr) minmax(0,1fr); gap: 16px; }
+.article.content .mtrag-viewer :is(.mv-results,.mv-status,.mv-help,.mv-position) { font-size: 12px; color: var(--ds-muted); line-height: 1.7; }
+.article.content .mtrag-viewer .mv-results { padding: 12px 0; border-block: 1px solid var(--ds-line); }
+.mv-task { padding: 24px; border: 1px solid var(--ds-line); border-radius: 6px; margin: 24px 0; }
+.mv-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.mv-chips span { padding: 3px 8px; font-size: 10px; letter-spacing: .03em; background: var(--ds-soft); color: var(--ds-accent); border-radius: 3px; }
+.article.content .mtrag-viewer .mv-question { font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 23px; line-height: 1.45; margin: 18px 0 12px; overflow-wrap: anywhere; }
+.article.content .mtrag-viewer .mv-id { font-family: ui-monospace, monospace; font-size: 11px; color: var(--ds-muted); overflow-wrap: anywhere; margin: 12px 0; }
+.mv-settings label { flex: 1; min-width: 190px; max-width: 330px; }
+.mv-tabs { display: flex; flex-wrap: wrap; gap: 5px; border-bottom: 1px solid var(--ds-line); padding-bottom: 10px; margin-top: 24px; }
+.article.content .mtrag-viewer .mv-tabs button { border-color: transparent; }
+.article.content .mtrag-viewer .mv-tabs button[aria-selected='true'] { background: var(--ds-selected); color: var(--ds-on-selected); }
+.mv-panel { padding: 16px 0; min-height: 180px; }
+.article.content .mtrag-viewer .mv-empty { padding: 24px; border-left: 2px solid var(--ds-accent); background: var(--ds-soft); font-size: 14px; line-height: 1.8; }
+.mv-message { padding: 18px 20px; margin: 12px 0; border: 1px solid var(--ds-line); border-radius: 5px; }
+.mv-label { font-size: 11px; color: var(--ds-accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
+.mv-text { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.85; }
+.article.content .mtrag-viewer :is(.mv-passage,.mv-rating,.mv-downloads) { padding: 14px 0; margin: 8px 0; border-bottom: 1px solid var(--ds-line); }
+.article.content .mtrag-viewer summary { color: var(--ds-accent); cursor: pointer; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.mv-passage > .mv-text { margin: 18px 0; }
+.mv-table-wrap { overflow-x: auto; }
+.article.content .mtrag-viewer table { width: 100%; font-size: 12px; }
+.mv-downloads a { display: inline-block; margin: 10px 16px 0 0; font-size: 12px; }
+.mtrag-viewer [hidden] { display: none !important; }
+@media (max-width: 640px) {
+  .mv-filter-grid,.mv-selection-grid { grid-template-columns: minmax(0,1fr); }
+  .mv-task { padding: 16px; }
+  .article.content .mtrag-viewer .mv-question { font-size: 20px; }
+  .mv-navigation { gap: 6px; }
+  .article.content .mtrag-viewer .mv-navigation button { padding: 7px; font-size: 11px; }
+  .mv-message { padding: 14px; }
+}
