@@ -36,12 +36,12 @@
     source.append(sourceBody);
     root.replaceChildren();
     const app = node('div', undefined, 'mv-app');
-    const status = node('p', 'Loading reference tasks and human-rating index…', 'mv-status');
+    const status = node('p', 'Loading data…', 'mv-status');
     status.setAttribute('role', 'status');
     root.append(status, app, source);
     let tasks, human, selected, filtered = [], tab = 'evidence', sequence = 0, currentEvidence = null;
     async function start() {
-      status.textContent = 'Loading reference tasks and human-rating index…';
+      status.textContent = 'Loading data…';
       try {
         [tasks, human] = await Promise.all([load(urls['Reference tasks']), load(urls['Human ratings'])]);
         if (!root.isConnected) return;
@@ -56,7 +56,7 @@
     function setup() {
       app.innerHTML = `
         <div class="mv-filter-grid">
-          <label class="mv-search">Search questions, history or task ID<input type="search" placeholder="e.g. cloud, interest rate, Cardinals" data-field="search"></label>
+          <label class="mv-search">Search questions, history or ID<input type="search" placeholder="e.g. cloud, interest rate, Cardinals" data-field="search"></label>
           <label>Collection<select data-field="collection"><option value="">All collections</option><option>ClapNQ</option><option>Cloud</option><option>FiQA</option><option>Govt</option></select></label>
           <label>Answerability<select data-field="answerability"><option value="">All labels</option><option>ANSWERABLE</option><option>PARTIAL</option><option>UNANSWERABLE</option><option>CONVERSATIONAL</option></select></label>
         </div>
@@ -68,7 +68,7 @@
         </div>
         <div class="mv-navigation"><button type="button" data-action="prev">← Previous match</button><span class="mv-position"></span><button type="button" data-action="next">Next match →</button></div>
         <div class="mv-task"></div>
-        <div class="mv-settings"><label>Evidence setting<select data-field="setting"><option value="reference">Reference · 842 tasks</option><option value="rag">Full RAG · 842 tasks</option><option value="reference-rag">Reference + RAG · 436 tasks</option></select></label><button type="button" data-action="download">Download selected task</button></div>
+        <div class="mv-settings"><label>Evidence setting<select data-field="setting"><option value="reference">Reference · 842 tasks</option><option value="rag">Full RAG · 842 tasks</option><option value="reference-rag">Reference + RAG · 436 tasks</option></select></label><button type="button" data-action="download">Download task JSON</button></div>
         <div class="mv-tabs" role="tablist" aria-label="Task details">
           <button type="button" role="tab" id="mv-tab-evidence" aria-controls="mv-panel" data-tab="evidence">Evidence</button>
           <button type="button" role="tab" id="mv-tab-history" aria-controls="mv-panel" data-tab="history">Conversation history</button>
@@ -119,13 +119,13 @@
         app.querySelector('.mv-position').textContent = selected ? `${index+1} / ${filtered.length}` : '0 matches';
         taskBody.replaceChildren();
         if (!selected) {
-          options(fields.turn, []); panel.replaceChildren(node('p','No tasks match these filters. Try a broader search or reset the filters.', 'mv-empty'));
+          options(fields.turn, []); panel.replaceChildren(node('p','No matching tasks. Change the search or reset filters.', 'mv-empty'));
           sequence++; return;
         }
         fields.conversation.value = selected.conversation_id;
         options(fields.turn, filtered.filter(t=>t.conversation_id===selected.conversation_id).sort((a,b)=>a.turn-b.turn).map(t=>[t.task_id, `Turn ${t.turn} · ${t.answerability.join(', ')}`]), selected.task_id);
         const chips = node('div',undefined,'mv-chips');
-        [domain(selected), `Turn ${selected.turn}`, ...selected.answerability, ...selected.multi_turn, human.evaluations[selected.task_id] ? 'Human-rated' : 'No human ratings'].forEach(s=>chips.append(node('span',s)));
+        [domain(selected), `Turn ${selected.turn}`, ...selected.answerability, ...selected.multi_turn.filter(x=>x!=='N/A'), ...(human.evaluations[selected.task_id] ? ['Human-rated'] : [])].forEach(s=>chips.append(node('span',s)));
         taskBody.append(chips,node('h3',selected.input.at(-1).text,'mv-question'),node('p',`Task ID: ${selected.task_id}`,'mv-id'));
         renderPanel();
       }
@@ -149,20 +149,20 @@
         currentEvidence=null;
         if (tab==='history') {
           const previous=task.input.slice(0,-1);
-          panel.append(node('p',`${previous.length} earlier messages · fixed supplied history`, 'mv-help'));
-          if (!previous.length) panel.append(node('p','This is the first turn. There are no earlier messages.','mv-empty'));
+          panel.append(node('p',`${previous.length} earlier messages`, 'mv-help'));
+          if (!previous.length) panel.append(node('p','First turn; no earlier messages.','mv-empty'));
           previous.forEach((m,i)=>panel.append(messageCard(`Turn ${Math.floor(i/2)+1} · ${m.speaker==='user'?'User':'Agent'}`,m.text)));
           return;
         }
         if (tab==='reference') {
-          panel.append(node('p','Released reference answer. This is separate from a newly generated candidate response.','mv-help'));
+          panel.append(node('p','Released reference answer.','mv-help'));
           task.targets.forEach((m,i)=>panel.append(messageCard(`Reference ${i+1}`,m.text)));
           return;
         }
         if (tab==='human') {
           const evaluations=human.evaluations[task.task_id];
-          panel.append(node('p','Human ratings use the Reference evidence setting, regardless of the evidence selector above. Scores below are individual annotations, not new model judgments.','mv-help'));
-          if (!evaluations) { panel.append(node('p','This task is not in the 159-task human evaluation subset. Select “Human-rated tasks only” to browse that subset.','mv-empty'));return; }
+          panel.append(node('p','Ratings for the Reference setting.','mv-help'));
+          if (!evaluations) { panel.append(node('p','No human ratings for this task. Use “Human-rated tasks only” to filter.','mv-empty'));return; }
           for (const e of evaluations) {
             const details=node('details',undefined,'mv-rating');details.open=true;
             details.append(node('summary',e.model_id));details.append(messageCard('Candidate response',e.response));
@@ -174,7 +174,7 @@
             }
             table.append(body);const wrap=node('div',undefined,'mv-table-wrap');wrap.append(table);details.append(wrap);panel.append(details);
           }
-          panel.append(node('p','Rating order is local to each metric; columns do not identify a shared rater across metrics.','mv-help'));
+          panel.append(node('p','Rating order does not identify the same rater across metrics.','mv-help'));
           return;
         }
         panel.textContent='Loading passages…';panel.setAttribute('aria-busy','true');
@@ -182,14 +182,14 @@
           const evidence=await evidenceFor(task,setting);
           if (run!==sequence || !root.isConnected) return;
           currentEvidence=evidence;panel.replaceChildren();
-          if (evidence===null) {panel.append(node('p','This task is not included in the 436-task Reference + RAG subset. Choose Reference or Full RAG to view its evidence.','mv-empty'));return;}
+          if (evidence===null) {panel.append(node('p','Not in the Reference + RAG subset. Choose Reference or Full RAG.','mv-empty'));return;}
           panel.append(node('p',`${evidence.length} passages · ${fields.setting.selectedOptions[0].textContent.split(' · ')[0]}`,'mv-help'));
-          if (!evidence.length) panel.append(node('p','No reference passages are supplied for this task. This is expected for unanswerable or conversational tasks in this release.','mv-empty'));
+          if (!evidence.length) panel.append(node('p','No reference passages. This task is labeled unanswerable or conversational.','mv-empty'));
           evidence.forEach((p,i)=>{
             const details=node('details',undefined,'mv-passage');details.open=i===0;
             details.append(node('summary',`${i+1}. ${p.title || p.document_id}`));
             details.append(node('p',`Passage ID: ${p.document_id}`,'mv-id'));
-            if (p.score!==undefined) details.append(node('p',`Retrieval score: ${p.score} · not a human quality rating`,'mv-help'));
+            if (p.score!==undefined) details.append(node('p',`Retrieval score: ${p.score} · retriever output`,'mv-help'));
             details.append(node('div',p.text,'mv-text'));panel.append(details);
           });
         } catch(error) {
@@ -228,18 +228,20 @@
         } catch(error) {status.textContent='Could not export this setting. Please retry after checking your connection.';}
         finally {action('download').disabled=!selected;}
       };
-      status.textContent='Public MTRAG snapshot · text preserved from the pinned release';
+      status.textContent='';
       applyFilters(new URL(location.href).searchParams.get('task'));
     }
     start();
   }
-  let queued=false;
+  let queued=false, ready=false;
   function scan() {
     queued=false;
-    // Wait until MyST has hydrated its article outline before enhancing the page.
-    if (!document.querySelector('.article.content .myst-outline-section')) return;
+    // The compact viewer has no outline; initialize after the page loads.
+    if (!ready || !document.querySelector('.article.content')) return;
     document.querySelectorAll('.mtrag-viewer').forEach(root=>{if(!mounted.has(root))mount(root);});
   }
   new MutationObserver(()=>{if(!queued){queued=true;requestAnimationFrame(scan);}}).observe(document,{childList:true,subtree:true});
-  scan();
+  const begin = () => requestAnimationFrame(() => requestAnimationFrame(() => { ready=true; scan(); }));
+  if (document.readyState === 'complete') begin();
+  else addEventListener('load', begin, {once:true});
 })();

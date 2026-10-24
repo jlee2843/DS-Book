@@ -3,7 +3,7 @@
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#725393"/></marker></defs>
 <rect width="900" height="460" rx="12" fill="#fdfcf9"/>
 <g font-family="Arial,sans-serif" fill="#302f32">
-<text x="30" y="36" font-size="14" fill="#725393" letter-spacing="2">ONE TASK · ONE CURRENT ANSWER</text>
+<text x="30" y="36" font-size="14" fill="#725393" letter-spacing="2">TASK INPUTS AND EVALUATION</text>
 <g fill="#f3f0ec" stroke="#dbd8d1"><rect x="30" y="65" width="230" height="80" rx="7"/><rect x="30" y="165" width="230" height="80" rx="7"/><rect x="30" y="265" width="230" height="80" rx="7"/><rect x="340" y="165" width="210" height="80" rx="7"/><rect x="630" y="165" width="240" height="80" rx="7"/><rect x="630" y="65" width="240" height="65" rx="7"/></g>
 <g font-size="19"><text x="47" y="97" font-size="17">Fixed conversation history</text><text x="47" y="197">Current user question</text><text x="47" y="297">Supplied passages</text><text x="357" y="197">Candidate answer</text><text x="647" y="197">Judge × prompt × run</text><text x="647" y="94">Reference answer</text></g>
 <g font-size="14" fill="#726e6b"><text x="47" y="122">input[:-1]</text><text x="47" y="222">input[-1]</text><text x="47" y="322">contexts · choose a setting</text><text x="357" y="222">Generate once; keep fixed</text><text x="647" y="222">One score per metric</text><text x="647" y="115">targets · only if metric requires it</text></g>

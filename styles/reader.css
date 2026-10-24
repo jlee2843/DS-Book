@@ -728,3 +728,15 @@ html.dark .myst-top-nav {
   .article.content .mtrag-viewer .mv-navigation button { padding: 7px; font-size: 11px; }
   .mv-message { padding: 14px; }
 }
+
+/* Data pages use a single title and a compact reading layout. */
+.article.content:has(:is(.mtrag-viewer-page,.mtrag-guide-page)) h1.myst-fm-block-title {
+  font-family: 'Source Serif 4', Georgia, serif; font-size: 30px; line-height: 1.3;
+  font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--ds-ink);
+}
+.article.content:has(:is(.mtrag-viewer-page,.mtrag-guide-page)) .myst-fm-block { padding-top: 20px; margin-bottom: 12px; }
+.article.content:has(.mtrag-viewer-page) .ds-sections { display: none; }
+.article.content .mtrag-viewer-page > p:first-child { color: var(--ds-muted); font-size: 13px; }
+.mtrag-viewer-page .mtrag-viewer { margin-top: 20px; }
+.mtrag-viewer .mv-status:empty { display: none; }
+.article.content .mtrag-guide-page > h2 { margin-top: 32px; }
