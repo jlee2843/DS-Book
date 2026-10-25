@@ -39,7 +39,7 @@
     const status = node('p', 'Loading data…', 'mv-status');
     status.setAttribute('role', 'status');
     root.append(status, app, source);
-    let tasks, human, selected, filtered = [], tab = 'evidence', sequence = 0, currentEvidence = null;
+    let tasks, human, selected, filtered = [], tab = 'answers', sequence = 0, currentEvidence = null;
     async function start() {
       status.textContent = 'Loading data…';
       try {
@@ -55,12 +55,13 @@
     }
     function setup() {
       app.innerHTML = `
+        <p class="mv-help">Choose a conversation and turn, then compare AI answers with the human-written reference. Saved model answers and human ratings are available for 159 of 842 tasks.</p>
         <div class="mv-filter-grid">
           <label class="mv-search">Search questions, history or ID<input type="search" placeholder="e.g. cloud, interest rate, Cardinals" data-field="search"></label>
           <label>Collection<select data-field="collection"><option value="">All collections</option><option>ClapNQ</option><option>Cloud</option><option>FiQA</option><option>Govt</option></select></label>
           <label>Answerability<select data-field="answerability"><option value="">All labels</option><option>ANSWERABLE</option><option>PARTIAL</option><option>UNANSWERABLE</option><option>CONVERSATIONAL</option></select></label>
         </div>
-        <div class="mv-filter-footer"><label class="mv-check"><input type="checkbox" data-field="rated"> Human-rated tasks only</label><button type="button" data-action="reset">Reset filters</button></div>
+        <div class="mv-filter-footer"><label class="mv-check"><input type="checkbox" data-field="rated"> Tasks with AI answers only (159)</label><button type="button" data-action="reset">Reset filters</button></div>
         <p class="mv-results" role="status" aria-live="polite"></p>
         <div class="mv-selection-grid">
           <label>Conversation<select data-field="conversation"></select></label>
@@ -70,9 +71,10 @@
         <div class="mv-task"></div>
         <div class="mv-settings"><label>Evidence setting<select data-field="setting"><option value="reference">Reference · 842 tasks</option><option value="rag">Full RAG · 842 tasks</option><option value="reference-rag">Reference + RAG · 436 tasks</option></select></label><button type="button" data-action="download">Download task JSON</button></div>
         <div class="mv-tabs" role="tablist" aria-label="Task details">
+          <button type="button" role="tab" id="mv-tab-answers" aria-controls="mv-panel" data-tab="answers">AI answers</button>
           <button type="button" role="tab" id="mv-tab-evidence" aria-controls="mv-panel" data-tab="evidence">Evidence</button>
           <button type="button" role="tab" id="mv-tab-history" aria-controls="mv-panel" data-tab="history">Conversation history</button>
-          <button type="button" role="tab" id="mv-tab-reference" aria-controls="mv-panel" data-tab="reference">Reference answer</button>
+          <button type="button" role="tab" id="mv-tab-reference" aria-controls="mv-panel" data-tab="reference">Human-written reference</button>
           <button type="button" role="tab" id="mv-tab-human" aria-controls="mv-panel" data-tab="human">Human ratings</button>
         </div>
         <div class="mv-panel" id="mv-panel" role="tabpanel" tabindex="0"></div>`;
@@ -125,7 +127,7 @@
         fields.conversation.value = selected.conversation_id;
         options(fields.turn, filtered.filter(t=>t.conversation_id===selected.conversation_id).sort((a,b)=>a.turn-b.turn).map(t=>[t.task_id, `Turn ${t.turn} · ${t.answerability.join(', ')}`]), selected.task_id);
         const chips = node('div',undefined,'mv-chips');
-        [domain(selected), `Turn ${selected.turn}`, ...selected.answerability, ...selected.multi_turn.filter(x=>x!=='N/A'), ...(human.evaluations[selected.task_id] ? ['Human-rated'] : [])].forEach(s=>chips.append(node('span',s)));
+        [domain(selected), `Turn ${selected.turn}`, ...selected.answerability, ...selected.multi_turn.filter(x=>x!=='N/A'), ...(human.evaluations[selected.task_id] ? ['AI answers available'] : ['No AI answers in this viewer'])].forEach(s=>chips.append(node('span',s)));
         taskBody.append(chips,node('h3',selected.input.at(-1).text,'mv-question'),node('p',`Task ID: ${selected.task_id}`,'mv-id'));
         renderPanel();
       }
@@ -154,18 +156,29 @@
           previous.forEach((m,i)=>panel.append(messageCard(`Turn ${Math.floor(i/2)+1} · ${m.speaker==='user'?'User':'Agent'}`,m.text)));
           return;
         }
+        if (tab==='answers') {
+          const evaluations=human.evaluations[task.task_id];
+          panel.append(node('p','Saved model outputs from the Reference evidence setting; no new answer is generated here. Changing Evidence setting does not change these outputs.','mv-help'));
+          if (!evaluations) {
+            panel.append(node('p','This task has a human-written reference answer, but no model output in the evaluation subset loaded by this viewer. AI answers are available for 159 of the 842 tasks.','mv-empty'));
+            const show=node('button','Show tasks with AI answers');show.type='button';
+            show.onclick=()=>{fields.rated.checked=true;applyFilters();};panel.append(show);return;
+          }
+          evaluations.filter(e=>e.model_id!=='reference').forEach(e=>panel.append(messageCard(e.model_id,e.response)));
+          return;
+        }
         if (tab==='reference') {
-          panel.append(node('p','Released reference answer.','mv-help'));
+          panel.append(node('p','Human-written reference answer from the dataset, not a generated model output.','mv-help'));
           task.targets.forEach((m,i)=>panel.append(messageCard(`Reference ${i+1}`,m.text)));
           return;
         }
         if (tab==='human') {
           const evaluations=human.evaluations[task.task_id];
           panel.append(node('p','Ratings for the Reference setting.','mv-help'));
-          if (!evaluations) { panel.append(node('p','No human ratings for this task. Use “Human-rated tasks only” to filter.','mv-empty'));return; }
+          if (!evaluations) { panel.append(node('p','No human ratings for this task. Use “Tasks with AI answers only (159)” to filter.','mv-empty'));return; }
           for (const e of evaluations) {
             const details=node('details',undefined,'mv-rating');details.open=true;
-            details.append(node('summary',e.model_id));details.append(messageCard('Candidate response',e.response));
+            details.append(node('summary',e.model_id==='reference'?'Human-written reference':e.model_id));
             const table=node('table');const head=node('thead');const tr=node('tr');
             ['Metric','Individual ratings','n','Scale'].forEach(x=>{const th=node('th',x);th.scope='col';tr.append(th);});head.append(tr);table.append(head);
             const body=node('tbody');
