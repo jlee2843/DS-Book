@@ -1294,3 +1294,8 @@ html.ds-monochrome .myst-primary-sidebar-toc .collapsible-content { width:auto; 
 html.ds-monochrome .myst-primary-sidebar-toc .myst-toc-item { max-width:100%; }
 html.ds-monochrome .myst-primary-sidebar-toc .myst-toc-item > a { min-width:0; overflow-wrap:anywhere; }
 html.ds-monochrome .myst-primary-sidebar-toc .collapsible-content a { width:auto; max-width:100%; }
+
+/* A folder has one hover/selection surface, shared by its label and chevron. */
+html.ds-monochrome .myst-primary-sidebar-toc div.myst-toc-item > :is(a,button) { background:transparent!important; }
+html.ds-monochrome .myst-primary-sidebar-toc div.myst-toc-item:has(> a.font-semibold),
+html.ds-monochrome .myst-primary-sidebar-toc div.myst-toc-item:has(> a[aria-current="page"]) { background:var(--ds-selected); }

@@ -139,3 +139,11 @@
  function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
  new MutationObserver(schedule).observe(document,{childList:true,subtree:true});schedule();
 })();
+
+/* Suppress native tooltips that only repeat the visible navigation label. */
+(() => {
+ let queued=false;
+ function update(){queued=false;document.querySelectorAll('.myst-primary-sidebar-toc a[title]').forEach(a=>{if(a.title.trim()===a.textContent.trim())a.removeAttribute('title');});}
+ function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
+ new MutationObserver(schedule).observe(document,{childList:true,subtree:true,attributes:true,attributeFilter:['title']});schedule();
+})();
