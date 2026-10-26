@@ -9,7 +9,9 @@ replacements = {}
 # Version the whole module graph so cached importers cannot load old chunks.
 install(root)
 modules = [p for p in root.rglob('*.js') if '.reader-' not in p.name and '.sections-' not in p.name]
-release = hashlib.sha256(b''.join(p.read_bytes() for p in sorted(modules))).hexdigest()[:16]
+# CSS references are embedded in the module graph, so CSS changes must also
+# invalidate JavaScript importers held by open browser tabs.
+release = hashlib.sha256((root / 'myst-theme.css').read_bytes() + b''.join(p.read_bytes() for p in sorted(modules))).hexdigest()[:16]
 for asset in modules:
     name = f'{asset.stem}.reader-{release}.js'
     asset.with_name(name).write_bytes(asset.read_bytes())

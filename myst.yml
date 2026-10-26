@@ -8,6 +8,7 @@ project:
     - file: notes/Basic.ipynb
     - file: notes/Preprocessing.ipynb
       title: Preprocessing
+    file: notes/Learning/Foundations.ipynb
   - title: Classification
     children:
     - file: notes/Logistic-regression.ipynb
@@ -24,105 +25,116 @@ project:
       title: Boosting
     - file: notes/SVM.ipynb
       title: SVM
+    file: notes/Learning/Classification.ipynb
   - title: Regression
     children:
-    - file: notes/Regression/Predictive-Modelling.ipynb
-      title: "Predictive Modelling"
+    - file: notes/Learning/Predictive-Modelling-Topics.ipynb
+      title: Predictive Modelling
       children:
+      - file: notes/Regression/Predictive-Modelling.ipynb
+        title: Predictive Modelling
       - file: notes/Regression/Prediction-Error.ipynb
-        title: "Prediction Error & Bias-Variance"
+        title: Prediction Error & Bias-Variance
       - file: notes/Regression/Optimism-and-Complexity.ipynb
-        title: "Optimism & Model Complexity"
+        title: Optimism & Model Complexity
       - file: notes/Regression/Cross-Validation.ipynb
-        title: "Cross-Validation"
+        title: Cross-Validation
       - file: notes/Regression/LOO-and-GCV.ipynb
-        title: "LOO & Generalized Cross-Validation"
-    - file: notes/Regression/Regularization-and-Penalized-Regression.ipynb
-      title: "Regularization & Penalized Regression"
+        title: LOO & Generalized Cross-Validation
+    - file: notes/Learning/Regularization-and-Penalized-Regression-Topics.ipynb
+      title: Regularization & Penalized Regression
       children:
+      - file: notes/Regression/Regularization-and-Penalized-Regression.ipynb
+        title: Regularization & Penalized Regression
       - file: notes/Regression/Least-Squares.ipynb
-        title: "Least Squares & Projection"
+        title: Least Squares & Projection
       - file: notes/Regression/Spectral-Analysis.ipynb
-        title: "Spectral Analysis & Collinearity"
+        title: Spectral Analysis & Collinearity
       - file: notes/Regression/Ridge-Regression.ipynb
-        title: "Ridge Regression"
+        title: Ridge Regression
       - file: notes/Regression/Ridge-Tuning.ipynb
-        title: "Ridge Tuning & GCV"
-    - file: notes/Regression/NonlinearRegression.ipynb
-      title: "Nonlinear Regression"
+        title: Ridge Tuning & GCV
+    - file: notes/Learning/NonlinearRegression-Topics.ipynb
+      title: Nonlinear Regression
       children:
+      - file: notes/Regression/NonlinearRegression.ipynb
+        title: Nonlinear Regression
       - file: notes/Regression/FunctionSpaces.ipynb
-        title: "Function Spaces and Kernels"
+        title: Function Spaces and Kernels
       - file: notes/Regression/SplineBases.ipynb
-        title: "Spline Bases"
+        title: Spline Bases
       - file: notes/Regression/PenalizedSplines.ipynb
-        title: "Penalized Splines"
+        title: Penalized Splines
       - file: notes/Regression/SplineTuning.ipynb
-        title: "Spline Tuning and Uncertainty"
-    - file: notes/Regression/SparseRegression.ipynb
-      title: "Sparse Regression and Trees"
+        title: Spline Tuning and Uncertainty
+    - file: notes/Learning/SparseRegression-Topics.ipynb
+      title: Sparse Regression and Trees
       children:
+      - file: notes/Regression/SparseRegression.ipynb
+        title: Sparse Regression and Trees
       - file: notes/Regression/Lasso.ipynb
-        title: "LASSO"
+        title: LASSO
       - file: notes/Regression/CoordinateDescent.ipynb
-        title: "Coordinate Descent"
+        title: Coordinate Descent
       - file: notes/Regression/LassoPaths.ipynb
-        title: "Solution Paths and Selection"
+        title: Solution Paths and Selection
       - file: notes/Regression/RegressionTrees.ipynb
-        title: "Regression Trees"
+        title: Regression Trees
       - file: notes/Regression/RegressionDiagnostics.ipynb
-        title: "Reading Model Results"
+        title: Reading Model Results
+    file: notes/Learning/Regression.ipynb
   - title: Statistical Experiments
     children:
     - file: notes/Statistical-Experiments/Design-and-Comparisons.ipynb
-      title: "Design & Mean Comparisons"
+      title: Design & Mean Comparisons
       children:
       - file: notes/Statistical-Experiments/Experimental-Design.ipynb
-        title: "Experimental Design"
+        title: Experimental Design
       - file: notes/Statistical-Experiments/Two-Group-Comparisons.ipynb
-        title: "Two-Group Comparisons"
+        title: Two-Group Comparisons
       - file: notes/Statistical-Experiments/Paired-and-Randomization-Tests.ipynb
-        title: "Paired & Randomization Tests"
+        title: Paired & Randomization Tests
       - file: notes/Statistical-Experiments/One-Way-ANOVA.ipynb
-        title: "One-Way ANOVA"
+        title: One-Way ANOVA
       - file: notes/Statistical-Experiments/Contrasts-and-Multiple-Comparisons.ipynb
-        title: "Contrasts & Multiple Comparisons"
+        title: Contrasts & Multiple Comparisons
     - file: notes/Statistical-Experiments/Blocking-and-Nuisance-Variation.ipynb
-      title: "Blocking & Nuisance Variation"
+      title: Blocking & Nuisance Variation
       children:
       - file: notes/Statistical-Experiments/Blocking-Designs.ipynb
-        title: "Blocking Designs"
+        title: Blocking Designs
       - file: notes/Statistical-Experiments/Blocking-Factorials.ipynb
-        title: "Blocking Factorial Experiments"
+        title: Blocking Factorial Experiments
     - file: notes/Statistical-Experiments/Factorials-and-Screening.ipynb
-      title: "Factorials & Screening"
+      title: Factorials & Screening
       children:
       - file: notes/Statistical-Experiments/Factorial-Experiments.ipynb
-        title: "Factorial Experiments & Interaction"
+        title: Factorial Experiments & Interaction
       - file: notes/Statistical-Experiments/Two-Level-Factorials.ipynb
-        title: "Two-Level Factorial Designs"
+        title: Two-Level Factorial Designs
       - file: notes/Statistical-Experiments/Fractional-Factorials.ipynb
-        title: "Fractional Factorial Designs"
+        title: Fractional Factorial Designs
       - file: notes/Statistical-Experiments/Saturated-Designs-and-Foldovers.ipynb
-        title: "Saturated Designs & Foldovers"
+        title: Saturated Designs & Foldovers
     - file: notes/Statistical-Experiments/Response-Surfaces-and-Optimization.ipynb
-      title: "Response Surfaces & Optimization"
+      title: Response Surfaces & Optimization
       children:
       - file: notes/Statistical-Experiments/Center-Points-and-Curvature.ipynb
-        title: "Center Points & Curvature"
+        title: Center Points & Curvature
       - file: notes/Statistical-Experiments/Response-Surfaces-and-Steepest-Ascent.ipynb
-        title: "Response Surfaces & Steepest Ascent"
+        title: Response Surfaces & Steepest Ascent
       - file: notes/Statistical-Experiments/Quadratic-Response-Surfaces.ipynb
-        title: "Quadratic Response Surfaces"
+        title: Quadratic Response Surfaces
       - file: notes/Statistical-Experiments/Robust-Parameter-Design.ipynb
-        title: "Robust Parameter Design"
+        title: Robust Parameter Design
     - file: notes/Statistical-Experiments/Random-Effects-and-Hierarchies.ipynb
-      title: "Random Effects & Hierarchies"
+      title: Random Effects & Hierarchies
       children:
       - file: notes/Statistical-Experiments/Random-Effects-and-Mixed-Models.ipynb
-        title: "Random Effects & Mixed Models"
+        title: Random Effects & Mixed Models
       - file: notes/Statistical-Experiments/Nested-Designs.ipynb
-        title: "Nested Designs"
+        title: Nested Designs
+    file: notes/Learning/Statistical-Experiments.ipynb
   - file: notes/Proposal.ipynb
     title: Proposal
   - title: Data
