@@ -766,9 +766,9 @@ html.ds-monochrome .article.content > div:has(> .myst-outline-section) { display
 .article.content .home-profile { border-bottom:2px solid var(--ds-ink); padding-bottom:28px; margin-bottom:12px; }
 .article.content .home-profile { display:flex; align-items:center; gap:28px; }
 .article.content .home-profile-copy { flex:1; min-width:0; }
-.article.content .home-profile .home-profile-avatar img { width:128px!important; height:128px!important; max-width:none!important; flex:none; border-radius:50%; object-fit:cover; margin:0!important; padding:0; image-rendering:pixelated; }
+.article.content .home-profile :is(img.home-profile-avatar, .home-profile-avatar img) { width:128px!important; height:128px!important; max-width:none!important; flex:none; border-radius:50%; object-fit:cover; margin:0!important; padding:0; image-rendering:pixelated; }
 .article.content .home-profile > .home-profile-avatar { order:2; flex:0 0 128px; margin:0; padding:0; background:none; border:0; }
-@media(max-width:600px){.article.content .home-profile{gap:18px;align-items:flex-start}.article.content .home-profile .home-profile-avatar img{width:80px!important;height:80px!important}.article.content .home-profile > .home-profile-avatar{flex-basis:80px}}
+@media(max-width:600px){.article.content .home-profile{gap:18px;align-items:flex-start}.article.content .home-profile :is(img.home-profile-avatar, .home-profile-avatar img){width:80px!important;height:80px!important}.article.content .home-profile > .home-profile-avatar{flex-basis:80px}}
 .article.content .home-profile-links a { text-decoration:none; border-bottom:1px solid var(--ds-line); padding-bottom:4px; }
 .article.content .home-profile-links a:hover { border-color:var(--ds-ink); }
 @media print{.ds-document-toc{display:none}}
