@@ -1,3 +1,4 @@
+import shutil
 """Install the same Sections enhancement in MyST preview and published bundles.
 
 Preview: python3 scripts/install_sections.py --preview (after myst start).
@@ -11,7 +12,7 @@ import re
 MARKER = '\n/* DS_SECTIONS_ENHANCEMENT */\n'
 
 def install(root):
-    script = Path('styles/sections.js').read_text() + '\n' + Path('styles/mtrag-viewer.js').read_text() + '\n' + Path('styles/site-navigation.js').read_text()
+    script = Path('styles/page-routes.js').read_text() + '\n' + Path('styles/sections.js').read_text() + '\n' + Path('styles/mtrag-viewer.js').read_text() + '\n' + Path('styles/site-navigation.js').read_text() + '\n' + Path('styles/progress-viewer.js').read_text() + '\n' + Path('styles/question-variations-data.js').read_text() + '\n' + Path('styles/gemma-data.js').read_text() + '\n' + Path('styles/evaluation-data.js').read_text() + '\n' + Path('styles/evaluation-viewer.js').read_text()
     matches = []
     for path in root.rglob('*.js'):
         if 'node_modules' in path.parts:
@@ -31,7 +32,7 @@ if __name__ == '__main__':
     changed = install(root)
     if '--preview' in sys.argv:
         # Bust immutable development module caches, including SSR preload URLs.
-        version = hashlib.sha256(Path('styles/sections.js').read_bytes() + Path('styles/mtrag-viewer.js').read_bytes() + Path('styles/site-navigation.js').read_bytes()).hexdigest()[:12]
+        version = hashlib.sha256(Path('styles/sections.js').read_bytes() + Path('styles/mtrag-viewer.js').read_bytes() + Path('styles/site-navigation.js').read_bytes() + Path('styles/progress-viewer.js').read_bytes() + Path('styles/question-variations-data.js').read_bytes() + Path('styles/gemma-data.js').read_bytes() + Path('styles/evaluation-data.js').read_bytes() + Path('styles/evaluation-viewer.js').read_bytes()).hexdigest()[:12]
         targets = list(root.rglob('*.js')) + [root.parents[1] / 'build/index.js']
         names = {p.name for p in root.rglob('*.js')}
         pattern = re.compile(r'([\w$.-]+\.js)(?:\?sections=[a-f0-9]+)?')

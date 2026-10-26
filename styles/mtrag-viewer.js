@@ -39,7 +39,7 @@
     const status = node('p', 'Loading data…', 'mv-status');
     status.setAttribute('role', 'status');
     root.append(status, app, source);
-    let tasks, human, selected, filtered = [], tab = 'answers', sequence = 0, currentEvidence = null;
+    let tasks, human, selected, filtered = [], tab = 'human', sequence = 0, currentEvidence = null;
     async function start() {
       status.textContent = 'Loading data…';
       try {
@@ -55,35 +55,36 @@
     }
     function setup() {
       app.innerHTML = `
-        <p class="mv-help">Choose a conversation and turn, then compare AI answers with the human-written reference. Saved model answers and human ratings are available for 159 of 842 tasks.</p>
+        <p class="mv-help">Read the complete conversation and select a turn to inspect its evidence, saved responses and human annotations. The selected turn is highlighted below.</p>
         <div class="mv-filter-grid">
           <label class="mv-search">Search questions, history or ID<input type="search" placeholder="e.g. cloud, interest rate, Cardinals" data-field="search"></label>
           <label>Collection<select data-field="collection"><option value="">All collections</option><option>ClapNQ</option><option>Cloud</option><option>FiQA</option><option>Govt</option></select></label>
           <label>Answerability<select data-field="answerability"><option value="">All labels</option><option>ANSWERABLE</option><option>PARTIAL</option><option>UNANSWERABLE</option><option>CONVERSATIONAL</option></select></label>
         </div>
-        <div class="mv-filter-footer"><label class="mv-check"><input type="checkbox" data-field="rated"> Tasks with AI answers only (159)</label><button type="button" data-action="reset">Reset filters</button></div>
+        <div class="mv-filter-grid"><label>Human Evaluation<select data-field="rated"><option value="">All tasks</option><option value="yes">With human evaluation (159)</option><option value="no">Without human evaluation</option></select></label><label>Conversation role<select data-field="multi"><option value="">All turns</option><option>Follow-up</option><option>Clarification</option><option>N/A</option></select></label><label>Question type<select data-field="question"><option value="">All question types</option></select></label></div><div class="mv-filter-footer"><button type="button" data-action="reset">Reset filters</button></div>
         <p class="mv-results" role="status" aria-live="polite"></p>
         <div class="mv-selection-grid">
           <label>Conversation<select data-field="conversation"></select></label>
-          <label>Turn<select data-field="turn"></select></label>
         </div>
         <div class="mv-navigation"><button type="button" data-action="prev">← Previous match</button><span class="mv-position"></span><button type="button" data-action="next">Next match →</button></div>
         <div class="mv-task"></div>
-        <div class="mv-settings"><label>Evidence setting<select data-field="setting"><option value="reference">Reference · 842 tasks</option><option value="rag">Full RAG · 842 tasks</option><option value="reference-rag">Reference + RAG · 436 tasks</option></select></label><button type="button" data-action="download">Download task JSON</button></div>
+        <div class="mv-settings"><label>Documents supplied for this question<select data-field="setting"><option value="reference">Selected reference documents</option><option value="rag">Retrieved documents (RAG)</option><option value="reference-rag">Reference + retrieved documents</option></select></label><button type="button" data-action="download">Download task JSON</button></div>
         <div class="mv-tabs" role="tablist" aria-label="Task details">
-          <button type="button" role="tab" id="mv-tab-answers" aria-controls="mv-panel" data-tab="answers">AI answers</button>
-          <button type="button" role="tab" id="mv-tab-evidence" aria-controls="mv-panel" data-tab="evidence">Evidence</button>
-          <button type="button" role="tab" id="mv-tab-history" aria-controls="mv-panel" data-tab="history">Conversation history</button>
-          <button type="button" role="tab" id="mv-tab-reference" aria-controls="mv-panel" data-tab="reference">Human-written reference</button>
-          <button type="button" role="tab" id="mv-tab-human" aria-controls="mv-panel" data-tab="human">Human ratings</button>
+          <button type="button" role="tab" id="mv-tab-evidence" aria-controls="mv-panel" data-tab="evidence">Supporting documents</button>
+          <button type="button" role="tab" id="mv-tab-human" aria-controls="mv-panel" data-tab="human">Human Evaluation</button>
         </div>
         <div class="mv-panel" id="mv-panel" role="tabpanel" tabindex="0"></div>`;
       const fields = Object.fromEntries([...app.querySelectorAll('[data-field]')].map(el => [el.dataset.field, el]));
-      const action = name => app.querySelector(`[data-action="${name}"]`);
+      const action = name => app.querySelector(`[data-action="${name}"]`) || settings.querySelector(`[data-action="${name}"]`);
       const panel = app.querySelector('.mv-panel');
+      const tablist=app.querySelector('.mv-tabs');
       const taskBody = app.querySelector('.mv-task');
+      const settings=app.querySelector('.mv-settings');settings.remove();
       const results = app.querySelector('.mv-results');
       const tabs = [...app.querySelectorAll('[data-tab]')];
+      const annotators=[...new Set(Object.values(human.evaluations).flatMap(es=>es.flatMap(e=>Object.values(e.annotator_ratings||{}).flatMap(r=>Object.keys(r)))))].sort();
+      const raterName=id=>`Annotator ${annotators.indexOf(id)+1}`;
+      [...new Set(tasks.flatMap(t=>t.question_type))].sort().forEach(q=>{const o=node('option',q);o.value=q;fields.question.append(o);});
       const indexed = tasks.map(t => ({task:t, text:[t.task_id, ...t.input.map(m=>m.text)].join(' ').toLowerCase()}));
       function updateURL() {
         const url = new URL(location.href);
@@ -101,16 +102,17 @@
         filtered = indexed.filter(({task:t, text}) => (!query || text.includes(query)) &&
           (!fields.collection.value || domain(t) === fields.collection.value) &&
           (!fields.answerability.value || t.answerability.includes(fields.answerability.value)) &&
-          (!fields.rated.checked || human.evaluations[t.task_id])).map(x=>x.task);
+          (!fields.rated.value || Boolean(human.evaluations[t.task_id])===(fields.rated.value==='yes')) &&
+          (!fields.multi.value || t.multi_turn.includes(fields.multi.value)) &&
+          (!fields.question.value || t.question_type.includes(fields.question.value))).map(x=>x.task);
         selected = filtered.find(t => t.task_id === preferred) || filtered[0];
         const groups = new Map();
         for (const t of filtered) if (!groups.has(t.conversation_id)) groups.set(t.conversation_id, t);
         options(fields.conversation, [...groups].map(([id,t]) => [id, `${domain(t)} · ${id.slice(0,8)} · ${tasks.find(x=>x.conversation_id===id).input[0].text.slice(0,75)}`]), selected?.conversation_id);
         results.textContent = `${filtered.length} of 842 tasks · ${groups.size} conversations match`;
         const empty = !selected;
-        for (const el of [fields.conversation, fields.turn, fields.setting, action('download')]) el.disabled = empty;
-        app.querySelector('.mv-settings').hidden = empty;
-        app.querySelector('.mv-tabs').hidden = empty;
+        for (const el of [fields.conversation, fields.setting, action('download')]) el.disabled = empty;
+        tablist.hidden = empty;
         renderTask();
       }
       function renderTask() {
@@ -119,16 +121,50 @@
         action('prev').disabled = index <= 0;
         action('next').disabled = index < 0 || index >= filtered.length - 1;
         app.querySelector('.mv-position').textContent = selected ? `${index+1} / ${filtered.length}` : '0 matches';
+        tablist.remove();panel.remove();
         taskBody.replaceChildren();
         if (!selected) {
-          options(fields.turn, []); panel.replaceChildren(node('p','No matching tasks. Change the search or reset filters.', 'mv-empty'));
-          sequence++; return;
+          panel.replaceChildren(node('p','No matching tasks. Change the search or reset filters.', 'mv-empty'));
+          taskBody.append(panel);sequence++; return;
         }
         fields.conversation.value = selected.conversation_id;
-        options(fields.turn, filtered.filter(t=>t.conversation_id===selected.conversation_id).sort((a,b)=>a.turn-b.turn).map(t=>[t.task_id, `Turn ${t.turn} · ${t.answerability.join(', ')}`]), selected.task_id);
-        const chips = node('div',undefined,'mv-chips');
-        [domain(selected), `Turn ${selected.turn}`, ...selected.answerability, ...selected.multi_turn.filter(x=>x!=='N/A'), ...(human.evaluations[selected.task_id] ? ['AI answers available'] : ['No AI answers in this viewer'])].forEach(s=>chips.append(node('span',s)));
-        taskBody.append(chips,node('h3',selected.input.at(-1).text,'mv-question'),node('p',`Task ID: ${selected.task_id}`,'mv-id'));
+        const conversation=tasks.filter(t=>t.conversation_id===selected.conversation_id).sort((a,b)=>a.turn-b.turn);
+        const fullInput=conversation.at(-1).input;
+        const timeline=node('div',undefined,'mv-conversation');
+
+        conversation.forEach(t=>{
+          const active=t.task_id===selected.task_id;
+          const item=node('section',undefined,'mv-conversation-turn'+(active?' is-current':''));
+          const button=node('button',`Turn ${t.turn}${active?' · Selected':''}`,'mv-turn-select');button.type='button';button.setAttribute('aria-pressed',String(active));
+          const selectTurn=()=>{selected=t;renderTask();};
+          button.onclick=event=>{event.stopPropagation();selectTurn();};
+          item.addEventListener('click',event=>{if(event.target.closest('a,button,input,select,summary,.mv-panel,.mv-response-options')||window.getSelection()?.toString())return;selectTurn();});
+
+          const labels=node('div',undefined,'mv-chips');[...t.answerability,...t.question_type,...t.multi_turn.filter(x=>x!=='N/A')].forEach(v=>labels.append(node('span',v)));
+          item.append(button,labels,messageCard('User',t.input.at(-1).text));
+          const reply=fullInput[2*t.turn-1];
+          const responses=node('div',undefined,'mv-response-options');
+          const evaluations=human.evaluations[t.task_id]||[];
+          const reference=evaluations.find(e=>e.model_id==='reference');
+          const referenceText=reference?.response || t.targets.map(m=>m.text).join('\n\n');
+          const responseTabs=node('div',undefined,'mv-response-tabs');responseTabs.setAttribute('role','tablist');responseTabs.setAttribute('aria-label',`Turn ${t.turn} responses`);
+          const responseBody=node('div',undefined,'mv-response-body');responseBody.setAttribute('role','tabpanel');
+          responses.append(responseTabs,responseBody);
+          function responseCard(label,text,note){
+            const choice=node('button',label);choice.type='button';choice.setAttribute('role','tab');
+            const choose=()=>{[...responseTabs.children].forEach(x=>x.setAttribute('aria-selected',String(x===choice)));responseBody.replaceChildren(node('div',text,'mv-text'));};
+            choice.onclick=event=>{event.stopPropagation();choose();};responseTabs.append(choice);
+            if(responseTabs.children.length===1)choose();else choice.setAttribute('aria-selected','false');
+          }
+          responseCard('Reference · human-reviewed',referenceText,'Dataset comparison answer, prepared with model assistance and human review.');
+          if(reply && reply.text!==referenceText)responseCard(reply.model||'Conversation response',''+reply.text,'Response recorded in the original conversation; it may differ from the reviewed reference.');
+          evaluations.filter(e=>e.model_id!=='reference').forEach(e=>responseCard(e.model_id,e.response,'Answer to this same question, generated using reference documents.'));
+          item.append(responses);
+          if(!evaluations.length){['llama-3.1-405b-instruct','gpt-4o'].forEach(label=>{const missing=node('button',label+' · unavailable');missing.type='button';missing.disabled=true;responseTabs.append(missing);});item.append(node('p','Only the reference answer is released for this turn. Llama and GPT-4o answers are available on tasks with human evaluation.','mv-help'));}
+          if(active)item.append(tablist,panel);
+          timeline.append(item);
+        });
+        taskBody.append(timeline);
         renderPanel();
       }
       async function evidenceFor(task, setting) {
@@ -147,62 +183,48 @@
         tabs.forEach(button=>{ const active=button.dataset.tab===tab;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1; });
         panel.setAttribute('aria-labelledby', `mv-tab-${tab}`);
         panel.replaceChildren();
+
         panel.removeAttribute('aria-busy');
         currentEvidence=null;
-        if (tab==='history') {
-          const previous=task.input.slice(0,-1);
-          panel.append(node('p',`${previous.length} earlier messages`, 'mv-help'));
-          if (!previous.length) panel.append(node('p','First turn; no earlier messages.','mv-empty'));
-          previous.forEach((m,i)=>panel.append(messageCard(`Turn ${Math.floor(i/2)+1} · ${m.speaker==='user'?'User':'Agent'}`,m.text)));
-          return;
-        }
-        if (tab==='answers') {
-          const evaluations=human.evaluations[task.task_id];
-          panel.append(node('p','Saved model outputs from the Reference evidence setting; no new answer is generated here. Changing Evidence setting does not change these outputs.','mv-help'));
-          if (!evaluations) {
-            panel.append(node('p','This task has a human-written reference answer, but no model output in the evaluation subset loaded by this viewer. AI answers are available for 159 of the 842 tasks.','mv-empty'));
-            const show=node('button','Show tasks with AI answers');show.type='button';
-            show.onclick=()=>{fields.rated.checked=true;applyFilters();};panel.append(show);return;
-          }
-          evaluations.filter(e=>e.model_id!=='reference').forEach(e=>panel.append(messageCard(e.model_id,e.response)));
-          return;
-        }
-        if (tab==='reference') {
-          panel.append(node('p','Human-written reference answer from the dataset, not a generated model output.','mv-help'));
-          task.targets.forEach((m,i)=>panel.append(messageCard(`Reference ${i+1}`,m.text)));
-          return;
-        }
         if (tab==='human') {
           const evaluations=human.evaluations[task.task_id];
-          panel.append(node('p','Ratings for the Reference setting.','mv-help'));
-          if (!evaluations) { panel.append(node('p','No human ratings for this task. Use “Tasks with AI answers only (159)” to filter.','mv-empty'));return; }
+          panel.append(node('p',`This release contains ${annotators.length} distinct evaluator IDs. Each response has ratings from three evaluators. Annotator 2, 5 or 6 identifies a person’s evaluator ID, not a score or a count. The same number always refers to the same evaluator in this viewer; names are not provided.`,'mv-help'));
+          panel.append(messageCard('Rating scales','Naturalness, Appropriateness, Completeness and Faithfulness: 1 = No, 2 = Mostly No, 3 = Mostly Yes, 4 = Yes. Pairwise preference rate: 0–100, showing how often this response was preferred over other responses to the same question. Head-to-head means comparing two responses at a time; it is not factual accuracy. Missing means no rating was recorded.'));
+          if (!evaluations) { panel.append(node('p','No human ratings for this task. Choose “With human evaluation” in the filter.','mv-empty'));return; }
           for (const e of evaluations) {
             const details=node('details',undefined,'mv-rating');details.open=true;
-            details.append(node('summary',e.model_id==='reference'?'Human-written reference':e.model_id));
+            details.append(node('summary',e.model_id==='reference'?'Reference answer':e.model_id));
             const table=node('table');const head=node('thead');const tr=node('tr');
-            ['Metric','Individual ratings','n','Scale'].forEach(x=>{const th=node('th',x);th.scope='col';tr.append(th);});head.append(tr);table.append(head);
+            details.append(messageCard('Response being rated',e.response));
+            const ids=[...new Set(Object.values(e.annotator_ratings||{}).flatMap(r=>Object.keys(r)))].sort();
+            ['Metric',...ids.map(raterName)].forEach(x=>{const th=node('th',x);th.scope='col';tr.append(th);});head.append(tr);table.append(head);
             const body=node('tbody');
-            for (const m of human.metrics) { const row=node('tr');const values=e.ratings[m.name]||[];
-              [m.display_name, values.length?values.join(' · '):'Missing',String(values.length),m.name==='win-rate'?'0–100':'1–4'].forEach(x=>row.append(node('td',x)));body.append(row);
+            for (const m of human.metrics) { const row=node('tr');const values=e.annotator_ratings?.[m.name]||{};
+              [m.name==='win-rate'?'Pairwise preference (%)':m.display_name, ...ids.map(id=>values[id]===undefined?'Missing':String(values[id]))].forEach(x=>row.append(node('td',x)));body.append(row);
             }
             table.append(body);const wrap=node('div',undefined,'mv-table-wrap');wrap.append(table);details.append(wrap);panel.append(details);
           }
-          panel.append(node('p','Rating order does not identify the same rater across metrics.','mv-help'));
+          panel.append(node('p','Each column follows the same annotator across all metrics and responses. Different annotator labels mean different evaluator IDs.','mv-help'));
           return;
         }
-        panel.textContent='Loading passages…';panel.setAttribute('aria-busy','true');
+        panel.append(node('h4','Supporting documents for the selected question'),settings,node('p','These document excerpts were supplied for this question. Choose reference documents, search results, or a mixture of both.','mv-help'));
+        const loading=node('p','Loading passages…');panel.append(loading);panel.setAttribute('aria-busy','true');
         try {
           const evidence=await evidenceFor(task,setting);
           if (run!==sequence || !root.isConnected) return;
-          currentEvidence=evidence;panel.replaceChildren();
-          if (evidence===null) {panel.append(node('p','Not in the Reference + RAG subset. Choose Reference or Full RAG.','mv-empty'));return;}
-          panel.append(node('p',`${evidence.length} passages · ${fields.setting.selectedOptions[0].textContent.split(' · ')[0]}`,'mv-help'));
+          currentEvidence=evidence;loading.remove();
+          if (evidence===null) {panel.append(node('p','This question has no mixed document set. Choose selected reference documents or retrieved documents (RAG).','mv-empty'));return;}
+          panel.append(node('p',`${evidence.length} document excerpts supplied for this question`,'mv-help'));
           if (!evidence.length) panel.append(node('p','No reference passages. This task is labeled unanswerable or conversational.','mv-empty'));
           evidence.forEach((p,i)=>{
             const details=node('details',undefined,'mv-passage');details.open=i===0;
-            details.append(node('summary',`${i+1}. ${p.title || p.document_id}`));
-            details.append(node('p',`Passage ID: ${p.document_id}`,'mv-id'));
-            if (p.score!==undefined) details.append(node('p',`Retrieval score: ${p.score} · retriever output`,'mv-help'));
+            details.append(node('summary',`Document ${i+1} · ${p.title||p.text.split('\n').find(x=>x.trim())?.slice(0,100)||p.document_id}`));
+            const metadata=node('details',undefined,'mv-document-metadata');metadata.append(node('summary','Document metadata'));
+            details.append(node('p',`Source: ${domain(task)} · Document excerpt`,'mv-help'),node('p',`Document / passage ID: ${p.document_id}`,'mv-id'));
+            details.append(node('p','Original file name: not provided in this dataset.','mv-help'));
+            if(p.url){const link=node('a','Original source ↗');link.href=p.url;link.target='_blank';link.rel='noopener noreferrer';details.append(link);}
+            if(p.score!==undefined)metadata.append(node('p',`Search relevance score: ${p.score}. This is not an answer-quality score.`,'mv-help'));
+            details.append(metadata);
             details.append(node('div',p.text,'mv-text'));panel.append(details);
           });
         } catch(error) {
@@ -213,13 +235,12 @@
       }
       let timer;
       fields.search.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>applyFilters(selected?.task_id),160);});
-      [fields.collection,fields.answerability,fields.rated].forEach(el=>el.addEventListener('change',()=>applyFilters(selected?.task_id)));
+      [fields.collection,fields.answerability,fields.rated,fields.multi,fields.question].forEach(el=>el.addEventListener('change',()=>applyFilters(selected?.task_id)));
       fields.conversation.addEventListener('change',()=>{selected=filtered.find(t=>t.conversation_id===fields.conversation.value);renderTask();});
-      fields.turn.addEventListener('change',()=>{selected=filtered.find(t=>t.task_id===fields.turn.value);renderTask();});
       fields.setting.addEventListener('change',renderPanel);
       action('prev').onclick=()=>{selected=filtered[filtered.indexOf(selected)-1];renderTask();};
       action('next').onclick=()=>{selected=filtered[filtered.indexOf(selected)+1];renderTask();};
-      action('reset').onclick=()=>{clearTimeout(timer);fields.search.value='';fields.collection.value='';fields.answerability.value='';fields.rated.checked=false;applyFilters();};
+      action('reset').onclick=()=>{clearTimeout(timer);fields.search.value='';fields.collection.value='';fields.answerability.value='';fields.rated.value='';fields.multi.value='';fields.question.value='';applyFilters();};
       for(const button of tabs) button.onclick=()=>{tab=button.dataset.tab;renderPanel();};
       app.querySelector('.mv-tabs').addEventListener('keydown',event=>{
         const idx=tabs.indexOf(document.activeElement); if(idx<0)return;

@@ -1,0 +1,2 @@
+Method: built-in image_gen editing.
+Prompt: Revise the monochrome pixel rabbit avatar using the original as character reference. Show TWO complete long upright ears above the head. Zoom out so entire ears, head and leaf fit inside a circular avatar with outer padding. Preserve face expression and leaf pose. Black white gray pixel art, square canvas, light gray background. No text. Do not crop ear tips.

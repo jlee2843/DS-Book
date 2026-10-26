@@ -1,0 +1,3 @@
+Source: /Users/jennylee/Downloads/usagi2.jpeg
+Method: built-in image_gen image editing; displayed with a circular CSS mask.
+Prompt: Edit this image for a small personal website avatar. Preserve this exact rabbit's face, expression, pose and leaf; crop to the upper image so ALL Korean lettering and all bottom captions are excluded. Convert to black, white and gray only and pixelate into crisp square pixel art, approximately 80x80 logical pixels, nearest-neighbor enlarged. Square image composed for circular cropping: rabbit face centered and clearly visible, with leaf at lower right. Plain light-gray background. No text, no letters, no additional objects. Maintain recognizable source illustration, not a redesigned character.

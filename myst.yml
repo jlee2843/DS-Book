@@ -137,6 +137,18 @@ project:
     file: notes/Learning/Statistical-Experiments.ipynb
   - file: notes/Proposal.ipynb
     title: Proposal
+  - file: notes/Literature-Review.ipynb
+    hidden: true
+    title: Literature Review
+    children:
+    - file: notes/Literature/Reliable-Decision-Support-with-LLMs.ipynb
+      hidden: true
+      title: Reliable decision support with LLMs
+  - file: notes/Progress.ipynb
+    title: Progress
+    children:
+    - file: notes/Progress/Progress-1.ipynb
+      title: "1"
   - title: Data
     children:
     - title: MTRAG
@@ -145,6 +157,11 @@ project:
         title: Data Viewer
       - file: notes/MTRAG-Inspection.ipynb
         title: Dataset Guide
+      file: notes/MTRAG.ipynb
+    - file: notes/LLM-Consistency-Data.ipynb
+      hidden: true
+      title: LLM Consistency
+    file: notes/Data.ipynb
   substitutions:
     build_date: '2026-05-04'
 site:

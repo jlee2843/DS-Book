@@ -15,9 +15,9 @@ def build(source, output):
             return [json.loads(line) for line in p.read_text().splitlines() if line.strip()]
         return json.loads(p.read_text())
     def passages(items):
-        return [{k: p[k] for k in ('document_id', 'text', 'title', 'score') if k in p} for p in items]
+        return [{k: p[k] for k in ('document_id', 'text', 'title', 'score', 'url') if k in p} for p in items]
     def messages(items):
-        return [{k: m[k] for k in ('speaker', 'text')} for m in items]
+        return [{**{k: m[k] for k in ('speaker', 'text')}, **({'model': m.get('metadata', {}).get('author_id')} if m.get('metadata', {}).get('author_type') == 'model' else {})} for m in items]
     def save(name, data):
         (output / name).write_text(json.dumps({'commit': COMMIT, 'data': data}, ensure_ascii=False, separators=(',', ':')) + '\n')
     output.mkdir(parents=True, exist_ok=True)
@@ -38,7 +38,7 @@ def build(source, output):
     evaluations = {}
     for e in human['evaluations']:
         ratings = {m['name']: [a['value'] for a in e['annotations'].get(m['name'], {}).values() if a.get('value') is not None] for m in metrics}
-        evaluations.setdefault(e['task_id'], []).append({'model_id': e['model_id'], 'response': e['model_response'], 'ratings': ratings})
+        evaluations.setdefault(e['task_id'], []).append({'model_id': e['model_id'], 'response': e['model_response'], 'ratings': ratings, 'annotator_ratings': {m['name']: {key: a['value'] for key, a in e['annotations'].get(m['name'], {}).items() if a.get('value') is not None} for m in metrics}})
     assert len(evaluations) == 159 and sum(map(len, evaluations.values())) == 477
     save('human.json', {'metrics': [{'name':m['name'], 'display_name':m['display_name']} for m in metrics], 'evaluations': evaluations})
     print(f'Wrote {len(tasks)} tasks and {len(evaluations)} human-rated tasks to {output}')

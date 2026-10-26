@@ -11,7 +11,7 @@
     const home=document.querySelector('.myst-home-link');
     const base=home ? new URL(home.href).pathname.replace(/\/$/,'') : '/DS-Book';
     const nav=document.createElement('nav');nav.className='ds-site-navigation';nav.setAttribute('aria-label','Site navigation');
-    function link(label,path){const a=document.createElement('a');a.textContent=label;a.href=base+path;return a;}
+    function link(label,path){const a=document.createElement('a');a.textContent=label;a.href=path==='/'?base+'/':base+'/'+dsRoute(path)+'/';return a;}
     nav.append(link('Home','/'));
     function group(label,entries){
       const wrap=document.createElement('div');wrap.className='ds-nav-group';
@@ -35,8 +35,7 @@
     ]);
     group('Research',[
       ['Proposal','/proposal'],
-      ['MTRAG: Dataset guide','/mtrag-inspection'],
-      ['MTRAG: Data viewer','/mtrag-viewer']
+      ['Data','/data'], ['Progress','/progress']
     ]);
     const explore=document.querySelector('.myst-top-nav-menu-button');
     if(explore)explore.setAttribute('aria-label','Explore');
@@ -64,7 +63,7 @@
   const article=label.closest('.article.content');const heading=article?.querySelector('h1');
   if(!heading)return;
   const a=label.querySelector('a');const home=document.querySelector('.myst-home-link');
-  if(a&&!a.dataset.parentReady){const base=home?new URL(home.href).pathname.replace(/\/$/,''):'/DS-Book';a.href=base+(a.textContent.trim()==='Regression'?'/regression/':'/statistical-experiments/');a.dataset.parentReady='true';}
+  if(a&&!a.dataset.parentReady){const base=home?new URL(home.href).pathname.replace(/\/$/,''):'/DS-Book';a.href=base+'/'+dsRoute(a.textContent.trim()==='Regression'?'regression':'statistical-experiments')+'/';a.dataset.parentReady='true';}
   if(label.nextElementSibling!==heading)heading.before(label);
  });}
  function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
@@ -73,11 +72,11 @@
 
 /* Keep the subject and topic visible above individual note titles. */
 (() => {
- const paths={"basic": [["Foundations", "foundations"]], "preprocessing": [["Foundations", "foundations"]], "logistic-regression": [["Classification", "classification"]], "k-nn": [["Classification", "classification"]], "naive-bayes": [["Classification", "classification"]], "trees": [["Classification", "classification"]], "random-forest": [["Classification", "classification"]], "boosting": [["Classification", "classification"]], "svm": [["Classification", "classification"]], "predictive-modelling": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "prediction-error": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "optimism-and-complexity": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "cross-validation": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "loo-and-gcv": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "regularization-and-penalized-regression": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "least-squares": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "spectral-analysis": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "ridge-regression": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "ridge-tuning": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "nonlinearregression": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "functionspaces": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "splinebases": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "penalizedsplines": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "splinetuning": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "sparseregression": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "lasso": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "coordinatedescent": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "lassopaths": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "regressiontrees": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "regressiondiagnostics": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "experimental-design": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "two-group-comparisons": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "paired-and-randomization-tests": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "one-way-anova": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "contrasts-and-multiple-comparisons": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "blocking-designs": [["Statistical Experiments", "statistical-experiments"], ["Blocking & Nuisance Variation", "blocking-and-nuisance-variation"]], "blocking-factorials": [["Statistical Experiments", "statistical-experiments"], ["Blocking & Nuisance Variation", "blocking-and-nuisance-variation"]], "factorial-experiments": [["Statistical Experiments", "statistical-experiments"], ["Factorials & Screening", "factorials-and-screening"]], "two-level-factorials": [["Statistical Experiments", "statistical-experiments"], ["Factorials & Screening", "factorials-and-screening"]], "fractional-factorials": [["Statistical Experiments", "statistical-experiments"], ["Factorials & Screening", "factorials-and-screening"]], "saturated-designs-and-foldovers": [["Statistical Experiments", "statistical-experiments"], ["Factorials & Screening", "factorials-and-screening"]], "center-points-and-curvature": [["Statistical Experiments", "statistical-experiments"], ["Response Surfaces & Optimization", "response-surfaces-and-optimization"]], "response-surfaces-and-steepest-ascent": [["Statistical Experiments", "statistical-experiments"], ["Response Surfaces & Optimization", "response-surfaces-and-optimization"]], "quadratic-response-surfaces": [["Statistical Experiments", "statistical-experiments"], ["Response Surfaces & Optimization", "response-surfaces-and-optimization"]], "robust-parameter-design": [["Statistical Experiments", "statistical-experiments"], ["Response Surfaces & Optimization", "response-surfaces-and-optimization"]], "random-effects-and-mixed-models": [["Statistical Experiments", "statistical-experiments"], ["Random Effects & Hierarchies", "random-effects-and-hierarchies"]], "nested-designs": [["Statistical Experiments", "statistical-experiments"], ["Random Effects & Hierarchies", "random-effects-and-hierarchies"]]};
+ const paths={"progress-1": [["Progress", "progress"]],"llm-consistency-data": [["Data", "data"]],"basic": [["Foundations", "foundations"]], "preprocessing": [["Foundations", "foundations"]], "logistic-regression": [["Classification", "classification"]], "k-nn": [["Classification", "classification"]], "naive-bayes": [["Classification", "classification"]], "trees": [["Classification", "classification"]], "random-forest": [["Classification", "classification"]], "boosting": [["Classification", "classification"]], "svm": [["Classification", "classification"]], "predictive-modelling": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "prediction-error": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "optimism-and-complexity": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "cross-validation": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "loo-and-gcv": [["Regression", "regression"], ["Predictive Modelling", "predictive-modelling-topics"]], "regularization-and-penalized-regression": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "least-squares": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "spectral-analysis": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "ridge-regression": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "ridge-tuning": [["Regression", "regression"], ["Regularization & Penalized Regression", "regularization-and-penalized-regression-topics"]], "nonlinearregression": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "functionspaces": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "splinebases": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "penalizedsplines": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "splinetuning": [["Regression", "regression"], ["Nonlinear Regression", "nonlinearregression-topics"]], "sparseregression": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "lasso": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "coordinatedescent": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "lassopaths": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "regressiontrees": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "regressiondiagnostics": [["Regression", "regression"], ["Sparse Regression and Trees", "sparseregression-topics"]], "experimental-design": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "two-group-comparisons": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "paired-and-randomization-tests": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "one-way-anova": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "contrasts-and-multiple-comparisons": [["Statistical Experiments", "statistical-experiments"], ["Design & Mean Comparisons", "design-and-comparisons"]], "blocking-designs": [["Statistical Experiments", "statistical-experiments"], ["Blocking & Nuisance Variation", "blocking-and-nuisance-variation"]], "blocking-factorials": [["Statistical Experiments", "statistical-experiments"], ["Blocking & Nuisance Variation", "blocking-and-nuisance-variation"]], "factorial-experiments": [["Statistical Experiments", "statistical-experiments"], ["Factorials & Screening", "factorials-and-screening"]], "two-level-factorials": [["Statistical Experiments", "statistical-experiments"], ["Factorials & Screening", "factorials-and-screening"]], "fractional-factorials": [["Statistical Experiments", "statistical-experiments"], ["Factorials & Screening", "factorials-and-screening"]], "saturated-designs-and-foldovers": [["Statistical Experiments", "statistical-experiments"], ["Factorials & Screening", "factorials-and-screening"]], "center-points-and-curvature": [["Statistical Experiments", "statistical-experiments"], ["Response Surfaces & Optimization", "response-surfaces-and-optimization"]], "response-surfaces-and-steepest-ascent": [["Statistical Experiments", "statistical-experiments"], ["Response Surfaces & Optimization", "response-surfaces-and-optimization"]], "quadratic-response-surfaces": [["Statistical Experiments", "statistical-experiments"], ["Response Surfaces & Optimization", "response-surfaces-and-optimization"]], "robust-parameter-design": [["Statistical Experiments", "statistical-experiments"], ["Response Surfaces & Optimization", "response-surfaces-and-optimization"]], "random-effects-and-mixed-models": [["Statistical Experiments", "statistical-experiments"], ["Random Effects & Hierarchies", "random-effects-and-hierarchies"]], "nested-designs": [["Statistical Experiments", "statistical-experiments"], ["Random Effects & Hierarchies", "random-effects-and-hierarchies"]], "mtrag": [["Data", "data"]], "mtrag-inspection": [["Data", "data"], ["MTRAG", "mtrag"]], "mtrag-viewer": [["Data", "data"], ["MTRAG", "mtrag"]], "reliable-decision-support-with-llms": [["Literature Review", "literature-review"]]};
  let queued=false;
  function update(){
   queued=false;
-  const slug=location.pathname.replace(/\/$/,'').split('/').pop();
+  const slug=dsCurrentSlug();
   const parents=paths[slug];
   const article=document.querySelector('.article.content');
   const heading=article?.querySelector('h1');
@@ -92,10 +91,50 @@
    const base=home?new URL(home.href).pathname.replace(/\/$/,''):'/DS-Book';
    parents.forEach(([title,path],i)=>{
     if(i){const separator=document.createElement('span');separator.textContent=' / ';separator.setAttribute('aria-hidden','true');label.append(separator);}
-    const a=document.createElement('a');a.textContent=title;a.href=base+'/'+path+'/';label.append(a);
+    const a=document.createElement('a');a.textContent=title;a.href=base+'/'+dsRoute(path)+'/';label.append(a);
    });
   }
   if(label.nextElementSibling!==heading)heading.before(label);
+ }
+ function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
+ new MutationObserver(schedule).observe(document,{childList:true,subtree:true});schedule();
+})();
+
+/* A-style horizontal navigation; existing content cards are unchanged. */
+(() => {
+ let queued=false;
+ function update(){
+  queued=false;
+  const article=document.querySelector('.article.content'), heading=article?.querySelector('h1');
+  if(!heading)return;
+  const slug=dsCurrentSlug();
+  if(slug==='mtrag'){location.replace(location.pathname.replace(/(?:mtrag|Research\/Data\/MTRAG)\/?$/, dsRoute('mtrag-inspection')+'/')+location.search+location.hash);return;}
+  const mtrag=['mtrag','mtrag-viewer','mtrag-inspection'].includes(slug);
+  const research=mtrag;
+  let nav=article.querySelector('.research-page-tabs');
+  if(!research){nav?.remove();return;}
+  if(nav?.dataset.slug===slug)return;
+  nav?.remove();nav=document.createElement('nav');nav.className='research-page-tabs';nav.dataset.slug=slug;nav.setAttribute('aria-label',mtrag?'MTRAG pages':'Research pages');
+  const home=document.querySelector('.myst-home-link');const base=home?new URL(home.href).pathname.replace(/\/$/,''):'/DS-Book';
+  const entries=mtrag?[['Dataset guide','mtrag-inspection'],['Data viewer','mtrag-viewer']]:[['MTRAG','mtrag']];
+  for(const [label,path] of entries){const a=document.createElement('a');a.textContent=label;a.href=base+'/'+dsRoute(path)+'/';if(slug===path||(path==='literature-review'&&slug==='reliable-decision-support-with-llms'))a.setAttribute('aria-current','page');nav.append(a);}
+  heading.after(nav);
+ }
+ function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
+ new MutationObserver(schedule).observe(document,{childList:true,subtree:true});schedule();
+})();
+
+/* The canonical route keeps Research separate from Learning Topics. */
+(() => {
+ let queued=false;
+ function update(){
+  queued=false;
+  document.querySelectorAll('.myst-primary-sidebar-toc .myst-toc').forEach(toc=>{
+   const proposal=[...toc.children].find(el=>el.matches('a')&&/\/Research\/Proposal\/?$/.test(new URL(el.href).pathname));
+   if(!proposal||toc.querySelector('.ds-research-label'))return;
+   const label=document.createElement('div');label.className='ds-research-label';label.textContent='Research';
+   proposal.before(label);
+  });
  }
  function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
  new MutationObserver(schedule).observe(document,{childList:true,subtree:true});schedule();

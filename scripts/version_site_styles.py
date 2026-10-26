@@ -50,3 +50,6 @@ for original, name in replacements.items():
     if original in {'myst-theme.css', 'favicon.ico'}:
         print(f'Versioned asset: {name}; updated {counts[original]} assets')
 print(f'Versioned {len(modules)} JavaScript modules: {release}')
+
+from install_routes import install_routes
+install_routes(root)
