@@ -1,8 +1,9 @@
 """Give the generated MyST site canonical hierarchical URLs and legacy redirects."""
 from pathlib import Path
-import json,re,html
+import json,re,html,os
 
 def install_routes(root):
+    base=os.environ.get('BASE_URL', '/DS-Book').rstrip('/')
     routes=json.loads(Path('styles/page-routes.json').read_text())
     # MyST stores nested page slugs with dots, and resolves them to slash URLs.
     def rewrite(text):
@@ -24,6 +25,6 @@ def install_routes(root):
         if 'http-equiv="refresh"' not in oldhtml.read_text():target.write_bytes(oldhtml.read_bytes())
         elif not target.exists():raise RuntimeError(f'Missing canonical page: {new}')
         oldjson=root/(old+'.json');(root/(new.replace('/','.')+'.json')).write_bytes(oldjson.read_bytes())
-        url='/DS-Book/'+new+'/'
+        url=base+'/'+new+'/'
         oldhtml.write_text('<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url='+html.escape(url)+'"><link rel="canonical" href="'+html.escape(url)+'"><script>location.replace('+json.dumps(url)+'+location.search+location.hash)</script></head><body><a href="'+html.escape(url)+'">Continue</a></body></html>')
     print(f'Installed {len(routes)} hierarchical routes and legacy redirects')

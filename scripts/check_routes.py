@@ -2,7 +2,8 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
-import json
+import json,os
+base=os.environ.get('BASE_URL', '/DS-Book').rstrip('/')+'/'
 root=Path('_build/html');routes=json.loads(Path('styles/page-routes.json').read_text())
 class Links(HTMLParser):
     def __init__(self):super().__init__();self.links=[]
@@ -14,9 +15,11 @@ for old,new in routes.items():
     data=json.loads((root/(new.replace('/','.')+'.json')).read_text());assert data['slug']==new.replace('/','.')
     parser=Links();parser.feed(page.read_text())
     for href in parser.links:
-        path=unquote(urlsplit(href).path)
-        if not path.startswith('/DS-Book/'):continue
-        rel=path[len('/DS-Book/'):].strip('/')
+        parsed=urlsplit(href)
+        if parsed.netloc or parsed.scheme:continue
+        path=unquote(parsed.path)
+        if not path.startswith(base):continue
+        rel=path[len(base):].strip('/')
         if rel in routes:errors.append((new,'legacy link',href))
         target=root/rel
         if not (target.is_file() or (target/'index.html').is_file()):errors.append((new,'missing target',href))
