@@ -7,6 +7,7 @@
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function update() {
     queued = false;
+    document.querySelectorAll('.article.content').forEach(article => article.classList.toggle('ds-retro-body', !article.querySelector('.home-pixel')));
     document.querySelectorAll('.article.content .myst-grid').forEach(grid => {
       if (grid.closest('.home-pixel')) return;
       const cards = [...grid.children].filter(e => e.matches('a.myst-card'));

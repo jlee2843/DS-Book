@@ -6,6 +6,11 @@ from install_sections import install, install_standalone
 
 root = Path('_build/html')
 replacements = {}
+# Isolated, removable note-body treatment.
+body_style = Path('styles/note-body-retro.css')
+if body_style.exists():
+    with (root / 'myst-theme.css').open('a') as theme:
+        theme.write('\n' + body_style.read_text())
 # Version the whole module graph so cached importers cannot load old chunks.
 install(root)
 install_standalone(root)

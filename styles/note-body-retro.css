@@ -1,0 +1,40 @@
+/* Optional B treatment: reading content only; navigation is unchanged. */
+html:root .article.content.ds-retro-body h2::before{font:500 14px/1.5 'Pixelify Sans',monospace;border:1px solid var(--ds-line);box-shadow:2px 2px 0 var(--ds-line);padding:1px 5px;top:3px}
+html:root .article.content.ds-retro-body h2{padding-left:43px}
+html:root .article.content.ds-retro-body .ds-example-card{position:relative;display:block;border:2px solid var(--ds-muted)!important;background:var(--ds-paper)!important;box-shadow:inset 0 0 0 3px var(--ds-paper),inset 0 0 0 4px var(--ds-line)!important;padding:26px 22px 20px!important;margin:32px 0!important;overflow:visible}
+html:root .article.content.ds-retro-body .ds-example-card .myst-admonition-header{display:table!important;width:fit-content!important;position:relative;margin:-39px 0 17px!important;padding:0 9px!important;background:var(--ds-paper)!important;font:500 15px/1.5 'Pixelify Sans',monospace!important;border:0!important;max-width:100%;color:var(--ds-ink)}
+html:root .article.content.ds-retro-body :is(dt,.myst-admonition-important .myst-admonition-header,.myst-admonition-note .myst-admonition-header,.myst-admonition-warning .myst-admonition-header){font-family:'Pixelify Sans',monospace;font-weight:500}
+html:root .article.content.ds-retro-body :is(.myst-admonition-warning,.myst-admonition-caution):not(.ds-example-card){border:0;border-left:2px dotted var(--ds-line);padding:4px 0 4px 18px;background:transparent!important}
+@media(max-width:640px){html:root .article.content.ds-retro-body .ds-example-card{padding:26px 16px 18px!important}}
+/* Reading resources: compact, right-aligned game controls. */
+html:root .article.content.ds-retro-body .document-actions{justify-content:flex-end;gap:14px;padding-right:3px}
+html:root .article.content.ds-retro-body .document-actions a.button{display:inline-flex;align-items:center;justify-content:center;min-height:40px!important;padding:8px 14px!important;border:1px solid var(--ds-muted)!important;border-radius:0;background:var(--ds-paper)!important;color:var(--ds-ink)!important;box-shadow:3px 3px 0 var(--ds-muted)!important;font:500 16px/1.3 'Pixelify Sans',monospace;text-decoration:none;transition:transform .1s,box-shadow .1s}
+html:root .article.content.ds-retro-body .document-actions a.button:hover{background:var(--ds-key-surface)!important;transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ds-muted)!important}
+html:root .article.content.ds-retro-body .document-actions a.button:active{transform:translate(3px,3px);box-shadow:none!important}
+html:root .article.content.ds-retro-body .document-actions a.button:focus-visible{outline:2px solid var(--ds-ink);outline-offset:5px}
+@media(prefers-reduced-motion:reduce){html:root .article.content.ds-retro-body .document-actions a.button{transition:none}}
+/* Definitions remain open and use the quiet margin treatment from B. */
+html:root .article.content.ds-retro-body :is(.ds-definition,.myst-admonition-important){display:block!important;border:0!important;border-left:2px solid var(--ds-line)!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;padding:0 0 0 18px!important;margin:24px 0!important}
+html:root .article.content.ds-retro-body :is(.ds-definition,.myst-admonition-important) .myst-admonition-header{border:0!important;padding:0!important;margin:0 0 8px!important;font:500 15px/1.5 'Pixelify Sans',monospace!important;color:var(--ds-muted)}
+html:root .article.content.ds-retro-body :is(.ds-definition,.myst-admonition-important) .myst-admonition-body{padding:0!important}
+html:root .article.content.ds-retro-body :is(.ds-definition,.myst-admonition-important) .myst-admonition-body>:last-child{margin-bottom:0}
+html:root .article.content.ds-retro-body #progress-drafts .archive-entry{display:flex;align-items:center;gap:20px;padding:20px;border:1px solid var(--ds-muted);box-shadow:4px 4px 0 var(--ds-line);margin:24px 4px 28px 0;text-decoration:none}
+html:root .article.content.ds-retro-body #progress-drafts .archive-entry>span:first-child{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border:1px solid var(--ds-muted);font:500 22px/1 'Pixelify Sans',monospace}
+html:root .article.content.ds-retro-body #progress-drafts .archive-entry::after{content:'▶';margin-left:auto;font-size:14px}
+html:root .article.content.ds-retro-body #progress-drafts .archive-entry:hover{background:var(--ds-key-surface)}
+html:root .article.content.ds-retro-body #progress-drafts .archive-entry small{display:block;margin-top:6px;font:400 12px/1.5 Inter,sans-serif;color:var(--ds-muted)}
+/* Explanatory notes keep full reading contrast. */
+html:root .article.content.ds-retro-body .myst-admonition-note:not(.ds-example-card){border:1px solid var(--ds-line)!important;border-left:3px solid var(--ds-muted)!important;border-radius:0!important;background:var(--ds-paper)!important;padding:18px 20px!important;margin:24px 0!important;color:var(--ds-ink)!important}
+html:root .article.content.ds-retro-body .myst-admonition-note:not(.ds-example-card) .myst-admonition-header{font:500 17px/1.5 'Pixelify Sans',monospace!important;color:var(--ds-ink)!important;margin:0 0 12px!important;padding:0 0 10px!important;border-bottom:1px solid var(--ds-line)!important}
+html:root .article.content.ds-retro-body .myst-admonition-note:not(.ds-example-card) .myst-admonition-body{color:var(--ds-ink)!important;padding:0!important}
+html:root .article.content.ds-retro-body .myst-admonition-note:not(.ds-example-card) .myst-admonition-body>:last-child{margin-bottom:0}
+html:root .article.content.ds-retro-body .myst-admonition-note:not(.ds-example-card) :is(p,li,.katex,.math){color:var(--ds-ink)!important}
+/* Disclosure controls are visibly interactive in both themes. */
+html:root .article.content.ds-retro-body :is(.myst-dropdown,details.myst-admonition){display:block;border:1px solid var(--ds-muted)!important;border-radius:0!important;padding:0!important;margin:24px 0!important;background:var(--ds-paper)!important;box-shadow:2px 2px 0 var(--ds-line)!important}
+html:root .article.content.ds-retro-body :is(.myst-dropdown,details.myst-admonition)>summary{display:flex!important;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;padding:14px 16px!important;margin:0!important;background:var(--ds-key-surface)!important;color:var(--ds-ink)!important;border:0!important;font:500 15px/1.5 Inter,sans-serif}
+html:root .article.content.ds-retro-body :is(.myst-dropdown,details.myst-admonition)>summary::after{content:'SHOW +'!important;flex-shrink:0;font:500 15px/1.4 'Pixelify Sans',monospace;color:var(--ds-ink);border:1px solid var(--ds-muted);padding:3px 8px}
+html:root .article.content.ds-retro-body :is(.myst-dropdown,details.myst-admonition)[open]>summary::after{content:'HIDE −'!important}
+html:root .article.content.ds-retro-body :is(.myst-dropdown,details.myst-admonition)[open]>summary{border-bottom:1px solid var(--ds-line)!important}
+html:root .article.content.ds-retro-body :is(.myst-dropdown,details.myst-admonition)>summary:focus-visible{outline:2px solid var(--ds-ink);outline-offset:3px}
+html:root .article.content.ds-retro-body :is(.myst-dropdown,details.myst-admonition)>summary:hover::after{background:var(--ds-ink);color:var(--ds-paper)}
+html:root .article.content.ds-retro-body :is(.myst-dropdown,details.myst-admonition)>.myst-dropdown-body{padding:16px!important;color:var(--ds-ink)!important}
