@@ -63,3 +63,17 @@ html:root .article.content:not(:has(.home-pixel)) :is(.method-summary-panel>p:fi
 html:root .article.content:not(:has(.home-pixel)) .method-summary-panel>p:first-child strong{font:inherit!important;color:inherit}
 html:root .article.content:not(:has(.home-pixel)) .method-summary-panel>ul{list-style-type:square;padding-left:18px}
 @media(max-width:640px){html:root .article.content:not(:has(.home-pixel)) :is(.method-summary-panel,.reading-comparison>div)+:is(.method-summary-panel,div){border-left:0;border-top:1px solid var(--ds-line)}}
+/* Reading headings: a restrained terminal accent, separate from body text. */
+html:root .article.content:not(:has(.home-pixel)) :is(h2,h3,h4,h5,h6):not(:is(.myst-admonition,.reading-comparison,.method-summary,.myst-grid) *){font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace!important;font-weight:600!important;letter-spacing:-.035em;line-height:1.5;color:var(--ds-ink)}
+html:root .article.content:not(:has(.home-pixel)) h2{font-size:24px}
+html:root .article.content:not(:has(.home-pixel)) h3:not(:is(.myst-admonition,.reading-comparison,.method-summary,.myst-grid) *){font-size:21px}
+html:root .article.content:not(:has(.home-pixel)) :is(h4,h5,h6):not(:is(.myst-admonition,.reading-comparison,.method-summary,.myst-grid) *){font-size:18px}
+/* Resource buttons keep the footer divider, without a rule above the buttons. */
+html:root .article.content .document-actions{border-top:0!important}
+/* Both MyST definition syntaxes use exactly the same term/body layout. */
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5,.ds-definition){display:block!important;border:1px solid var(--ds-line)!important;border-left:3px solid var(--ds-muted)!important;border-radius:0!important;box-shadow:none!important;background:var(--ds-paper)!important;padding:18px 20px!important;margin:24px 0!important;color:var(--ds-ink)!important}
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dt,.ds-definition .myst-admonition-header){display:block!important;grid-column:auto;border:0!important;border-bottom:1px solid var(--ds-line)!important;padding:0 0 10px!important;margin:0 0 12px!important;font:500 17px/1.5 'Pixelify Sans',monospace!important;color:var(--ds-ink)!important;background:transparent!important}
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dd,.ds-definition .myst-admonition-body){display:block!important;grid-column:auto;border:0!important;padding:0!important;margin:0!important;font:400 15px/1.8 Inter,Arial,sans-serif!important;color:var(--ds-ink)!important}
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dd,.ds-definition .myst-admonition-body)>:first-child{margin-top:0!important}
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dd,.ds-definition .myst-admonition-body)>:last-child{margin-bottom:0!important}
+html:root body .article.content:not(:has(.home-pixel)) dl.my-5>dd+dt{margin-top:20px!important}
