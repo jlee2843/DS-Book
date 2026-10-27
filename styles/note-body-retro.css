@@ -55,7 +55,11 @@ html:root .article.content:not(:has(.home-pixel)) div.group:has(>div>.katex-disp
 html:root .article.content:not(:has(.home-pixel)) .equation-sequence div.group:has(>div>.katex-display){background:none!important}
 /* Contained formulas do not need their own frame. */
 html:root .article.content:not(:has(.home-pixel)) :is(.myst-admonition,.myst-dropdown,.reading-comparison,.method-summary,.myst-grid,td,dd) div.group:has(>div>.katex-display){background:none!important}
-/* Comparison panels: quiet monochrome retro windows. */
-html:root .article.content:not(:has(.home-pixel)) :is(.method-summary-panel,.reading-comparison>div){border:1px solid var(--ds-muted);border-radius:0;background:var(--ds-paper);box-shadow:3px 3px 0 var(--ds-line);padding:18px 20px;margin-bottom:3px}
-html:root .article.content:not(:has(.home-pixel)) :is(.method-summary-panel>p:first-child,.reading-comparison>div>:is(h3,h4,h5):first-child){margin:-18px -20px 16px;padding:10px 16px;border-bottom:1px solid var(--ds-muted);background:var(--ds-soft);color:var(--ds-ink);font:500 16px/1.5 'Pixelify Sans',monospace}
-html:root .article.content:not(:has(.home-pixel)) .method-summary-panel>p:first-child strong{font:inherit}
+/* Comparisons share one quiet frame and small monochrome labels. */
+html:root .article.content:not(:has(.home-pixel)) :is(.method-summary,.reading-comparison){gap:0;border:1px solid var(--ds-line);background:var(--ds-paper)}
+html:root .article.content:not(:has(.home-pixel)) :is(.method-summary-panel,.reading-comparison>div){border:0;border-radius:0;background:transparent;box-shadow:none;padding:24px;margin:0}
+html:root .article.content:not(:has(.home-pixel)) :is(.method-summary-panel,.reading-comparison>div)+:is(.method-summary-panel,div){border-left:1px solid var(--ds-line)}
+html:root .article.content:not(:has(.home-pixel)) :is(.method-summary-panel>p:first-child,.reading-comparison>div>:is(h3,h4,h5):first-child){display:table;margin:0 0 20px;padding:4px 10px;border:0;background:var(--ds-ink);color:var(--ds-paper);font:500 16px/1.4 'Pixelify Sans',monospace!important}
+html:root .article.content:not(:has(.home-pixel)) .method-summary-panel>p:first-child strong{font:inherit!important;color:inherit}
+html:root .article.content:not(:has(.home-pixel)) .method-summary-panel>ul{list-style-type:square;padding-left:18px}
+@media(max-width:640px){html:root .article.content:not(:has(.home-pixel)) :is(.method-summary-panel,.reading-comparison>div)+:is(.method-summary-panel,div){border-left:0;border-top:1px solid var(--ds-line)}}
