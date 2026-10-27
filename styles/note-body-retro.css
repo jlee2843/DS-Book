@@ -84,3 +84,7 @@ html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5,.ds-definitio
 html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dt,.ds-definition .myst-admonition-header){display:table!important;position:relative;width:fit-content;max-width:100%;border:0!important;background:var(--ds-paper)!important;padding:0 9px!important;margin:-40px 0 14px!important}
 html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dt,.ds-definition .myst-admonition-header)::before{content:'Definition';margin:0 0 3px;font-size:10px;line-height:1.4;letter-spacing:.06em}
 html:root body .article.content:not(:has(.home-pixel)) dl.my-5>dd+dt{margin:20px 0 14px!important}
+
+/* Only the first term may overlap a definition frame's top border.
+   Match the header rule's specificity so grouped lists stay in normal flow. */
+html:root body .article.content:not(:has(.home-pixel)) dl.my-5.my-5>dt~dt{margin:24px 0 14px!important}

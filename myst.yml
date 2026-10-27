@@ -135,6 +135,15 @@ project:
       - file: notes/Statistical-Experiments/Nested-Designs.ipynb
         title: Nested Designs
     file: notes/Learning/Statistical-Experiments.ipynb
+  - title: Artificial Intelligence
+    file: notes/Learning/Artificial-Intelligence.ipynb
+    children:
+    - file: notes/Artificial-Intelligence/Models-Context-and-Agents.ipynb
+      title: Models, Context & Agents
+    - file: notes/Artificial-Intelligence/Embeddings-and-Evidence-Retrieval.ipynb
+      title: Embeddings & Evidence Retrieval
+    - file: notes/Artificial-Intelligence/Agent-Evaluation.ipynb
+      title: Agent Evaluation
   - file: notes/Proposal.ipynb
     title: Proposal
   - file: notes/Literature-Review.ipynb

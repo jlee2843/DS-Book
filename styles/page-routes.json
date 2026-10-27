@@ -68,5 +68,9 @@
   "mtrag": "Research/Data/MTRAG",
   "mtrag-viewer": "Research/Data/MTRAG/Data-Viewer",
   "mtrag-inspection": "Research/Data/MTRAG/Dataset-Guide",
-  "llm-consistency-data": "Research/Data/LLM-Consistency"
+  "llm-consistency-data": "Research/Data/LLM-Consistency",
+  "artificial-intelligence": "Learning-Notes/Artificial-Intelligence",
+  "models-context-and-agents": "Learning-Notes/Artificial-Intelligence/Models-Context-and-Agents",
+  "embeddings-and-evidence-retrieval": "Learning-Notes/Artificial-Intelligence/Embeddings-and-Evidence-Retrieval",
+  "agent-evaluation": "Learning-Notes/Artificial-Intelligence/Agent-Evaluation"
 }
