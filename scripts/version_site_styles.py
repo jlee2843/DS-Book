@@ -2,13 +2,14 @@
 from pathlib import Path
 import hashlib
 import re
-from install_sections import install
+from install_sections import install, install_standalone
 
 root = Path('_build/html')
 replacements = {}
 # Version the whole module graph so cached importers cannot load old chunks.
 install(root)
-modules = [p for p in root.rglob('*.js') if '.reader-' not in p.name and '.sections-' not in p.name]
+install_standalone(root)
+modules = [p for p in root.rglob('*.js') if '.reader-' not in p.name and '.sections-' not in p.name and p.name != 'site-enhancements.js']
 # CSS references are embedded in the module graph, so CSS changes must also
 # invalidate JavaScript importers held by open browser tabs.
 release = hashlib.sha256((root / 'myst-theme.css').read_bytes() + b''.join(p.read_bytes() for p in sorted(modules))).hexdigest()[:16]

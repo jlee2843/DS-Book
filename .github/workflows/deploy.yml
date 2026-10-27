@@ -15,6 +15,7 @@ env:
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -43,10 +44,15 @@ jobs:
         run: python3 scripts/version_site_styles.py
       - name: Validate page routes
         run: python3 scripts/check_routes.py
+      - name: Preserve assets for cached pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/retain_site_assets.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './_build/html'
+          retention-days: 7
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

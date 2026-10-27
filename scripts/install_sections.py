@@ -11,6 +11,25 @@ import re
 
 MARKER = '\n/* DS_SECTIONS_ENHANCEMENT */\n'
 
+SOURCES = ['page-routes', 'sections', 'mtrag-viewer', 'site-navigation',
+           'progress-viewer', 'question-variations-data', 'gemma-data',
+           'evaluation-data', 'evaluation-viewer']
+
+def install_standalone(root):
+    """Keep the site UI independent of MyST's lazy module graph."""
+    import os
+    script = "(() => { function start() { if (window.dsNavigationInstalled) return;\n" + '\n'.join(
+        Path(f'styles/{name}.js').read_text() for name in SOURCES
+    ) + "\n} if(document.readyState === 'complete') setTimeout(start, 1500); else window.addEventListener('load', () => setTimeout(start, 1500), {once:true}); })();"
+    (root / 'site-enhancements.js').write_text(script)
+    version = hashlib.sha256(script.encode()).hexdigest()[:16]
+    base = os.environ.get('BASE_URL', '/DS-Book').rstrip('/')
+    tag = f'<script defer src="{base}/site-enhancements.js?v={version}"></script>'
+    for page in root.rglob('*.html'):
+        text = page.read_text()
+        page.write_text(text.replace('</head>', tag + '</head>'))
+
+
 def install(root):
     script = Path('styles/page-routes.js').read_text() + '\n' + Path('styles/sections.js').read_text() + '\n' + Path('styles/mtrag-viewer.js').read_text() + '\n' + Path('styles/site-navigation.js').read_text() + '\n' + Path('styles/progress-viewer.js').read_text() + '\n' + Path('styles/question-variations-data.js').read_text() + '\n' + Path('styles/gemma-data.js').read_text() + '\n' + Path('styles/evaluation-data.js').read_text() + '\n' + Path('styles/evaluation-viewer.js').read_text()
     matches = []
