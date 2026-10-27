@@ -1348,12 +1348,11 @@ html.ds-monochrome .article.content .home-pixel .home-profile h2::after{content:
 @media(max-width:600px){html.ds-monochrome .article.content .home-pixel .home-rabbit{flex-basis:86px}}
 
 /* Home menu headings and monochrome pointer feedback. */
-html.ds-monochrome .article.content .home-pixel .home-menu h3{font:500 18px/1.4 'Pixelify Sans',monospace!important;letter-spacing:.2px;color:var(--ds-ink)}
 html.ds-monochrome .article.content .home-pixel .home-menu>p>a{transition:background-color .15s,color .15s}
 html.ds-monochrome .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-visible),
 html.ds-monochrome .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-visible) .link-text{background:var(--ds-ink)!important;color:var(--ds-paper)!important}
 html.ds-monochrome .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-visible)::after{color:var(--ds-paper)!important}
 @media(prefers-reduced-motion:reduce){html.ds-monochrome .article.content .home-pixel .home-menu>p>a{transition:none}}
 
-/* Document headings share the notebook’s pixel typography. */
-html.ds-monochrome .article.content :is(h1,h2,h3,h4,h5,h6){font-family:'Pixelify Sans',monospace!important}
+/* Pixel typography is reserved for the main document title. */
+html.ds-monochrome .article.content h1{font-family:'Pixelify Sans',monospace!important}
