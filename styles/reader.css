@@ -1354,3 +1354,13 @@ html.ds-monochrome .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-
 html.ds-monochrome .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-visible) .link-text{background:var(--ds-ink)!important;color:var(--ds-paper)!important}
 html.ds-monochrome .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-visible)::after{color:var(--ds-paper)!important}
 @media(prefers-reduced-motion:reduce){html.ds-monochrome .article.content .home-pixel .home-menu>p>a{transition:none}}
+
+/* Global navigation: visible monochrome hover, including expanded menus. */
+html.ds-monochrome .ds-site-navigation > a,
+html.ds-monochrome .ds-nav-group > button{font:500 15px/1.2 'Pixelify Sans',monospace;padding-inline:9px;transition:background-color .12s,color .12s}
+html.ds-monochrome .ds-site-navigation{gap:10px}
+html.ds-monochrome .ds-site-navigation > a:is(:hover,:focus-visible),
+html.ds-monochrome .ds-nav-group > button:is(:hover,:focus-visible,[aria-expanded="true"]),
+html.ds-monochrome .ds-nav-menu a:is(:hover,:focus-visible){background:var(--ds-ink)!important;color:var(--ds-paper)!important;text-decoration:none}
+html.ds-monochrome .ds-nav-menu a{transition:background-color .12s,color .12s}
+@media(prefers-reduced-motion:reduce){html.ds-monochrome .ds-site-navigation > a,html.ds-monochrome .ds-nav-group > button,html.ds-monochrome .ds-nav-menu a{transition:none}}
