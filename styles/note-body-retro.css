@@ -77,3 +77,10 @@ html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dd,.ds-defini
 html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dd,.ds-definition .myst-admonition-body)>:first-child{margin-top:0!important}
 html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dd,.ds-definition .myst-admonition-body)>:last-child{margin-bottom:0!important}
 html:root body .article.content:not(:has(.home-pixel)) dl.my-5>dd+dt{margin-top:20px!important}
+/* Definition labels distinguish terms from ordinary notes. */
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dt,.ds-definition .myst-admonition-header)::before{content:'Def';display:block;width:fit-content;margin:0 0 6px;padding:0;border:0;box-shadow:none;font:500 11px/1.4 ui-monospace,Menlo,Consolas,monospace;color:var(--ds-muted);letter-spacing:.04em}
+/* Definitions use a fieldset-like frame, distinct from note panels. */
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5,.ds-definition){overflow:visible!important;border:1px solid var(--ds-muted)!important;padding:22px 20px 18px!important;margin:34px 0 26px!important}
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dt,.ds-definition .myst-admonition-header){display:table!important;position:relative;width:fit-content;max-width:100%;border:0!important;background:var(--ds-paper)!important;padding:0 9px!important;margin:-40px 0 14px!important}
+html:root body .article.content:not(:has(.home-pixel)) :is(dl.my-5>dt,.ds-definition .myst-admonition-header)::before{content:'Definition';margin:0 0 3px;font-size:10px;line-height:1.4;letter-spacing:.06em}
+html:root body .article.content:not(:has(.home-pixel)) dl.my-5>dd+dt{margin:20px 0 14px!important}
