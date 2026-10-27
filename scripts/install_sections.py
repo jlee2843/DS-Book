@@ -12,7 +12,7 @@ import re
 MARKER = '\n/* DS_SECTIONS_ENHANCEMENT */\n'
 
 SOURCES = ['page-routes', 'sections', 'mtrag-viewer', 'site-navigation',
-           'progress-viewer', 'question-variations-data', 'gemma-data',
+           'note-menu', 'progress-viewer', 'question-variations-data', 'gemma-data',
            'evaluation-data', 'evaluation-viewer']
 
 def install_standalone(root):
@@ -31,7 +31,7 @@ def install_standalone(root):
 
 
 def install(root):
-    script = Path('styles/page-routes.js').read_text() + '\n' + Path('styles/sections.js').read_text() + '\n' + Path('styles/mtrag-viewer.js').read_text() + '\n' + Path('styles/site-navigation.js').read_text() + '\n' + Path('styles/progress-viewer.js').read_text() + '\n' + Path('styles/question-variations-data.js').read_text() + '\n' + Path('styles/gemma-data.js').read_text() + '\n' + Path('styles/evaluation-data.js').read_text() + '\n' + Path('styles/evaluation-viewer.js').read_text()
+    script = '\n'.join(Path(f'styles/{name}.js').read_text() for name in SOURCES)
     matches = []
     for path in root.rglob('*.js'):
         if 'node_modules' in path.parts:
