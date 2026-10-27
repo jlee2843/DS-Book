@@ -1337,3 +1337,12 @@ html.ds-monochrome .article.content .home-pixel h2>a,html.ds-monochrome .article
 html.ds-monochrome .article.content .home-pixel .home-profile h2{font-family:'Pixelify Sans',monospace!important;font-size:38px!important;font-weight:500!important}
 html.ds-monochrome .article.content .home-pixel .home-introducing p,html.ds-monochrome .article.content .home-pixel .home-chapter-label p,html.ds-monochrome .article.content .home-pixel .home-lecture-sources h3{font-family:'Pixelify Sans',monospace!important}
 body:has(.home-pixel) .myst-outline,body:has(.home-pixel) .myst-footer-links,body:has(.home-pixel) [aria-label="Table of contents"]{display:none!important}
+
+/* Home signature and terminal cursor. */
+html.ds-monochrome .article.content .home-pixel .home-rabbit{order:2;flex:0 0 104px;display:flex;flex-direction:column;align-items:center;gap:8px}
+html.ds-monochrome .article.content .home-pixel .home-rabbit .home-profile-avatar{flex:none;margin:0}
+html.ds-monochrome .article.content .home-pixel .home-rabbit-caption p{margin:0;white-space:nowrap;font:500 14px/1.3 'Pixelify Sans',monospace!important;color:var(--ds-muted)}
+html.ds-monochrome .article.content .home-pixel .home-profile h2::after{content:'_';display:inline-block;margin-left:5px;animation:home-cursor-blink 1.1s steps(1,end) infinite}
+@keyframes home-cursor-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){html.ds-monochrome .article.content .home-pixel .home-profile h2::after{animation:none}}
+@media(max-width:600px){html.ds-monochrome .article.content .home-pixel .home-rabbit{flex-basis:86px}}
