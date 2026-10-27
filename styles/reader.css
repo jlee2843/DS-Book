@@ -1356,3 +1356,8 @@ html.ds-monochrome .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-
 
 /* Pixel typography is reserved for the main document title. */
 html.ds-monochrome .article.content h1{font-family:'Pixelify Sans',monospace!important}
+
+/* Keep document titles close to the navigation and download controls. */
+html.ds-monochrome .article.content{padding-top:16px}
+html.ds-monochrome .article.content .myst-fm-block{padding-top:0}
+html.ds-monochrome .article.content .myst-fm-block-header{margin-bottom:8px}
