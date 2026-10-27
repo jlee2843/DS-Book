@@ -7,7 +7,6 @@
     queued=false;
     const top=document.querySelector('.myst-top-nav');
     if (!top || document.querySelector('.ds-site-navigation')) return;
-    document.documentElement.classList.add('ds-monochrome');
     const home=document.querySelector('.myst-home-link');
     const base=home ? new URL(home.href).pathname.replace(/\/$/,'') : '/DS-Book';
     const nav=document.createElement('nav');nav.className='ds-site-navigation';nav.setAttribute('aria-label','Site navigation');
