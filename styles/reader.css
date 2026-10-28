@@ -1382,3 +1382,6 @@ html:root .article.content a.rpg-note-open{align-self:flex-start;display:inline-
 html:root .article.content a.rpg-note-open:hover{text-decoration:underline;text-underline-offset:4px}
 html:root .article.content .rpg-note-submenu .rpg-note-inner{background:#dedede;--ds-ink:#222;--ds-muted:#555;--ds-line:#999}
 @media(max-width:600px){html:root .article.content .rpg-note-inner{grid-template-columns:1fr;gap:16px;padding:23px 13px 18px}html:root .article.content .rpg-note-preview{border-left:0;border-top:1px dashed var(--ds-line);padding:18px 0 0}html:root .article.content .rpg-note-number{font-size:40px;margin-bottom:12px}html:root .article.content .rpg-note-choice{padding:10px 0}}
+
+/* Option B: a theme-aware pixel illustration for the selected topic. */
+html:root .article.content .rpg-note-art{display:block;width:96px;height:96px;flex-shrink:0;fill:currentColor;color:var(--ds-ink);shape-rendering:crispEdges;margin:0 0 18px}
