@@ -144,6 +144,8 @@ project:
       title: Embeddings & Evidence Retrieval
     - file: notes/Artificial-Intelligence/Agent-Evaluation.ipynb
       title: Agent Evaluation
+    - file: notes/Artificial-Intelligence/LangSmith-Evaluation-in-Practice.ipynb
+      title: LangSmith Evaluation in Practice
   - file: notes/Proposal.ipynb
     title: Proposal
   - file: notes/Literature-Review.ipynb
