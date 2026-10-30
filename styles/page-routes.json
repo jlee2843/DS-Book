@@ -73,5 +73,6 @@
   "models-context-and-agents": "Learning-Notes/Artificial-Intelligence/Models-Context-and-Agents",
   "embeddings-and-evidence-retrieval": "Learning-Notes/Artificial-Intelligence/Embeddings-and-Evidence-Retrieval",
   "agent-evaluation": "Learning-Notes/Artificial-Intelligence/Agent-Evaluation",
-  "langsmith-evaluation-in-practice": "Learning-Notes/Artificial-Intelligence/LangSmith-Evaluation-in-Practice"
+  "langsmith-evaluation-in-practice": "Learning-Notes/Artificial-Intelligence/LangSmith-Evaluation-in-Practice",
+  "prompt-engineering": "Learning-Notes/Artificial-Intelligence/Prompt-Engineering"
 }
