@@ -24,7 +24,7 @@ function progressExperimentNav(current) {
 function mountProgressAnalysis() {
   document.querySelectorAll('.progress-analysis-app').forEach(root=>{
     if(root.dataset.ready)return;
-    const keys=['input','q1','q2','q3','q4','q5'];
+    const keys=['input','q1','q2','q3','q4','q5','example'];
     const panels=Object.fromEntries(keys.map(k=>[k,root.querySelector('.progress2-'+k)]));
     if(keys.some(k=>!panels[k]))return;
     root.dataset.ready='true';root.id='progress-drafts';
@@ -35,7 +35,7 @@ function mountProgressAnalysis() {
       <h1 class="myst-fm-block-title">Human and LLM Judges: Four Metrics</h1>
       <p class="description"><time datetime="2026-11-02">2026-11-02</time></p>
       <div class="trial-goal"><strong>Goal:</strong><p>Compare human and automatic evaluations of GPT 4o and Llama answers across faithfulness, appropriateness, naturalness, and completeness, using <a href="${dsBasePath()}/Research/Literature-Review/Quantifying-Biases-in-LLM-as-a-Judge-Evaluations/">Quantifying Biases in LLM-as-a-Judge Evaluations</a> as a methodological reference.</p></div>
-      <div class="section-tabs" aria-label="Experiment sections">${[['input','Input'],['q1','Q1'],['q2','Q2'],['q3','Q3'],['q4','Q4'],['q5','Q5']].map(([key,label])=>`<button type="button" data-p2-section="${key}" aria-pressed="false">${label}</button>`).join('')}</div>
+      <div class="section-tabs" aria-label="Experiment sections">${[['input','Input'],['q1','Q1'],['q2','Q2'],['q3','Q3'],['q4','Q4'],['q5','Q5'],['example','Example']].map(([key,label])=>`<button type="button" data-p2-section="${key}" aria-pressed="false">${label}</button>`).join('')}</div>
       <div class="progress2-panels"></div>
     </main></div></div>`;
     const holder=root.querySelector('.progress2-panels');

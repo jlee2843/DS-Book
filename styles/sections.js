@@ -18,7 +18,8 @@
     }
   }
   function schedulePosition(){if(!positionQueued){positionQueued=true;requestAnimationFrame(updatePosition);}}
-  window.addEventListener('scroll',schedulePosition,{passive:true});
+  document.addEventListener('scroll',schedulePosition,{passive:true,capture:true});
+  document.addEventListener('toggle',schedulePosition,true);
   window.addEventListener('resize',schedulePosition,{passive:true});
   window.addEventListener('hashchange',schedulePosition);
   document.addEventListener('load',schedulePosition,true);
@@ -26,14 +27,14 @@
     queued=false;
     const article=document.querySelector('.article.content');
     if(!article)return;
-    const headings=[...article.querySelectorAll('h2[id],h3[id]')].filter(h=>!h.closest('.mtrag-viewer')&&!h.closest('.home-profile'));
+    const headings=[...article.querySelectorAll('h2[id],h3[id],h4[id]')].filter(h=>!h.closest('.mtrag-viewer')&&!h.closest('.home-profile'));
     const key=location.pathname+JSON.stringify(headings.map(h=>[h.id,h.textContent]));
     if(key===signature&&toc?.isConnected){schedulePosition();return;}
     signature=key;toc?.remove();items=[];
     if(!headings.length)return;
     toc=document.createElement('nav');toc.className='ds-document-toc';toc.setAttribute('aria-label','Table of contents');
     const title=document.createElement('div');title.className='ds-document-toc-title';title.textContent='Table of Contents';toc.append(title);
-    for(const h of headings){const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent.replace(/¶/g,'').trim();if(h.tagName==='H3')a.className='ds-toc-subheading';a.addEventListener('click',event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();h.scrollIntoView({block:'start',behavior:'instant'});history.pushState(null,'','#'+encodeURIComponent(h.id));schedulePosition();});toc.append(a);items.push({heading:h,link:a});}
+    for(const h of headings){const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent.replace(/¶/g,'').trim();if(h.tagName!=='H2')a.className='ds-toc-subheading';a.addEventListener('click',event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();h.scrollIntoView({block:'start',behavior:'instant'});history.pushState(null,'','#'+encodeURIComponent(h.id));schedulePosition();});toc.append(a);items.push({heading:h,link:a});}
     article.append(toc);schedulePosition();
   }
   function schedule(){if(!queued){queued=true;requestAnimationFrame(refresh);}}
