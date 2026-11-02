@@ -75,5 +75,6 @@
   "agent-evaluation": "Learning-Notes/Artificial-Intelligence/Agent-Evaluation",
   "langsmith-evaluation-in-practice": "Learning-Notes/Artificial-Intelligence/LangSmith-Evaluation-in-Practice",
   "prompt-engineering": "Learning-Notes/Artificial-Intelligence/Prompt-Engineering",
-  "quantifying-biases-in-llm-as-a-judge-evaluations": "Research/Literature-Review/Quantifying-Biases-in-LLM-as-a-Judge-Evaluations"
+  "quantifying-biases-in-llm-as-a-judge-evaluations": "Research/Literature-Review/Quantifying-Biases-in-LLM-as-a-Judge-Evaluations",
+  "progress-2": "Research/Progress/2"
 }
