@@ -24,6 +24,6 @@ for old,new in routes.items():
         target=root/rel
         if not (target.is_file() or (target/'index.html').is_file()):errors.append((new,'missing target',href))
 assert not errors,errors[:20]
-hidden = {'Research.Literature-Review', 'Research.Literature-Review.Reliable-decision-support-with-LLMs', 'Research.Data.LLM-Consistency'}
+hidden = {'Research.Data.LLM-Consistency'}
 assert {p['slug'] for p in json.loads((root/'config.json').read_text())['projects'][0]['pages']} == {p.replace('/','.') for p in routes.values()} - hidden
 print(f'Validated {len(routes)} canonical pages, page data and internal links')

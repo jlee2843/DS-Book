@@ -12,7 +12,7 @@ import re
 MARKER = '\n/* DS_SECTIONS_ENHANCEMENT */\n'
 
 SOURCES = ['page-routes', 'sections', 'mtrag-viewer', 'site-navigation',
-           'note-menu', 'progress-viewer', 'question-variations-data', 'gemma-data',
+           'note-menu', 'literature-catalog', 'progress-viewer', 'question-variations-data', 'gemma-data',
            'evaluation-data', 'evaluation-viewer']
 
 def install_standalone(root):

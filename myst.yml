@@ -151,11 +151,11 @@ project:
   - file: notes/Proposal.ipynb
     title: Proposal
   - file: notes/Literature-Review.ipynb
-    hidden: true
     title: Literature Review
     children:
+    - file: notes/Literature/Quantifying-Biases-in-LLM-as-a-Judge-Evaluations.ipynb
+      title: Quantifying Biases in LLM-as-a-Judge Evaluations
     - file: notes/Literature/Reliable-Decision-Support-with-LLMs.ipynb
-      hidden: true
       title: Reliable decision support with LLMs
   - file: notes/Progress.ipynb
     title: Progress
