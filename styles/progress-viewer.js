@@ -25,7 +25,7 @@ function mountProgressAnalysis() {
   document.querySelectorAll('.progress-analysis-app').forEach(root=>{
     if(root.dataset.ready)return;
     const isThird=root.classList.contains('progress3-app');
-    const tabs=isThird?[['input','Experiment'],['model','Statistical model'],['readout','Results']]:[['input','Input'],['q1','Q1'],['q2','Q2'],['q3','Q3'],['q4','Q4'],['q5','Q5'],['example','Example']];
+    const tabs=isThird?[['input','Experiment'],['model','Statistical model'],['readout','Results'],['examples','Examples']]:[['input','Input'],['q1','Q1'],['q2','Q2'],['q3','Q3'],['q4','Q4'],['q5','Q5'],['example','Example']];
     const keys=tabs.map(([key])=>key);
     const panels=Object.fromEntries(keys.map(k=>[k,root.querySelector((isThird?'.progress3-':'.progress2-')+k)]));
     if(keys.some(k=>!panels[k]))return;
@@ -53,11 +53,19 @@ function mountProgressAnalysis() {
     }
     root.addEventListener('click',event=>{
       const b=event.target.closest('button');if(!b)return;
-      if(b.dataset.p2Section)section=b.dataset.p2Section;
+      if(b.dataset.p2Section){
+        const wasExamples=section==='examples';
+        section=b.dataset.p2Section;
+        if(isThird&&section==='examples')history.replaceState(null,'','#examples');
+        else if(isThird&&wasExamples)history.replaceState(null,'',location.pathname+location.search);
+      }
       else return;
       render();
     });
     function revealAnchor(){
+      if(isThird&&new URLSearchParams(location.hash.slice(1)).has('response')){
+        section='examples';render();return;
+      }
       const id=decodeURIComponent(location.hash.slice(1));if(!id)return;
       const target=document.getElementById(id);if(!target||!root.contains(target))return;
       const key=keys.find(k=>panels[k].contains(target)||panels[k]===target);if(!key)return;

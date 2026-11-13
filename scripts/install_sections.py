@@ -13,7 +13,7 @@ MARKER = '\n/* DS_SECTIONS_ENHANCEMENT */\n'
 
 SOURCES = ['page-routes', 'sections', 'mtrag-viewer', 'site-navigation',
            'note-menu', 'literature-catalog', 'progress-figure-viewer', 'progress-viewer', 'question-variations-data', 'gemma-data',
-           'evaluation-data', 'evaluation-viewer']
+           'evaluation-data', 'evaluation-viewer', 'progress-scores-viewer']
 
 def install_standalone(root):
     """Keep the site UI independent of MyST's lazy module graph."""

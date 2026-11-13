@@ -1538,6 +1538,43 @@ html:root body #progress-drafts.progress-analysis-app .equation-sequence{backgro
 html:root body #progress-drafts.progress-analysis-app div.group:has(>div>.katex-display){border:0!important;box-shadow:none!important;background:linear-gradient(var(--ds-line),var(--ds-line)) left top/12px 1px no-repeat,linear-gradient(var(--ds-line),var(--ds-line)) left top/1px 12px no-repeat,linear-gradient(var(--ds-line),var(--ds-line)) right top/12px 1px no-repeat,linear-gradient(var(--ds-line),var(--ds-line)) right top/1px 12px no-repeat,linear-gradient(var(--ds-line),var(--ds-line)) left bottom/12px 1px no-repeat,linear-gradient(var(--ds-line),var(--ds-line)) left bottom/1px 12px no-repeat,linear-gradient(var(--ds-line),var(--ds-line)) right bottom/12px 1px no-repeat,linear-gradient(var(--ds-line),var(--ds-line)) right bottom/1px 12px no-repeat!important}
 
 /* Progress 3 figure viewer. The existing report and SVG palette remain intact. */
+/* Recorded Progress 3 scores. Keep controls and tables scoped to the explorer. */
+#progress-drafts .progress-score-viewer{font-family:'IBM Plex Sans',Arial,sans-serif;color:var(--ds-ink);min-width:0}
+html:root body #progress-drafts .progress-score-viewer :is(h2,h3){font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace!important;font-weight:600;letter-spacing:-.035em;line-height:1.5;padding-left:0}
+html:root body #progress-drafts .progress-score-viewer h2{font-size:24px}
+html:root body #progress-drafts .progress-score-viewer h3{font-size:21px}
+html:root body #progress-drafts .progress-score-viewer :is(h2,h3)::before{display:none}
+#progress-drafts .progress-score-viewer .ps-settings{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;border-block:1px solid var(--ds-line);padding:16px 0;margin:20px 0 28px;font-size:14px}
+#progress-drafts .progress-score-viewer .ps-filters{display:flex;flex-wrap:wrap;gap:18px 28px;scroll-margin-top:90px}
+#progress-drafts .progress-score-viewer fieldset{border:0;padding:0;margin:0;min-width:0}
+#progress-drafts .progress-score-viewer legend{font-size:13px;color:var(--ds-muted);padding:0;margin-bottom:8px}
+#progress-drafts .progress-score-viewer .ps-choices{display:flex;flex-wrap:wrap;gap:6px}
+#progress-drafts .progress-score-viewer button{font-family:inherit;font-size:14px;color:var(--ds-ink);background:var(--ds-paper);border:1px solid var(--ds-line);padding:7px 12px;cursor:pointer;border-radius:0;min-height:38px}
+#progress-drafts .progress-score-viewer button:hover{border-color:var(--ds-ink)}
+#progress-drafts .progress-score-viewer button[aria-pressed=true]{background:var(--ds-ink);color:var(--ds-paper);border-color:var(--ds-ink)}
+#progress-drafts .progress-score-viewer :focus-visible{outline:2px solid var(--ds-ink);outline-offset:3px}
+#progress-drafts .progress-score-viewer .ps-selection{font-weight:600;margin:24px 0 4px!important}
+#progress-drafts .progress-score-viewer .ps-meta,#progress-drafts .progress-score-viewer .ps-caption,#progress-drafts .progress-score-viewer .ps-detail-meta{font-size:13px;line-height:1.7;color:var(--ds-muted);overflow-wrap:anywhere}
+#progress-drafts .progress-score-viewer .ps-answer{border-left:3px solid var(--ds-line);padding:14px 20px;background:var(--ds-soft);white-space:pre-wrap;line-height:1.8;overflow-wrap:anywhere}
+#progress-drafts .progress-score-viewer .ps-question{line-height:1.8}
+#progress-drafts .progress-score-viewer .ps-table-scroll{max-width:100%;overflow-x:auto;margin:18px 0}
+html:root body #progress-drafts .progress-score-viewer table{width:100%;font-family:'IBM Plex Sans',Arial,sans-serif;font-size:13px;border-collapse:collapse}
+html:root body #progress-drafts .progress-score-viewer table :is(th,td){background:transparent;padding:10px 8px;vertical-align:middle;white-space:nowrap;text-align:left;border:0;border-bottom:1px solid var(--ds-line)}
+#progress-drafts .progress-score-viewer table button{padding:6px 9px;font-variant-numeric:tabular-nums}
+#progress-drafts .progress-score-viewer .ps-current{outline:1px solid var(--ds-ink);outline-offset:-1px}
+#progress-drafts .progress-score-viewer .ps-detail{margin:30px 0;border-top:1px solid var(--ds-line)}
+#progress-drafts .progress-score-viewer .ps-judgement{margin:0;padding:18px 0;border-bottom:1px solid var(--ds-line)}
+#progress-drafts .progress-score-viewer .ps-judgement-head{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--ds-muted)}
+#progress-drafts .progress-score-viewer .ps-verdict{border:1px solid var(--ds-line);padding:1px 8px;color:var(--ds-ink);font-weight:500}
+#progress-drafts .progress-score-viewer .ps-reason{font-size:14px;line-height:1.7;color:var(--ds-muted)}
+#progress-drafts .progress-score-viewer .ps-error{border:1px dashed var(--ds-ink);padding:14px;overflow-wrap:anywhere}
+#progress-drafts .progress-score-viewer .ps-failed{border-style:dashed}
+#progress-drafts .progress-score-viewer details{border:1px solid var(--ds-line);margin:24px 0;padding:0}
+#progress-drafts .progress-score-viewer summary{background:var(--ds-soft);padding:12px 16px;font-size:14px;cursor:pointer;font-weight:500}
+#progress-drafts .progress-score-viewer details>div,#progress-drafts .progress-score-viewer details>ul{padding:16px;margin:0}
+#progress-drafts .progress-score-viewer details>ul{padding-left:36px}
+#progress-drafts .progress-score-viewer .ps-verbatim{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}
+@media(max-width:640px){#progress-drafts .progress-score-viewer .ps-settings{grid-template-columns:1fr}#progress-drafts .progress-score-viewer .ps-filters{gap:18px;width:100%}#progress-drafts .progress-score-viewer fieldset{width:100%}#progress-drafts .progress-score-viewer .ps-answer{padding:12px 14px}#progress-drafts .progress-score-viewer button{min-height:42px}}
 #progress-drafts .progress-figure-preview{cursor:zoom-in}
 #progress-drafts .progress-figure-open{display:block;margin:0 0 8px auto;padding:5px 10px;border:1px solid var(--ds-line);background:var(--ds-paper);color:var(--ds-ink);font:12px 'IBM Plex Sans',sans-serif;cursor:pointer}
 #progress-drafts .progress-figure-open:hover{border-color:var(--ds-ink)}
