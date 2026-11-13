@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" width="322.312344pt" height="255.081677pt" viewBox="0 0 322.312344 255.081677" version="1.1" data-chart-title="Faithfulness / Evaluation completion">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2026-11-12T21:57:40.534209</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 255.081677  L 322.312344 255.081677  L 322.312344 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 55.292344 208.281677  L 315.112344 208.281677  L 315.112344 54.849197  L 55.292344 54.849197  z " style="fill: #ffffff" />
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m0762f0c32a" d="M 0 0  L 0 3.5  " style="stroke: #333333; stroke-width: 0.8" />
+      </defs>
+      <g>
+       <use xlink:href="#m0762f0c32a" x="98.997964" y="208.281677" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="98.997964" y="226.556677" transform="rotate(-0 98.997964 226.556677)">0.3</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m0762f0c32a" x="185.202344" y="208.281677" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="185.202344" y="226.556677" transform="rotate(-0 185.202344 226.556677)">0.6</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m0762f0c32a" x="271.406723" y="208.281677" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="271.406723" y="226.556677" transform="rotate(-0 271.406723 226.556677)">0.9</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="185.202344" y="244.856677" transform="rotate(-0 185.202344 244.856677)">Generation temperature</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 55.292344 208.281677  L 315.112344 208.281677  " clip-path="url(#p08102fbbb2)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="mdfd6e61735" d="M 0 0  L -3.5 0  " style="stroke: #333333; stroke-width: 0.8" />
+      </defs>
+      <g>
+       <use xlink:href="#mdfd6e61735" x="55.292344" y="208.281677" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="213.919177" transform="rotate(-0 48.292344 213.919177)">0.00</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 55.292344 175.214332  L 315.112344 175.214332  " clip-path="url(#p08102fbbb2)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mdfd6e61735" x="55.292344" y="175.214332" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="180.851832" transform="rotate(-0 48.292344 180.851832)">0.25</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 55.292344 142.146987  L 315.112344 142.146987  " clip-path="url(#p08102fbbb2)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mdfd6e61735" x="55.292344" y="142.146987" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="147.784487" transform="rotate(-0 48.292344 147.784487)">0.50</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 55.292344 109.079642  L 315.112344 109.079642  " clip-path="url(#p08102fbbb2)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mdfd6e61735" x="55.292344" y="109.079642" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="114.717142" transform="rotate(-0 48.292344 114.717142)">0.75</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path d="M 55.292344 76.012297  L 315.112344 76.012297  " clip-path="url(#p08102fbbb2)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#mdfd6e61735" x="55.292344" y="76.012297" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="81.649797" transform="rotate(-0 48.292344 81.649797)">1.00</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="18.475" y="131.565437" transform="rotate(-90 18.475 131.565437)">Fraction producing a valid score</text>
+    </g>
+   </g>
+   <g id="progress-mark-0" data-series="original" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 67.102344 208.281677  L 81.757088 208.281677  L 81.757088 76.012297  L 67.102344 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #446b5b" />
+   </g>
+   <g id="progress-mark-2" data-series="original" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Valid scores&quot;: 6, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 0.6666666666666666}}">
+    <path d="M 153.306723 208.281677  L 167.961468 208.281677  L 167.961468 120.102091  L 153.306723 120.102091  z " clip-path="url(#p08102fbbb2)" style="fill: #446b5b" />
+   </g>
+   <g id="progress-mark-4" data-series="original" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 239.511103 208.281677  L 254.165847 208.281677  L 254.165847 76.012297  L 239.511103 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #446b5b" />
+   </g>
+   <g id="progress-mark-6" data-series="A" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 83.481176 208.281677  L 98.13592 208.281677  L 98.13592 76.012297  L 83.481176 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #897044" />
+   </g>
+   <g id="progress-mark-8" data-series="A" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 169.685555 208.281677  L 184.3403 208.281677  L 184.3403 76.012297  L 169.685555 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #897044" />
+   </g>
+   <g id="progress-mark-10" data-series="A" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 255.889935 208.281677  L 270.54468 208.281677  L 270.54468 76.012297  L 255.889935 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #897044" />
+   </g>
+   <g id="progress-mark-12" data-series="B" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 99.860008 208.281677  L 114.514753 208.281677  L 114.514753 76.012297  L 99.860008 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #687bb5" />
+   </g>
+   <g id="progress-mark-14" data-series="B" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 186.064388 208.281677  L 200.719132 208.281677  L 200.719132 76.012297  L 186.064388 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #687bb5" />
+   </g>
+   <g id="progress-mark-16" data-series="B" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 272.268767 208.281677  L 286.923512 208.281677  L 286.923512 76.012297  L 272.268767 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #687bb5" />
+   </g>
+   <g id="progress-mark-18" data-series="C" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 116.23884 208.281677  L 130.893585 208.281677  L 130.893585 76.012297  L 116.23884 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #333333" />
+   </g>
+   <g id="progress-mark-20" data-series="C" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 202.44322 208.281677  L 217.097964 208.281677  L 217.097964 76.012297  L 202.44322 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #333333" />
+   </g>
+   <g id="progress-mark-22" data-series="C" data-value="{&quot;kind&quot;: &quot;Evaluation completion&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Valid scores&quot;: 9, &quot;Planned scores&quot;: 9, &quot;Completion fraction&quot;: 1.0}}">
+    <path d="M 288.647599 208.281677  L 303.302344 208.281677  L 303.302344 76.012297  L 288.647599 76.012297  z " clip-path="url(#p08102fbbb2)" style="fill: #333333" />
+   </g>
+   <g id="patch_3">
+    <path d="M 55.292344 208.281677  L 55.292344 54.849197  " style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="patch_4">
+    <path d="M 55.292344 208.281677  L 315.112344 208.281677  " style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="progress-mark-1" data-series="original">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="74.429716" y="68.907869" transform="rotate(-0 74.429716 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-3" data-series="original">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="160.634096" y="112.997662" transform="rotate(-0 160.634096 112.997662)">6/9</text>
+   </g>
+   <g id="progress-mark-5" data-series="original">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="246.838475" y="68.907869" transform="rotate(-0 246.838475 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-7" data-series="A">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="90.808548" y="68.907869" transform="rotate(-0 90.808548 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-9" data-series="A">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="177.012928" y="68.907869" transform="rotate(-0 177.012928 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-11" data-series="A">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="263.217307" y="68.907869" transform="rotate(-0 263.217307 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-13" data-series="B">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="107.18738" y="68.907869" transform="rotate(-0 107.18738 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-15" data-series="B">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="193.39176" y="68.907869" transform="rotate(-0 193.39176 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-17" data-series="B">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="279.596139" y="68.907869" transform="rotate(-0 279.596139 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-19" data-series="C">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="123.566212" y="68.907869" transform="rotate(-0 123.566212 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-21" data-series="C">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="209.770592" y="68.907869" transform="rotate(-0 209.770592 68.907869)">9/9</text>
+   </g>
+   <g id="progress-mark-23" data-series="C">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="295.974971" y="68.907869" transform="rotate(-0 295.974971 68.907869)">9/9</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 13px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="185.202344" y="48.849197" transform="rotate(-0 185.202344 48.849197)">Faithfulness / evaluation completion</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_5">
+     <path d="M 84.597031 22.875  L 102.197031 22.875  L 102.197031 15.175  L 84.597031 15.175  z " style="fill: #446b5b" />
+    </g>
+    <g id="text_12">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #222222" x="110.997031" y="22.875" transform="rotate(-0 110.997031 22.875)">Original</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 161.344375 22.875  L 178.944375 22.875  L 178.944375 15.175  L 161.344375 15.175  z " style="fill: #897044" />
+    </g>
+    <g id="text_13">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #222222" x="187.744375" y="22.875" transform="rotate(-0 187.744375 22.875)">A</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 206.894688 22.875  L 224.494688 22.875  L 224.494688 15.175  L 206.894688 15.175  z " style="fill: #687bb5" />
+    </g>
+    <g id="text_14">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #222222" x="233.294688" y="22.875" transform="rotate(-0 233.294688 22.875)">B</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 252.577344 22.875  L 270.177344 22.875  L 270.177344 15.175  L 252.577344 15.175  z " style="fill: #333333" />
+    </g>
+    <g id="text_15">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #222222" x="278.977344" y="22.875" transform="rotate(-0 278.977344 22.875)">C</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p08102fbbb2">
+   <rect x="55.292344" y="54.849197" width="259.82" height="153.43248" />
+  </clipPath>
+ </defs>
+</svg>

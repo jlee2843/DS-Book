@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" width="322.192344pt" height="255.081677pt" viewBox="0 0 322.192344 255.081677" version="1.1" data-chart-title="Faithfulness / Repeated scores">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2026-11-12T21:57:40.458171</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 255.081677  L 322.192344 255.081677  L 322.192344 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 48.692344 208.281677  L 314.992344 208.281677  L 314.992344 54.849197  L 48.692344 54.849197  z " style="fill: #ffffff" />
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m2ee2950fb3" d="M 0 0  L 0 3.5  " style="stroke: #333333; stroke-width: 0.8" />
+      </defs>
+      <g>
+       <use xlink:href="#m2ee2950fb3" x="66.059735" y="208.281677" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="66.059735" y="226.556677" transform="rotate(-0 66.059735 226.556677)">1</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m2ee2950fb3" x="181.842344" y="208.281677" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="181.842344" y="226.556677" transform="rotate(-0 181.842344 226.556677)">2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m2ee2950fb3" x="297.624952" y="208.281677" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="297.624952" y="226.556677" transform="rotate(-0 297.624952 226.556677)">3</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="181.842344" y="244.856677" transform="rotate(-0 181.842344 244.856677)">Evaluation repeat</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 48.692344 204.628523  L 314.992344 204.628523  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="m116394eb28" d="M 0 0  L -3.5 0  " style="stroke: #333333; stroke-width: 0.8" />
+      </defs>
+      <g>
+       <use xlink:href="#m116394eb28" x="48.692344" y="204.628523" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="41.692344" y="210.266023" transform="rotate(-0 41.692344 210.266023)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 48.692344 175.403288  L 314.992344 175.403288  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m116394eb28" x="48.692344" y="175.403288" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="41.692344" y="181.040788" transform="rotate(-0 41.692344 181.040788)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 48.692344 146.178054  L 314.992344 146.178054  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m116394eb28" x="48.692344" y="146.178054" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="41.692344" y="151.815554" transform="rotate(-0 41.692344 151.815554)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 48.692344 116.95282  L 314.992344 116.95282  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m116394eb28" x="48.692344" y="116.95282" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="41.692344" y="122.59032" transform="rotate(-0 41.692344 122.59032)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path d="M 48.692344 87.727585  L 314.992344 87.727585  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m116394eb28" x="48.692344" y="87.727585" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="41.692344" y="93.365085" transform="rotate(-0 41.692344 93.365085)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_14">
+      <path d="M 48.692344 58.502351  L 314.992344 58.502351  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #ebebeb; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m116394eb28" x="48.692344" y="58.502351" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="41.692344" y="64.139851" transform="rotate(-0 41.692344 64.139851)">1.0</text>
+     </g>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="18.475" y="131.565437" transform="rotate(-90 18.475 131.565437)">Individual score</text>
+    </g>
+   </g>
+   <g id="progress-mark-0" data-series="original">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+    <defs>
+     <path id="me06bef611e" d="M 0 2  C 0.530406 2 1.03916 1.789267 1.414214 1.414214  C 1.789267 1.03916 2 0.530406 2 0  C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214  C 1.03916 -1.789267 0.530406 -2 0 -2  C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214  C -1.789267 -1.03916 -2 -0.530406 -2 0  C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214  C -1.03916 1.789267 -0.530406 2 0 2  z " style="stroke: #446b5b; stroke-opacity: 0.5" />
+    </defs>
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#me06bef611e" x="66.059735" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="181.842344" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="297.624952" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-1" data-series="original">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#me06bef611e" x="66.059735" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="181.842344" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="297.624952" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-2" data-series="original">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#me06bef611e" x="66.059735" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="181.842344" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="297.624952" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-3" data-series="original">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#me06bef611e" x="66.059735" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;original-0.6-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="181.842344" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;original-0.6-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="297.624952" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;original-0.6-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-4" data-series="original">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#me06bef611e" x="66.059735" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;original-0.6-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="181.842344" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;original-0.6-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="297.624952" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;original-0.6-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-5" data-series="original">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#me06bef611e" x="66.059735" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="181.842344" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="297.624952" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-6" data-series="original">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#me06bef611e" x="66.059735" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="181.842344" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="297.624952" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-7" data-series="original">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#me06bef611e" x="66.059735" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="181.842344" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#me06bef611e" x="297.624952" y="107.211075" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-8" data-series="A">
+    <path d="M 66.059735 131.565437  L 181.842344 131.565437  L 297.624952 131.565437  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <defs>
+     <path id="m7533a72041" d="M -2 2  L 2 2  L 2 -2  L -2 -2  z " style="stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" />
+    </defs>
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.5}}" />
+    </g>
+   </g>
+   <g id="progress-mark-9" data-series="A">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-10" data-series="A">
+    <path d="M 66.059735 146.178054  L 181.842344 146.178054  L 297.624952 146.178054  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="146.178054" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.4}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="146.178054" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.4}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="146.178054" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.4}}" />
+    </g>
+   </g>
+   <g id="progress-mark-11" data-series="A">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-12" data-series="A">
+    <path d="M 66.059735 131.565437  L 181.842344 131.565437  L 297.624952 131.565437  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.5}}" />
+    </g>
+   </g>
+   <g id="progress-mark-13" data-series="A">
+    <path d="M 66.059735 131.565437  L 181.842344 131.565437  L 297.624952 131.565437  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="131.565437" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.5}}" />
+    </g>
+   </g>
+   <g id="progress-mark-14" data-series="A">
+    <path d="M 66.059735 116.95282  L 181.842344 116.95282  L 297.624952 116.95282  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="116.95282" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="116.95282" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="116.95282" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6}}" />
+    </g>
+   </g>
+   <g id="progress-mark-15" data-series="A">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="107.211075" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-16" data-series="A">
+    <path d="M 66.059735 168.09698  L 181.842344 168.09698  L 297.624952 168.09698  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#m7533a72041" x="66.059735" y="168.09698" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.25}}" />
+     <use xlink:href="#m7533a72041" x="181.842344" y="168.09698" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.25}}" />
+     <use xlink:href="#m7533a72041" x="297.624952" y="168.09698" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.25}}" />
+    </g>
+   </g>
+   <g id="progress-mark-17" data-series="B">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <defs>
+     <path id="mf82eec8599" d="M -0 2.828427  L 2.828427 0  L 0 -2.828427  L -2.828427 -0  z " style="stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" />
+    </defs>
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="107.211075" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="107.211075" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="107.211075" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-18" data-series="B">
+    <path d="M 66.059735 155.919799  L 181.842344 155.919799  L 297.624952 155.919799  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="155.919799" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.3333333333333333}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="155.919799" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.3333333333333333}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="155.919799" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.3333333333333333}}" />
+    </g>
+   </g>
+   <g id="progress-mark-19" data-series="B">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="107.211075" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="107.211075" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="107.211075" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-20" data-series="B">
+    <path d="M 66.059735 204.628523  L 181.842344 204.628523  L 297.624952 204.628523  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.0}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.0}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.0}}" />
+    </g>
+   </g>
+   <g id="progress-mark-21" data-series="B">
+    <path d="M 66.059735 131.565437  L 181.842344 131.565437  L 297.624952 131.565437  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.5}}" />
+    </g>
+   </g>
+   <g id="progress-mark-22" data-series="B">
+    <path d="M 66.059735 204.628523  L 181.842344 204.628523  L 297.624952 204.628523  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.0}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.0}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.0}}" />
+    </g>
+   </g>
+   <g id="progress-mark-23" data-series="B">
+    <path d="M 66.059735 131.565437  L 181.842344 131.565437  L 297.624952 131.565437  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.5}}" />
+    </g>
+   </g>
+   <g id="progress-mark-24" data-series="B">
+    <path d="M 66.059735 131.565437  L 181.842344 131.565437  L 297.624952 131.565437  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="131.565437" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.5}}" />
+    </g>
+   </g>
+   <g id="progress-mark-25" data-series="B">
+    <path d="M 66.059735 204.628523  L 181.842344 204.628523  L 297.624952 204.628523  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mf82eec8599" x="66.059735" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.0}}" />
+     <use xlink:href="#mf82eec8599" x="181.842344" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.0}}" />
+     <use xlink:href="#mf82eec8599" x="297.624952" y="204.628523" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.0}}" />
+    </g>
+   </g>
+   <g id="progress-mark-26" data-series="C">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <defs>
+     <path id="mcc7c932dd1" d="M 0 -2  L -2 2  L 2 2  z " style="stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" />
+    </defs>
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-27" data-series="C">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-28" data-series="C">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-29" data-series="C">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-30" data-series="C">
+    <path d="M 66.059735 131.565437  L 181.842344 131.565437  L 297.624952 131.565437  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="131.565437" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="131.565437" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="131.565437" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.5}}" />
+    </g>
+   </g>
+   <g id="progress-mark-31" data-series="C">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="progress-mark-32" data-series="C">
+    <path d="M 66.059735 131.565437  L 181.842344 131.565437  L 297.624952 131.565437  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="131.565437" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-1&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="131.565437" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-1&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.5}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="131.565437" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-1&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.5}}" />
+    </g>
+   </g>
+   <g id="progress-mark-33" data-series="C">
+    <path d="M 66.059735 95.033894  L 181.842344 95.033894  L 297.624952 95.033894  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="95.033894" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-2&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.75}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="95.033894" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-2&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.75}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="95.033894" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-2&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.75}}" />
+    </g>
+   </g>
+   <g id="progress-mark-34" data-series="C">
+    <path d="M 66.059735 107.211075  L 181.842344 107.211075  L 297.624952 107.211075  " clip-path="url(#pb2c4659796)" style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+    <g clip-path="url(#pb2c4659796)">
+     <use xlink:href="#mcc7c932dd1" x="66.059735" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-3&quot;, &quot;Repeat&quot;: 1, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="181.842344" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-3&quot;, &quot;Repeat&quot;: 2, &quot;Score&quot;: 0.6666666666666666}}" />
+     <use xlink:href="#mcc7c932dd1" x="297.624952" y="107.211075" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" data-value="{&quot;kind&quot;: &quot;Evaluation score&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-3&quot;, &quot;Repeat&quot;: 3, &quot;Score&quot;: 0.6666666666666666}}" />
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 48.692344 208.281677  L 48.692344 54.849197  " style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="patch_4">
+    <path d="M 48.692344 208.281677  L 314.992344 208.281677  " style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="text_12">
+    <text style="font-size: 13px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="181.842344" y="48.849197" transform="rotate(-0 181.842344 48.849197)">Faithfulness / repeated scores</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_16">
+     <path d="M 81.237031 19.025  L 90.037031 19.025  L 98.837031 19.025  " style="fill: none; stroke: #446b5b; stroke-opacity: 0.5; stroke-linecap: square" />
+     <g>
+      <use xlink:href="#me06bef611e" x="90.037031" y="19.025" style="fill: #446b5b; fill-opacity: 0.5; stroke: #446b5b; stroke-opacity: 0.5" />
+     </g>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #222222" x="107.637031" y="22.875" transform="rotate(-0 107.637031 22.875)">Original</text>
+    </g>
+    <g id="line2d_17">
+     <path d="M 157.984375 19.025  L 166.784375 19.025  L 175.584375 19.025  " style="fill: none; stroke: #897044; stroke-opacity: 0.5; stroke-linecap: square" />
+     <g>
+      <use xlink:href="#m7533a72041" x="166.784375" y="19.025" style="fill: #897044; fill-opacity: 0.5; stroke: #897044; stroke-opacity: 0.5; stroke-linejoin: miter" />
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #222222" x="184.384375" y="22.875" transform="rotate(-0 184.384375 22.875)">A</text>
+    </g>
+    <g id="line2d_18">
+     <path d="M 203.534687 19.025  L 212.334687 19.025  L 221.134687 19.025  " style="fill: none; stroke: #687bb5; stroke-opacity: 0.5; stroke-linecap: square" />
+     <g>
+      <use xlink:href="#mf82eec8599" x="212.334687" y="19.025" style="fill: #687bb5; fill-opacity: 0.5; stroke: #687bb5; stroke-opacity: 0.5; stroke-linejoin: miter" />
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #222222" x="229.934687" y="22.875" transform="rotate(-0 229.934687 22.875)">B</text>
+    </g>
+    <g id="line2d_19">
+     <path d="M 249.217344 19.025  L 258.017344 19.025  L 266.817344 19.025  " style="fill: none; stroke: #333333; stroke-opacity: 0.5; stroke-linecap: square" />
+     <g>
+      <use xlink:href="#mcc7c932dd1" x="258.017344" y="19.025" style="fill: #333333; fill-opacity: 0.5; stroke: #333333; stroke-opacity: 0.5; stroke-linejoin: miter" />
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #222222" x="275.617344" y="22.875" transform="rotate(-0 275.617344 22.875)">C</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb2c4659796">
+   <rect x="48.692344" y="54.849197" width="266.3" height="153.43248" />
+  </clipPath>
+ </defs>
+</svg>

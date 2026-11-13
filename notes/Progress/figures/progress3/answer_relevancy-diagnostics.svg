@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" width="603.112344pt" height="271.44pt" viewBox="0 0 603.112344 271.44" version="1.1" data-chart-title="Answer Relevancy / Regression diagnostics">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2026-11-12T21:57:40.975676</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 271.44  L 603.112344 271.44  L 603.112344 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 55.292344 224.64  L 295.852344 224.64  L 295.852344 26.525  L 55.292344 26.525  z " style="fill: #ffffff" />
+   </g>
+   <g id="progress-mark-0">
+    <defs>
+     <path id="m0387813740" d="M 0 2.645751  C 0.701661 2.645751 1.374679 2.366978 1.870829 1.870829  C 2.366978 1.374679 2.645751 0.701661 2.645751 0  C 2.645751 -0.701661 2.366978 -1.374679 1.870829 -1.870829  C 1.374679 -2.366978 0.701661 -2.645751 0 -2.645751  C -0.701661 -2.645751 -1.374679 -2.366978 -1.870829 -1.870829  C -2.366978 -1.374679 -2.645751 -0.701661 -2.645751 0  C -2.645751 0.701661 -2.366978 1.374679 -1.870829 1.870829  C -1.374679 2.366978 -0.701661 2.645751 0 2.645751  z " style="stroke: #446b5b" />
+    </defs>
+    <g clip-path="url(#pbf646ce233)">
+     <use xlink:href="#m0387813740" x="140.035071" y="135.280437" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-1&quot;, &quot;Fitted&quot;: 0.766666666666667, &quot;Residual&quot;: 0.033333333333333104}}" />
+     <use xlink:href="#m0387813740" x="140.035071" y="179.613864" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-2&quot;, &quot;Fitted&quot;: 0.766666666666667, &quot;Residual&quot;: -0.10000000000000042}}" />
+     <use xlink:href="#m0387813740" x="140.035071" y="124.19708" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;original-0.3-3&quot;, &quot;Fitted&quot;: 0.766666666666667, &quot;Residual&quot;: 0.06666666666666632}}" />
+     <use xlink:href="#m0387813740" x="127.733707" y="146.363794" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;original-0.6-1&quot;, &quot;Fitted&quot;: 0.7500000000000002, &quot;Residual&quot;: -2.220446049250313e-16}}" />
+     <use xlink:href="#m0387813740" x="127.733707" y="146.363794" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;original-0.6-2&quot;, &quot;Fitted&quot;: 0.7500000000000002, &quot;Residual&quot;: -2.220446049250313e-16}}" />
+     <use xlink:href="#m0387813740" x="75.599357" y="182.252758" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-1&quot;, &quot;Fitted&quot;: 0.6793650793650796, &quot;Residual&quot;: -0.10793650793650822}}" />
+     <use xlink:href="#m0387813740" x="75.599357" y="150.586025" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-2&quot;, &quot;Fitted&quot;: 0.6793650793650796, &quot;Residual&quot;: -0.012698412698412986}}" />
+     <use xlink:href="#m0387813740" x="75.599357" y="106.252598" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;Original&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;original-0.9-3&quot;, &quot;Fitted&quot;: 0.6793650793650796, &quot;Residual&quot;: 0.12063492063492054}}" />
+     <use xlink:href="#m0387813740" x="284.917798" y="134.048953" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-1&quot;, &quot;Fitted&quot;: 0.9629629629629625, &quot;Residual&quot;: 0.037037037037037535}}" />
+     <use xlink:href="#m0387813740" x="284.917798" y="134.048953" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-2&quot;, &quot;Fitted&quot;: 0.9629629629629625, &quot;Residual&quot;: 0.037037037037037535}}" />
+     <use xlink:href="#m0387813740" x="284.917798" y="170.993475" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;A-0.3-3&quot;, &quot;Fitted&quot;: 0.9629629629629625, &quot;Residual&quot;: -0.07407407407407363}}" />
+     <use xlink:href="#m0387813740" x="128.417116" y="196.54677" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-1&quot;, &quot;Fitted&quot;: 0.7509259259259256, &quot;Residual&quot;: -0.15092592592592557}}" />
+     <use xlink:href="#m0387813740" x="128.417116" y="105.109077" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-2&quot;, &quot;Fitted&quot;: 0.7509259259259256, &quot;Residual&quot;: 0.12407407407407445}}" />
+     <use xlink:href="#m0387813740" x="128.417116" y="137.435534" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;A-0.6-3&quot;, &quot;Fitted&quot;: 0.7509259259259256, &quot;Residual&quot;: 0.026851851851852238}}" />
+     <use xlink:href="#m0387813740" x="120.056917" y="77.280315" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-1&quot;, &quot;Fitted&quot;: 0.739598997493734, &quot;Residual&quot;: 0.2077694235588975}}" />
+     <use xlink:href="#m0387813740" x="120.056917" y="202.280578" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-2&quot;, &quot;Fitted&quot;: 0.739598997493734, &quot;Residual&quot;: -0.16817042606516264}}" />
+     <use xlink:href="#m0387813740" x="120.056917" y="159.530488" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;A&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;A-0.9-3&quot;, &quot;Fitted&quot;: 0.739598997493734, &quot;Residual&quot;: -0.03959899749373419}}" />
+     <use xlink:href="#m0387813740" x="195.098318" y="93.585905" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-1&quot;, &quot;Fitted&quot;: 0.8412698412698411, &quot;Residual&quot;: 0.15873015873015894}}" />
+     <use xlink:href="#m0387813740" x="195.098318" y="204.419471" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-2&quot;, &quot;Fitted&quot;: 0.8412698412698411, &quot;Residual&quot;: -0.17460317460317443}}" />
+     <use xlink:href="#m0387813740" x="195.098318" y="141.086005" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;B-0.3-3&quot;, &quot;Fitted&quot;: 0.8412698412698411, &quot;Residual&quot;: 0.01587301587301604}}" />
+     <use xlink:href="#m0387813740" x="66.226889" y="201.780577" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-1&quot;, &quot;Fitted&quot;: 0.6666666666666666, &quot;Residual&quot;: -0.16666666666666663}}" />
+     <use xlink:href="#m0387813740" x="66.226889" y="35.530227" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-2&quot;, &quot;Fitted&quot;: 0.6666666666666666, &quot;Residual&quot;: 0.33333333333333337}}" />
+     <use xlink:href="#m0387813740" x="66.226889" y="201.780577" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;B-0.6-3&quot;, &quot;Fitted&quot;: 0.6666666666666666, &quot;Residual&quot;: -0.16666666666666663}}" />
+     <use xlink:href="#m0387813740" x="96.980298" y="90.94701" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-1&quot;, &quot;Fitted&quot;: 0.7083333333333337, &quot;Residual&quot;: 0.1666666666666663}}" />
+     <use xlink:href="#m0387813740" x="96.980298" y="132.509598" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-2&quot;, &quot;Fitted&quot;: 0.7083333333333337, &quot;Residual&quot;: 0.0416666666666663}}" />
+     <use xlink:href="#m0387813740" x="96.980298" y="215.634773" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;B&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;B-0.9-3&quot;, &quot;Fitted&quot;: 0.7083333333333337, &quot;Residual&quot;: -0.2083333333333337}}" />
+     <use xlink:href="#m0387813740" x="271.249616" y="183.308316" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-1&quot;, &quot;Fitted&quot;: 0.9444444444444449, &quot;Residual&quot;: -0.1111111111111115}}" />
+     <use xlink:href="#m0387813740" x="271.249616" y="127.891533" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-2&quot;, &quot;Fitted&quot;: 0.9444444444444449, &quot;Residual&quot;: 0.055555555555555136}}" />
+     <use xlink:href="#m0387813740" x="271.249616" y="127.891533" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.3, &quot;Response&quot;: &quot;C-0.3-3&quot;, &quot;Fitted&quot;: 0.9444444444444449, &quot;Residual&quot;: 0.055555555555555136}}" />
+     <use xlink:href="#m0387813740" x="143.549746" y="136.863774" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-1&quot;, &quot;Fitted&quot;: 0.7714285714285719, &quot;Residual&quot;: 0.028571428571428248}}" />
+     <use xlink:href="#m0387813740" x="143.549746" y="165.363834" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-2&quot;, &quot;Fitted&quot;: 0.7714285714285719, &quot;Residual&quot;: -0.057142857142857606}}" />
+     <use xlink:href="#m0387813740" x="143.549746" y="136.863774" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.6, &quot;Response&quot;: &quot;C-0.6-3&quot;, &quot;Fitted&quot;: 0.7714285714285719, &quot;Residual&quot;: 0.028571428571428248}}" />
+     <use xlink:href="#m0387813740" x="196.074616" y="94.025721" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-1&quot;, &quot;Fitted&quot;: 0.8425925925925926, &quot;Residual&quot;: 0.15740740740740744}}" />
+     <use xlink:href="#m0387813740" x="196.074616" y="167.914765" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-2&quot;, &quot;Fitted&quot;: 0.8425925925925926, &quot;Residual&quot;: -0.06481481481481477}}" />
+     <use xlink:href="#m0387813740" x="196.074616" y="177.150895" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Regression residual&quot;, &quot;values&quot;: {&quot;Prompt&quot;: &quot;C&quot;, &quot;Temperature&quot;: 0.9, &quot;Response&quot;: &quot;C-0.9-3&quot;, &quot;Fitted&quot;: 0.8425925925925926, &quot;Residual&quot;: -0.09259259259259256}}" />
+    </g>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m502ebfba44" d="M 0 0  L 0 3.5  " style="stroke: #333333; stroke-width: 0.8" />
+      </defs>
+      <g>
+       <use xlink:href="#m502ebfba44" x="90.829616" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="90.829616" y="242.915" transform="rotate(-0 90.829616 242.915)">0.70</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m502ebfba44" x="127.733707" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="127.733707" y="242.915" transform="rotate(-0 127.733707 242.915)">0.75</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m502ebfba44" x="164.637798" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="164.637798" y="242.915" transform="rotate(-0 164.637798 242.915)">0.80</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m502ebfba44" x="201.541889" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="201.541889" y="242.915" transform="rotate(-0 201.541889 242.915)">0.85</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m502ebfba44" x="238.44598" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="238.44598" y="242.915" transform="rotate(-0 238.44598 242.915)">0.90</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m502ebfba44" x="275.350071" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="275.350071" y="242.915" transform="rotate(-0 275.350071 242.915)">0.95</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="175.572344" y="261.215" transform="rotate(-0 175.572344 261.215)">Fitted score</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <defs>
+       <path id="mf14462d8b9" d="M 0 0  L -3.5 0  " style="stroke: #333333; stroke-width: 0.8" />
+      </defs>
+      <g>
+       <use xlink:href="#mf14462d8b9" x="55.292344" y="212.863934" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="218.501434" transform="rotate(-0 48.292344 218.501434)">−0.2</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="55.292344" y="179.613864" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="185.251364" transform="rotate(-0 48.292344 185.251364)">−0.1</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="55.292344" y="146.363794" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="152.001294" transform="rotate(-0 48.292344 152.001294)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="55.292344" y="113.113724" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="118.751224" transform="rotate(-0 48.292344 118.751224)">0.1</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="55.292344" y="79.863654" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="85.501154" transform="rotate(-0 48.292344 85.501154)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="55.292344" y="46.613584" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="48.292344" y="52.251084" transform="rotate(-0 48.292344 52.251084)">0.3</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="18.475" y="125.5825" transform="rotate(-90 18.475 125.5825)">Residual</text>
+    </g>
+   </g>
+   <g id="line2d_13">
+    <path d="M 55.292344 146.363794  L 295.852344 146.363794  " clip-path="url(#pbf646ce233)" style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linecap: square" />
+   </g>
+   <g id="patch_3">
+    <path d="M 55.292344 224.64  L 55.292344 26.525  " style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="patch_4">
+    <path d="M 55.292344 224.64  L 295.852344 224.64  " style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="text_15">
+    <text style="font-size: 13px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="175.572344" y="20.525" transform="rotate(-0 175.572344 20.525)">Residuals versus fitted</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 355.352344 224.64  L 595.912344 224.64  L 595.912344 26.525  L 355.352344 26.525  z " style="fill: #ffffff" />
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_7">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m502ebfba44" x="369.568711" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="369.568711" y="242.915" transform="rotate(-0 369.568711 242.915)">−2</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m502ebfba44" x="422.600527" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="422.600527" y="242.915" transform="rotate(-0 422.600527 242.915)">−1</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m502ebfba44" x="475.632344" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="475.632344" y="242.915" transform="rotate(-0 475.632344 242.915)">0</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m502ebfba44" x="528.66416" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="528.66416" y="242.915" transform="rotate(-0 528.66416 242.915)">1</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m502ebfba44" x="581.695977" y="224.64" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="581.695977" y="242.915" transform="rotate(-0 581.695977 242.915)">2</text>
+     </g>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="475.632344" y="261.215" transform="rotate(-0 475.632344 261.215)">Theoretical quantiles</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_7">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="355.352344" y="197.649648" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="348.352344" y="203.287148" transform="rotate(-0 348.352344 203.287148)">−0.2</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="355.352344" y="167.252256" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="348.352344" y="172.889756" transform="rotate(-0 348.352344 172.889756)">−0.1</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="355.352344" y="136.854865" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="348.352344" y="142.492365" transform="rotate(-0 348.352344 142.492365)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="355.352344" y="106.457474" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="348.352344" y="112.094974" transform="rotate(-0 348.352344 112.094974)">0.1</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="355.352344" y="76.060082" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="348.352344" y="81.697582" transform="rotate(-0 348.352344 81.697582)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#mf14462d8b9" x="355.352344" y="45.662691" style="fill: #333333; stroke: #333333; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #333333" x="348.352344" y="51.300191" transform="rotate(-0 348.352344 51.300191)">0.3</text>
+     </g>
+    </g>
+    <g id="text_28">
+     <text style="font-size: 11px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="318.535" y="125.5825" transform="rotate(-90 318.535 125.5825)">Ordered Values</text>
+    </g>
+   </g>
+   <g id="progress-mark-1">
+    <defs>
+     <path id="m7467386a44" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #446b5b" />
+    </defs>
+    <g clip-path="url(#p5f72db8721)">
+     <use xlink:href="#m7467386a44" x="366.286889" y="200.182764" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -2.061884011124795, &quot;Ordered residual&quot;: -0.2083333333333337}}" />
+     <use xlink:href="#m7467386a44" x="387.131123" y="189.929675" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -1.6688325366144816, &quot;Ordered residual&quot;: -0.17460317460317443}}" />
+     <use xlink:href="#m7467386a44" x="399.609129" y="187.974287" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -1.433539700417483, &quot;Ordered residual&quot;: -0.16817042606516264}}" />
+     <use xlink:href="#m7467386a44" x="408.898517" y="187.517184" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -1.2583733893457936, &quot;Ordered residual&quot;: -0.16666666666666663}}" />
+     <use xlink:href="#m7467386a44" x="416.496846" y="187.517184" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -1.1150947051772646, &quot;Ordered residual&quot;: -0.16666666666666663}}" />
+     <use xlink:href="#m7467386a44" x="423.04276" y="182.732409" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.9916609843111055, &quot;Ordered residual&quot;: -0.15092592592592557}}" />
+     <use xlink:href="#m7467386a44" x="428.871932" y="170.629744" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.8817425994485024, &quot;Ordered residual&quot;: -0.1111111111111115}}" />
+     <use xlink:href="#m7467386a44" x="434.184428" y="169.664748" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.7815669645471119, &quot;Ordered residual&quot;: -0.10793650793650822}}" />
+     <use xlink:href="#m7467386a44" x="439.110184" y="167.252256" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.6886839205585729, &quot;Ordered residual&quot;: -0.10000000000000042}}" />
+     <use xlink:href="#m7467386a44" x="443.739144" y="165.000598" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.6013974656140555, &quot;Ordered residual&quot;: -0.09259259259259256}}" />
+     <use xlink:href="#m7467386a44" x="448.136785" y="159.371451" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.5184728823866673, &quot;Ordered residual&quot;: -0.07407407407407363}}" />
+     <use xlink:href="#m7467386a44" x="452.352835" y="156.556878" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.4389724970982647, &quot;Ordered residual&quot;: -0.06481481481481477}}" />
+     <use xlink:href="#m7467386a44" x="456.426489" y="154.224803" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.36215720963291, &quot;Ordered residual&quot;: -0.057142857142857606}}" />
+     <use xlink:href="#m7467386a44" x="460.389724" y="148.891927" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.2874240569807453, &quot;Ordered residual&quot;: -0.03959899749373419}}" />
+     <use xlink:href="#m7467386a44" x="464.269503" y="140.714851" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.21426458680596722, &quot;Ordered residual&quot;: -0.012698412698412986}}" />
+     <use xlink:href="#m7467386a44" x="468.089325" y="136.854865" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.14223571563172394, &quot;Ordered residual&quot;: -2.220446049250313e-16}}" />
+     <use xlink:href="#m7467386a44" x="471.87036" y="136.854865" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: -0.07093823763255579, &quot;Ordered residual&quot;: -2.220446049250313e-16}}" />
+     <use xlink:href="#m7467386a44" x="475.632344" y="132.029882" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.0, &quot;Ordered residual&quot;: 0.01587301587301604}}" />
+     <use xlink:href="#m7467386a44" x="479.394327" y="128.692602" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.07093823763255565, &quot;Ordered residual&quot;: 0.026851851851852238}}" />
+     <use xlink:href="#m7467386a44" x="483.175362" y="128.169896" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.1422357156317238, &quot;Ordered residual&quot;: 0.028571428571428248}}" />
+     <use xlink:href="#m7467386a44" x="486.995184" y="128.169896" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.21426458680596694, &quot;Ordered residual&quot;: 0.028571428571428248}}" />
+     <use xlink:href="#m7467386a44" x="490.874964" y="126.722401" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.2874240569807453, &quot;Ordered residual&quot;: 0.033333333333333104}}" />
+     <use xlink:href="#m7467386a44" x="494.838198" y="125.596572" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.36215720963290987, &quot;Ordered residual&quot;: 0.037037037037037535}}" />
+     <use xlink:href="#m7467386a44" x="498.911853" y="125.596572" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.4389724970982647, &quot;Ordered residual&quot;: 0.037037037037037535}}" />
+     <use xlink:href="#m7467386a44" x="503.127903" y="124.189285" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.5184728823866671, &quot;Ordered residual&quot;: 0.0416666666666663}}" />
+     <use xlink:href="#m7467386a44" x="507.525544" y="119.967425" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.6013974656140555, &quot;Ordered residual&quot;: 0.055555555555555136}}" />
+     <use xlink:href="#m7467386a44" x="512.154503" y="119.967425" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.6886839205585726, &quot;Ordered residual&quot;: 0.055555555555555136}}" />
+     <use xlink:href="#m7467386a44" x="517.08026" y="116.589937" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.7815669645471115, &quot;Ordered residual&quot;: 0.06666666666666632}}" />
+     <use xlink:href="#m7467386a44" x="522.392755" y="100.184996" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.8817425994485024, &quot;Ordered residual&quot;: 0.12063492063492054}}" />
+     <use xlink:href="#m7467386a44" x="528.221927" y="99.139583" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 0.9916609843111054, &quot;Ordered residual&quot;: 0.12407407407407445}}" />
+     <use xlink:href="#m7467386a44" x="534.767842" y="89.007119" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 1.1150947051772646, &quot;Ordered residual&quot;: 0.15740740740740744}}" />
+     <use xlink:href="#m7467386a44" x="542.36617" y="88.605037" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 1.2583733893457936, &quot;Ordered residual&quot;: 0.15873015873015894}}" />
+     <use xlink:href="#m7467386a44" x="551.655558" y="86.192546" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 1.433539700417482, &quot;Ordered residual&quot;: 0.1666666666666663}}" />
+     <use xlink:href="#m7467386a44" x="564.133565" y="73.69838" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 1.6688325366144798, &quot;Ordered residual&quot;: 0.2077694235588975}}" />
+     <use xlink:href="#m7467386a44" x="584.977798" y="35.530227" style="fill: #446b5b; stroke: #446b5b" data-value="{&quot;kind&quot;: &quot;Normal Q Q point&quot;, &quot;values&quot;: {&quot;Theoretical quantile&quot;: 2.061884011124795, &quot;Ordered residual&quot;: 0.33333333333333337}}" />
+    </g>
+   </g>
+   <g id="line2d_25">
+    <path d="M 366.286889 215.634773  L 387.131123 200.617168  L 399.609129 191.627163  L 408.898517 184.934456  L 416.496846 179.460102  L 423.04276 174.74398  L 428.871932 170.544248  L 434.184428 166.716765  L 439.110184 163.167914  L 443.739144 159.832897  L 448.136785 156.664537  L 452.352835 153.627008  L 456.426489 150.69207  L 460.389724 147.836686  L 464.269503 145.041428  L 468.089325 142.289369  L 471.87036 139.565254  L 475.632344 136.854865  L 479.394327 134.144476  L 483.175362 131.420361  L 486.995184 128.668301  L 490.874964 125.873044  L 494.838198 123.01766  L 498.911853 120.082722  L 503.127903 117.045193  L 507.525544 113.876833  L 512.154503 110.541816  L 517.08026 106.992965  L 522.392755 103.165482  L 528.221927 98.96575  L 534.767842 94.249627  L 542.36617 88.775274  L 551.655558 82.082567  L 564.133565 73.092562  L 584.977798 58.074957  " clip-path="url(#p5f72db8721)" style="fill: none; stroke: #897044; stroke-width: 1.5; stroke-linecap: square" />
+   </g>
+   <g id="patch_6">
+    <path d="M 355.352344 224.64  L 355.352344 26.525  " style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="patch_7">
+    <path d="M 355.352344 224.64  L 595.912344 224.64  " style="fill: none; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="text_29">
+    <text style="font-size: 13px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #222222" x="475.632344" y="20.525" transform="rotate(-0 475.632344 20.525)">Normal Q Q plot</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pbf646ce233">
+   <rect x="55.292344" y="26.525" width="240.56" height="198.115" />
+  </clipPath>
+  <clipPath id="p5f72db8721">
+   <rect x="355.352344" y="26.525" width="240.56" height="198.115" />
+  </clipPath>
+ </defs>
+</svg>
