@@ -182,7 +182,8 @@ project:
   substitutions:
     build_date: '2026-05-04'
 site:
-  template: book-theme
+  # Preserve the verified theme bundle used by the site enhancements.
+  template: https://github.com/myst-templates/book-theme/archive/7b77b6f1ed20760e06b160c10a91a372de7e12b9.zip
   title: The Statistics Notebook
   options:
     style: styles/reader.css
