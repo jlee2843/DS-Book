@@ -107,6 +107,7 @@ function createProgressFigureViewer(root) {
     }
     // The toolbar replaces the static SVG legend only in the enlarged view.
     if (seriesBar.children.length) chart.querySelectorAll('[id*="legend_"]').forEach(n => n.remove());
+    $('.ds-figure-hint').hidden = chart.getAttribute('data-chart-title')?.toLowerCase().includes('response scores') || false;
     $('.ds-figure-hint').textContent = seriesBar.children.length
       ? 'Hover or tap a point for values. Select prompts in the legend. Use + to zoom and drag to move.'
       : 'Hover or tap a point for values. Use + to zoom and drag to move.';

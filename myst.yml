@@ -166,6 +166,8 @@ project:
       title: "2"
     - file: notes/Progress/Progress-3.ipynb
       title: "3"
+    - file: notes/Progress/Progress-4.ipynb
+      title: "4"
   - title: Data
     children:
     - title: MTRAG

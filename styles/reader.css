@@ -1633,3 +1633,7 @@ html.dark .ds-figure-dialog{--p2-human:#a5bcb4;--p2-auto:#b7a58d;--p2-contrast:#
   .ds-figure-dialog .ds-figure-tooltip{max-width:260px}
   .ds-figure-dialog .ds-figure-values{padding:10px 12px}
 }
+
+/* Progress 4 goals use the existing Goal box with a readable list. */
+#progress-drafts .trial-goal .progress4-goals{list-style:disc;margin:10px 0 0;padding-left:22px}
+#progress-drafts .trial-goal .progress4-goals li{margin:6px 0;line-height:1.7}
