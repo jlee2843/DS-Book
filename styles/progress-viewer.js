@@ -26,7 +26,7 @@ function mountProgressAnalysis() {
     if(root.dataset.ready)return;
     const isThird=root.classList.contains('progress3-app');
     const isFourth=root.classList.contains('progress4-app');
-    const tabs=isFourth?[['input','Agenda'],['anova','ANOVA'],['crossed','Crossed Design']]:isThird?[['input','Experiment'],['model','Statistical model'],['readout','Results'],['examples','Examples']]:[['input','Input'],['q1','Q1'],['q2','Q2'],['q3','Q3'],['q4','Q4'],['q5','Q5'],['example','Example']];
+    const tabs=isFourth?[['input','Agenda'],['anova','ANOVA'],['crossed','Crossed Design'],['similarity','Response Similarity']]:isThird?[['input','Experiment'],['model','Statistical model'],['readout','Results'],['examples','Examples']]:[['input','Input'],['q1','Q1'],['q2','Q2'],['q3','Q3'],['q4','Q4'],['q5','Q5'],['example','Example']];
     const keys=tabs.map(([key])=>key);
     const panels=Object.fromEntries(keys.map(k=>[k,root.querySelector((isFourth?'.progress4-':isThird?'.progress3-':'.progress2-')+k)]));
     if(keys.some(k=>!panels[k]))return;
