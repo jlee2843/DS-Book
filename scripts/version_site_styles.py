@@ -11,6 +11,10 @@ body_style = Path('styles/note-body-retro.css')
 if body_style.exists():
     with (root / 'myst-theme.css').open('a') as theme:
         theme.write('\n' + body_style.read_text())
+# Shared terminal theme is the final cascade for every page.
+terminal_style = Path('styles/terminal-theme.css')
+with (root / 'myst-theme.css').open('a') as theme:
+    theme.write('\n' + terminal_style.read_text())
 # Version the whole module graph so cached importers cannot load old chunks.
 install(root)
 install_standalone(root)

@@ -1,0 +1,174 @@
+/* Shared terminal treatment. Loaded last by version_site_styles.py. */
+html:root{--ds-paper:#f3f3f3;--ds-sidebar:#e9e9e9;--ds-ink:#161616;--ds-muted:#606060;--ds-line:#aaa;--ds-soft:#e3e3e3;--ds-key-surface:#e9e9e9;--ds-accent:#237000;--ds-neon:#237000;--ds-selected:#dedede;--ds-on-selected:#111}
+html:root.dark{--ds-paper:#080808;--ds-sidebar:#111;--ds-ink:#ededed;--ds-muted:#999;--ds-line:#444;--ds-soft:#202020;--ds-key-surface:#111;--ds-accent:#a3ff12;--ds-neon:#a3ff12;--ds-selected:#232323;--ds-on-selected:#eee}
+html:root .article.content{color:var(--ds-ink);padding-top:28px}
+html:root .article.content h1{font-size:38px!important;line-height:1.2!important}
+html:root .article.content :is(h2,h3,h4){color:var(--ds-ink)}
+.ds-terminal-session{display:flex;justify-content:space-between;gap:20px;padding-bottom:14px;margin-bottom:28px;border-bottom:1px solid var(--ds-line);color:var(--ds-muted);font:11px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace}
+.ds-terminal-command{font:12px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ds-muted);margin:24px 0;overflow-wrap:anywhere}
+.ds-terminal-command b{color:var(--ds-neon);font-weight:400;margin:0 12px}.ds-terminal-command span{color:var(--ds-ink)}
+html:root .article.content .ds-document-toc{border-left:1px dashed var(--ds-line)}
+html:root .article.content .ds-document-toc a[aria-current=location]{color:var(--ds-neon);box-shadow:inset 2px 0 var(--ds-neon);background:none}
+html:root .article.content:not(:has(.home-pixel)) h2::before{border:0;box-shadow:none;padding:0;color:var(--ds-muted);font:11px/1.8 monospace}
+html:root .article.content:not(:has(.home-pixel)) .myst-admonition-note:not(.ds-example-card){border-left-color:var(--ds-neon)!important;background:transparent!important}
+html:root .article.content:not(:has(.home-pixel)) .myst-admonition-note:not(.ds-example-card) .myst-admonition-header{color:var(--ds-neon)!important}
+html:root .article.content a:hover{color:var(--ds-neon)}
+/* Home profile and directory reuse real notebook links and downloads. */
+html:root .article.content:has(.home-pixel){max-width:1080px!important}
+html:root .article.content .home-pixel .home-profile{width:100%;max-width:none;justify-content:space-between;align-items:center;padding:0 0 30px;border:0}
+html:root .article.content .home-pixel .home-profile-copy{flex:1;min-width:0}
+html:root .article.content .home-pixel .home-profile h2::after{content:none}
+html:root .article.content .home-pixel .home-introducing{display:none}
+html:root .article.content .home-pixel .home-profile-copy>p{font:12px/1.9 monospace}
+html:root .article.content .home-pixel .home-rabbit{flex:0 0 125px;order:2;align-self:center;margin-left:auto;gap:12px}
+html:root .article.content .home-pixel .home-rabbit-caption{order:-1;position:relative;border:1px solid var(--ds-muted);padding:5px 8px;background:var(--ds-paper)}
+html:root .article.content .home-pixel .home-rabbit-caption p{font:10px/1.6 monospace!important;color:var(--ds-ink)}
+.home-rabbit-caption::after{content:'';position:absolute;bottom:-5px;left:23px;width:8px;height:8px;background:var(--ds-paper);border-right:1px solid var(--ds-muted);border-bottom:1px solid var(--ds-muted);transform:rotate(45deg)}
+html:root .article.content .home-pixel .home-profile :is(img.home-profile-avatar,.home-profile-avatar img){width:82px!important;height:82px!important;border-radius:0!important;filter:none!important;opacity:1;mix-blend-mode:normal;padding:0!important}
+html:root .article.content .home-profile-links a[data-profile-icon]{display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center;border:0;padding:0;color:var(--ds-ink)}
+html:root .article.content .home-profile-links a[data-profile-icon] svg{width:23px;height:23px}
+html:root .article.content .home-profile-links a[data-profile-icon]:hover{color:var(--ds-neon);opacity:1}
+html:root .article.content .home-pixel .home-chapters{border:0;padding:0}
+html:root .article.content .home-pixel .home-chapter-label p{font:600 13px/1.8 monospace!important;margin:0 0 28px}
+html:root .article.content .home-pixel .home-chapter-label p::before{content:'./';color:var(--ds-neon)}
+html:root .article.content .home-pixel .home-menu-columns{grid-template-columns:1.2fr 1fr;gap:60px}
+html:root .article.content .home-pixel .home-menu h3{font:600 15px/1.8 monospace!important;color:var(--ds-ink);margin:0 0 18px;padding:0}
+html:root .article.content .home-pixel .home-menu h3::before{content:'├── ▱ ';position:static;color:var(--ds-muted);font:inherit;border:0;box-shadow:none}
+html:root .article.content .home-pixel .home-menu h3::after{content:'/';font:inherit}
+html:root .article.content .home-pixel .home-menu>p{border:0;margin:0}
+html:root .article.content .home-pixel .home-menu>p>a{font:13px/1.8 monospace;gap:9px;padding:10px 0;white-space:normal;align-items:baseline}
+html:root .article.content .home-pixel .home-menu>p>a::before{content:'│  ├── ▱';visibility:visible;white-space:pre;color:var(--ds-muted);font:inherit}
+html:root .article.content .home-pixel .home-menu>p:last-child>a::before{content:'│  └── ▱'}
+html:root .article.content .home-pixel .home-menu>p>a::after{content:'/';margin:0;color:inherit;font:inherit}
+html:root .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-visible),html:root .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-visible) .link-text{background:none!important;color:var(--ds-neon)!important}
+html:root .article.content .home-pixel .home-menu>p>a:is(:hover,:focus-visible)::after{color:var(--ds-neon)!important}
+html:root .article.content .home-pixel .home-lecture-sources{border:0;padding:0;margin:28px 0}
+html:root .article.content .home-pixel .home-lecture-sources summary{font:12px/1.8 monospace;cursor:pointer;color:var(--ds-muted);margin-bottom:18px}
+html:root .article.content .home-pixel .home-source-columns{padding-left:24px}
+html:root .article.content .home-pixel-footer{border-top:1px dashed var(--ds-line);padding-top:12px}
+/* Directory selection preserves every topic's distinct pixel illustration. */
+html:root .article.content .rpg-note-window,html:root .article.content .rpg-note-submenu{border:0;box-shadow:none;background:transparent;padding:0;color:var(--ds-ink)}
+html:root .article.content .rpg-note-caption{position:static;padding:0;background:none;font:11px/1.8 monospace;letter-spacing:0;color:var(--ds-muted);margin-bottom:20px}
+html:root .article.content .rpg-note-inner{padding:0;gap:40px;background:transparent}
+html:root .article.content .rpg-note-choices{align-self:start;gap:3px}
+html:root .article.content .rpg-note-choice{display:flex;gap:12px;padding:10px 0;font:13px/1.8 monospace;color:var(--ds-ink)}
+html:root .article.content .rpg-note-choice::before{content:'├──';white-space:pre;color:var(--ds-muted)}
+html:root .article.content .rpg-note-choice:last-child::before{content:'└──'}
+html:root .article.content .rpg-note-choice[aria-pressed=true],html:root .article.content .rpg-note-choice:hover{color:var(--ds-neon)}
+html:root .article.content .rpg-note-choice[aria-pressed=true]::after{content:'←';font:11px/1.8 monospace}
+html:root .article.content :is(.rpg-note-cursor,.rpg-note-index){display:none}
+html:root .article.content .rpg-note-preview{background:none;border-left:1px dashed var(--ds-line);color:var(--ds-ink);padding:0 0 0 30px;justify-content:flex-start}
+html:root .article.content .rpg-note-title{font-size:28px;color:var(--ds-ink)}
+html:root .article.content .rpg-note-art{fill:currentColor;color:var(--ds-ink)}
+html:root .article.content .rpg-note-preview p{color:var(--ds-muted)}
+html:root .article.content a.rpg-note-open{border:0;border-bottom:1px solid var(--ds-neon);box-shadow:none;padding:4px 0;font:12px/1.8 monospace;color:var(--ds-neon);background:none}
+html:root .article.content :is(button,select,input){accent-color:var(--ds-neon)}
+@media(max-width:650px){
+ .ds-terminal-session{font-size:10px}.ds-terminal-session span:last-child{display:none}.ds-terminal-command{font-size:10px}
+ html:root .article.content h1{font-size:32px!important}
+ html:root .article.content .home-pixel .home-rabbit{flex-basis:95px}
+ html:root .article.content .home-pixel .home-profile :is(img.home-profile-avatar,.home-profile-avatar img){width:64px!important;height:64px!important}
+ html:root .article.content .home-pixel .home-menu-columns{grid-template-columns:1fr;gap:30px}
+ html:root .article.content .rpg-note-inner{grid-template-columns:1fr;gap:25px}
+ html:root .article.content .rpg-note-preview{border-left:0;border-top:1px dashed var(--ds-line);padding:24px 0 0}
+}
+html:root .article.content .rpg-note-submenu .rpg-note-inner{--ds-ink:#161616;--ds-muted:#606060;--ds-line:#aaa;background:transparent}
+html:root.dark .article.content .rpg-note-submenu .rpg-note-inner{--ds-ink:#ededed;--ds-muted:#999;--ds-line:#444}
+/* Home uses the full horizontal console, without reserving a TOC column. */
+html:root .article.content:has(.home-pixel){display:block;width:min(1080px,calc(100% - 80px));margin-inline:auto;padding-inline:0}
+html:root .article.content:has(.home-pixel)>div{max-width:none}
+html:root .article.content h1{text-transform:none!important;letter-spacing:0!important}
+@media(max-width:650px){html:root .article.content:has(.home-pixel){width:calc(100% - 32px)}}
+
+/* Terminal reading surface: whitespace and text hierarchy, no decorative rules. */
+html:root .article.content .ds-terminal-session{display:none;border:0}
+html:root .article.content .ds-terminal-command{margin:8px 0 24px;font-size:12px}
+html:root .article.content .home-pixel-footer,
+html:root .article.content .ds-document-toc,
+html:root .article.content .rpg-note-preview,
+html:root .article.content .myst-footer-links{border:0!important;box-shadow:none!important}
+html:root .article.content hr{display:none}
+html:root .article.content:not(:has(.home-pixel)){
+ --terminal-font:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+ background:var(--ds-paper)!important;
+}
+html:root .article.content:not(:has(.home-pixel)) :is(p,li,table,dt,dd){font-family:var(--terminal-font)!important;font-size:13px;line-height:1.95}
+html:root .article.content:not(:has(.home-pixel)) h1{font:600 30px/1.35 var(--terminal-font)!important;margin-bottom:22px!important}
+html:root .article.content:not(:has(.home-pixel)) h1::before{content:'./';color:var(--ds-neon);font-weight:400;margin-right:4px}
+html:root .article.content:not(:has(.home-pixel)) :is(h2,h3,h4){font-family:var(--terminal-font)!important}
+html:root .article.content:not(:has(.home-pixel)) h2{font-size:19px!important;padding-left:38px!important;border:0!important;box-shadow:none!important}
+html:root .article.content:not(:has(.home-pixel)) h2::before{content:counter(note-section,decimal-leading-zero);font:12px/1.9 var(--terminal-font)!important;color:var(--ds-muted);top:3px}
+html:root .article.content:not(:has(.home-pixel)) :is(.note-parent,.submenu-parent){font:11px/1.8 var(--terminal-font);color:var(--ds-muted)}
+html:root .article.content:not(:has(.home-pixel)) :is(.myst-fm-block,.myst-fm-block-header){border:0!important;box-shadow:none!important}
+html:root .article.content .rpg-note-inner{gap:48px}
+html:root .article.content .rpg-note-preview{padding-left:20px}
+html:root .article.content .rpg-note-preview::before{content:'[ preview ]';display:block;margin-bottom:20px;font:11px/1.8 monospace;color:var(--ds-muted)}
+html:root .article.content .rpg-note-title{font:600 19px/1.5 var(--terminal-font)!important}
+html:root .article.content .rpg-note-caption{font:11px/1.8 monospace;letter-spacing:.03em;margin-bottom:12px}
+html:root .article.content .rpg-note-choice{font-size:13px;padding:11px 0}
+html:root .article.content a.rpg-note-open{border:0;padding:6px 0}
+html:root .article.content a.rpg-note-open::before{content:'$ ';color:var(--ds-neon)}
+html:root .article.content .ds-document-toc-title{font:11px/1.8 monospace!important;color:var(--ds-muted)}
+html:root .article.content .ds-document-toc a{font:11px/1.8 monospace!important}
+html:root .article.content .ds-document-toc a[aria-current=location]{box-shadow:none!important;padding-left:0}
+html:root .article.content .ds-document-toc a[aria-current=location]::before{content:'> ';color:var(--ds-neon)}
+html:root .article.content .literature-note{border:0;padding-block:26px}
+html:root .article.content .literature-catalog .literature-note .literature-note-title a{font:600 20px/1.5 var(--terminal-font)!important}
+html:root .article.content .literature-catalog .literature-filter-box{border:0;padding:0;margin-block:24px}
+html:root .article.content:not(:has(.home-pixel)) .document-actions a.button{box-shadow:none!important;font:12px/1.5 var(--terminal-font)!important}
+@media(max-width:650px){
+ html:root .article.content:not(:has(.home-pixel)) h1{font-size:24px!important;overflow-wrap:anywhere}
+ html:root .article.content:not(:has(.home-pixel)) :is(p,li,table,dt,dd){font-size:12px}
+ html:root .article.content .rpg-note-preview{padding:20px 0 0}
+ html:root .article.content .ds-terminal-command{font-size:10px}
+}
+html:root .article.content :is(.source-note,.revision-note,.method-summary-panel,.document-actions,.reading-steps>div,figure figcaption){border:0!important;box-shadow:none!important}
+
+/* Header: a quiet terminal toolbar with the existing navigation controls. */
+html:root .myst-top-nav{border:0!important;box-shadow:none!important;padding:12px 0 14px!important}
+html:root .myst-top-nav-bar{height:52px;padding:0 140px 0 28px;gap:22px}
+html:root .myst-home-link,html:root .myst-home-link>span{font:500 17px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace!important;letter-spacing:-.5px!important}
+html:root .myst-home-link{display:flex;align-items:center;gap:12px!important;min-width:0}
+html:root .myst-home-link::before{content:'>_';font:600 23px/1 monospace;color:var(--ds-neon);flex:none}
+html:root .myst-home-link>span{margin:0!important;white-space:normal}
+html:root .myst-top-nav .myst-search-bar{border:0!important;border-radius:0;background:transparent!important;width:auto!important;min-width:34px;padding:7px!important;box-shadow:none!important;gap:6px;color:var(--ds-muted)}
+html:root .myst-search-bar>svg{width:16px!important;height:16px!important;margin:0!important}
+html:root .myst-search-text-placeholder{font:11px/1.5 monospace!important;color:var(--ds-muted)}
+html:root .myst-search-shortcut{display:none!important}
+html:root .myst-theme-button{padding:7px!important;width:34px;height:34px;color:var(--ds-muted)}
+html:root .myst-theme-button svg{width:17px!important;height:17px!important}
+html:root .myst-top-nav-bar div:has(> .myst-top-nav-menu-button){right:28px;top:9px}
+html:root .myst-top-nav-menu-button{border:0!important;padding:0 5px!important;height:34px!important;background:none!important;box-shadow:none!important;gap:7px;color:var(--ds-muted)}
+html:root .myst-top-nav-menu-button::after{display:block;content:'Explore';font:11px/1 monospace}
+html:root .myst-top-nav-menu-button svg{width:15px;height:15px}
+html:root .myst-top-nav :is(button,.myst-home-link):hover{color:var(--ds-neon)}
+html:root .ds-site-navigation{height:34px;padding:0 28px 0 68px;gap:24px;border:0!important;background:transparent}
+html:root .ds-site-navigation>a,html:root .ds-nav-group>button{height:34px;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ds-muted)}
+html:root .ds-site-navigation [aria-current=page],html:root .ds-site-navigation [data-section-active=true]{color:var(--ds-ink)}
+html:root .ds-site-navigation [aria-current=page]::before,html:root .ds-site-navigation [data-section-active=true]::before{content:'>';margin-right:7px;color:var(--ds-neon)}
+html:root .ds-nav-group>button[aria-expanded=true]{color:var(--ds-neon)}
+html:root .ds-nav-menu{top:calc(100% + 4px);box-shadow:4px 4px 0 var(--ds-soft);padding:9px}
+html:root .ds-nav-menu a{font:12px/1.8 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+html:root .myst-top-nav :focus-visible{outline:1px solid var(--ds-neon);outline-offset:4px}
+@media(max-width:800px){
+ html:root .myst-top-nav-bar{padding-left:20px;padding-right:100px;gap:10px}
+ html:root .myst-home-link,html:root .myst-home-link>span{font-size:14px!important;letter-spacing:-.4px!important}
+ html:root .myst-home-link{gap:9px!important}
+ html:root .myst-home-link::before{font-size:20px}
+ html:root .myst-top-nav-bar div:has(> .myst-top-nav-menu-button){right:20px}
+ html:root .ds-site-navigation{padding-left:49px;gap:20px}
+}
+@media(max-width:480px){
+ html:root .myst-top-nav{padding:8px 0 10px!important}
+ html:root .myst-top-nav-bar{padding:0 42px 0 16px;height:62px;gap:5px}
+ html:root .myst-home-link{max-width:205px;gap:8px!important}
+ html:root .myst-home-link,html:root .myst-home-link>span{font-size:13px!important;letter-spacing:-.4px!important}
+ html:root .myst-top-nav-bar div:has(> .myst-top-nav-menu-button){right:12px;top:14px}
+ html:root .myst-top-nav-menu-button::after{display:none}
+ html:root .myst-theme-button,html:root .myst-top-nav .myst-search-bar{min-width:28px;width:28px;padding:5px!important}
+ html:root .ds-site-navigation{padding:0 16px;gap:20px}
+ html:root .ds-site-navigation>a,html:root .ds-nav-group>button{font-size:11px}
+}
+
+/* Progress 4 has no section number badges to reserve space for. */
+html:root .article.content #progress-drafts.progress4-app h2{padding-left:0!important}
